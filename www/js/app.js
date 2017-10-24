@@ -44,6 +44,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
 
+  .state('dealer', {
+    url: '/dealer',
+        templateUrl: 'templates/dealer.html' ,
+        controller: 'DealerCtrl'
+  })
+
   .state('app.search', {
     url: '/search',
     views: {

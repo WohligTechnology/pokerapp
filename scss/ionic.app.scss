@@ -65,6 +65,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 width: 50%;
     }
 }
+
 .table-border{
     border: 3px solid #fff;
     height: 50px;
@@ -76,3 +77,110 @@ width: 50%;
  color: #fff !important;
  margin: 30px 0px;
 }
+
+
+.removedpopup {
+    h3 {
+      img {
+        max-width: 35px;
+        max-height: 35px;
+        font-size: 30px!important;
+      }
+    }
+    .popup-title{
+        font-size: 30px;
+        padding:20px 20px!important;
+    }
+    .popup {
+      border-radius: 5px;
+      width: 600px;
+    }
+    .popup-body {
+      background: white;
+      color: #223c4d;
+      text-align: center;
+      font-weight: 600;
+      padding: 30px 30px;
+      font-size: 30px;
+      h4 {
+        margin: 0;
+        font-size: 250px;
+        color: #223c4d;
+        font-weight: 600;
+      }
+      label {
+        font-size: 25px;
+      }
+    }
+    .popup-head {
+      padding-top: 20px;
+      padding-bottom: 0;
+      border-bottom: none!important;
+      text-align: center;
+      background: white;
+      border-radius: 5px;
+      font-size: 30px!important;
+    }
+    .popup-buttons {
+      padding: 0;
+      min-height: 40px;
+      background: cornflowerblue!important;
+      border: none;
+      font-size: 30px;
+      button {
+        border: none;
+        min-height: 60px;
+        font-size: 25px;
+        background: cornflowerblue!important;
+      }
+    }
+  }
+
+  .leaveApp {
+    h3 {
+      img {
+        max-width: 35px;
+        max-height: 35px;
+      }
+    }
+    .popup {
+      border-radius: 5px;
+    }
+    .popup-body {
+      background: white;
+      color: #223c4d;
+      text-align: center;
+      font-weight: 600;
+      padding-bottom: 30px;
+      font-size: 14px;
+      h4 {
+        margin: 0;
+        font-size: 25px;
+        color: #223c4d;
+        font-weight: 600;
+      }
+      label {
+        font-size: 12px;
+      }
+    }
+    .popup-head {
+      padding-top: 30px;
+      padding-bottom: 0;
+      border-bottom: none!important;
+      text-align: center;
+      background: white;
+      border-radius: 5px;
+    }
+    .popup-buttons {
+      padding: 0;
+      min-height: 40px;
+      background: white;
+      border: none;
+      button {
+        border: none;
+        min-height: 35px;
+        font-size: 12px;
+      }
+    }
+  }
+

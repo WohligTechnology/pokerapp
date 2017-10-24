@@ -52,8 +52,57 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('HomeCtrl', function($scope, $stateParams) {
-  
+.controller('HomeCtrl', function($scope, $stateParams, $ionicPopup, $state) {
+  $scope.youlose = function(){
+    $ionicPopup.alert({
+      cssClass: 'removedpopup',
+      title: "Sorry",
+      template: "You Lose",
+      buttons: [{
+          text: 'OK',
+          // cssClass: 'leaveApp',
+          onTap: function (e) {
+            $state.go('dealer')
+          }
+        },
+      ]
+    });
+  }
+
+  $scope.youwin = function(){
+    $ionicPopup.alert({
+      cssClass: 'removedpopup',
+      title: "Hurray",
+      template: "You Won",
+      buttons: [{
+          text: 'OK',
+          // cssClass: 'leaveApp',
+          onTap: function (e) {
+            $state.go('dealer')
+          }
+        },
+      ]
+    });
+  }
+
+  $scope.fold = function(){
+    $ionicPopup.alert({
+      cssClass: 'removedpopup',
+      title: "Fold",
+      template: "Your cards are folded",
+      buttons: [{
+          text: 'OK',
+          // cssClass: 'leaveApp',
+          onTap: function (e) {
+            $state.go('dealer')
+          }
+        },
+      ]
+    });
+  }
+})
+
+.controller('DealerCtrl', function($scope, $stateParams) {
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

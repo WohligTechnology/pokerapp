@@ -9855,14 +9855,19 @@ a.button {
   border: 3px solid #fff;
   height: 180px;
   margin: 10px;
-  background-color: transparent !important; }
+  background-color: transparent; }
   .table-border h2 {
     text-align: center;
     color: #fff !important;
     margin-top: 55px; }
 
 .mar-t {
-  margin-top: 50px; }
+  margin-top: 20%; }
+
+.btn-start {
+  font-size: 30px;
+  padding: 10px 30px;
+  margin-top: 30px; }
 
 .removedpopup h3 img {
   max-width: 35px;

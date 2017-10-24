@@ -1,4 +1,4 @@
-/*
+    /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
 
@@ -14,178 +14,179 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-
-// The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
-
-.bgImg{
-    background-image: url(../img/bg-added.jpg);
-    width: auto;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center right;
-}
-
-.mar50{
-    margin-top: 50%;
-}
-
-.centerDiv{
-    height: 100vh;
-    position: relative;
-}
-
-.centerRow{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    left: 50%;
-}
-
-.buttonpos{
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-    button{
-        background: transparent!important;
+    
+    // The path for our ionicons font files, relative to the built CSS in www/css
+    $ionicons-font-path: "../lib/ionic/fonts" !default;
+    // Include all of Ionic
+    @import "www/lib/ionic/scss/ionic";
+    .bgImg {
+        background-image: url(../img/bg-added.jpg);
+        width: auto;
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
     }
-    i{
-        font-size: 40px;
-        color: red;
+    
+    .mar50 {
+        margin-top: 50%;
     }
-}
-
-.cardimg{
-    width: 100%;
-    img{
-width: 50%;
+    
+    .centerDiv {
+        height: 100vh;
+        position: relative;
     }
-}
-
-.table-border{
-    border: 3px solid #fff;
-    height: 180px;
-    margin: 10px;
-    background-color: transparent !important;
-
-h2{
-    text-align: center;
- color: #fff !important;
-margin-top: 55px;
-
-}
-
-}
-.mar-t{
-    margin-top: 50px;
-}
-
-.removedpopup {
-    h3 {
-      img {
-        max-width: 35px;
-        max-height: 35px;
-        font-size: 30px!important;
-      }
+    
+    .centerRow {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
     }
-    .popup-title{
+    
+    .buttonpos {
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        button {
+            background: transparent!important;
+        }
+        i {
+            font-size: 40px;
+            color: red;
+        }
+    }
+    
+    .cardimg {
+        width: 100%;
+        img {
+            width: 50%;
+        }
+    }
+    
+    .table-border {
+        border: 3px solid #fff;
+        height: 180px;
+        margin: 10px;
+        background-color: transparent;
+        h2 {
+            text-align: center;
+            color: #fff !important;
+            margin-top: 55px;
+        }
+    }
+    
+    .mar-t {
+        margin-top: 20%;
+    }
+    
+    .btn-start {
         font-size: 30px;
-        padding:20px 20px!important;
+        padding: 10px 30px;
+        margin-top: 30px;
     }
-    .popup {
-      border-radius: 5px;
-      width: 600px;
+    
+    .removedpopup {
+        h3 {
+            img {
+                max-width: 35px;
+                max-height: 35px;
+                font-size: 30px!important;
+            }
+        }
+        .popup-title {
+            font-size: 30px;
+            padding: 20px 20px!important;
+        }
+        .popup {
+            border-radius: 5px;
+            width: 600px;
+        }
+        .popup-body {
+            background: white;
+            color: #223c4d;
+            text-align: center;
+            font-weight: 600;
+            padding: 30px 30px;
+            font-size: 30px;
+            h4 {
+                margin: 0;
+                font-size: 250px;
+                color: #223c4d;
+                font-weight: 600;
+            }
+            label {
+                font-size: 25px;
+            }
+        }
+        .popup-head {
+            padding-top: 20px;
+            padding-bottom: 0;
+            border-bottom: none!important;
+            text-align: center;
+            background: white;
+            border-radius: 5px;
+            font-size: 30px!important;
+        }
+        .popup-buttons {
+            padding: 0;
+            min-height: 40px;
+            background: cornflowerblue!important;
+            border: none;
+            font-size: 30px;
+            button {
+                border: none;
+                min-height: 60px;
+                font-size: 25px;
+                background: cornflowerblue!important;
+            }
+        }
     }
-    .popup-body {
-      background: white;
-      color: #223c4d;
-      text-align: center;
-      font-weight: 600;
-      padding: 30px 30px;
-      font-size: 30px;
-      h4 {
-        margin: 0;
-        font-size: 250px;
-        color: #223c4d;
-        font-weight: 600;
-      }
-      label {
-        font-size: 25px;
-      }
+    
+    .leaveApp {
+        h3 {
+            img {
+                max-width: 35px;
+                max-height: 35px;
+            }
+        }
+        .popup {
+            border-radius: 5px;
+        }
+        .popup-body {
+            background: white;
+            color: #223c4d;
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 30px;
+            font-size: 14px;
+            h4 {
+                margin: 0;
+                font-size: 25px;
+                color: #223c4d;
+                font-weight: 600;
+            }
+            label {
+                font-size: 12px;
+            }
+        }
+        .popup-head {
+            padding-top: 30px;
+            padding-bottom: 0;
+            border-bottom: none!important;
+            text-align: center;
+            background: white;
+            border-radius: 5px;
+        }
+        .popup-buttons {
+            padding: 0;
+            min-height: 40px;
+            background: white;
+            border: none;
+            button {
+                border: none;
+                min-height: 35px;
+                font-size: 12px;
+            }
+        }
     }
-    .popup-head {
-      padding-top: 20px;
-      padding-bottom: 0;
-      border-bottom: none!important;
-      text-align: center;
-      background: white;
-      border-radius: 5px;
-      font-size: 30px!important;
-    }
-    .popup-buttons {
-      padding: 0;
-      min-height: 40px;
-      background: cornflowerblue!important;
-      border: none;
-      font-size: 30px;
-      button {
-        border: none;
-        min-height: 60px;
-        font-size: 25px;
-        background: cornflowerblue!important;
-      }
-    }
-  }
-
-  .leaveApp {
-    h3 {
-      img {
-        max-width: 35px;
-        max-height: 35px;
-      }
-    }
-    .popup {
-      border-radius: 5px;
-    }
-    .popup-body {
-      background: white;
-      color: #223c4d;
-      text-align: center;
-      font-weight: 600;
-      padding-bottom: 30px;
-      font-size: 14px;
-      h4 {
-        margin: 0;
-        font-size: 25px;
-        color: #223c4d;
-        font-weight: 600;
-      }
-      label {
-        font-size: 12px;
-      }
-    }
-    .popup-head {
-      padding-top: 30px;
-      padding-bottom: 0;
-      border-bottom: none!important;
-      text-align: center;
-      background: white;
-      border-radius: 5px;
-    }
-    .popup-buttons {
-      padding: 0;
-      min-height: 40px;
-      background: white;
-      border: none;
-      button {
-        border: none;
-        min-height: 35px;
-        font-size: 12px;
-      }
-    }
-  }
-

@@ -9853,12 +9853,16 @@ a.button {
 
 .table-border {
   border: 3px solid #fff;
-  height: 50px;
-  background-color: #fff !important; }
+  height: 180px;
+  margin: 10px;
+  background-color: transparent !important; }
+  .table-border h2 {
+    text-align: center;
+    color: #fff !important;
+    margin-top: 55px; }
 
-.color-white {
-  color: #fff !important;
-  margin: 30px 0px; }
+.mar-t {
+  margin-top: 50px; }
 
 .removedpopup h3 img {
   max-width: 35px;

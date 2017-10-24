@@ -190,3 +190,23 @@ $dark:                            #444 !default;
             }
         }
     }
+
+    .players{
+        margin: 10px;
+        img{
+           border: 3px solid white;
+        }
+       
+       
+         }
+       
+         .playerimg{
+           width: 100%;
+           img{
+       width: 60%;
+           }
+           h1{
+               color: white;
+               margin-bottom: 20px!important;
+           }
+       }

@@ -9957,3 +9957,16 @@ a.button {
     border: none;
     min-height: 35px;
     font-size: 12px; }
+
+.players {
+  margin: 10px; }
+  .players img {
+    border: 3px solid white; }
+
+.playerimg {
+  width: 100%; }
+  .playerimg img {
+    width: 60%; }
+  .playerimg h1 {
+    color: white;
+    margin-bottom: 20px !important; }

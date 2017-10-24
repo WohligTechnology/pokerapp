@@ -9823,8 +9823,8 @@ a.button {
   background-repeat: no-repeat;
   background-position: center right; }
 
-.mar5 {
-  margin-top: 5% !important; }
+.mar50 {
+  margin-top: 50%; }
 
 .centerDiv {
   height: 100vh;
@@ -9850,9 +9850,24 @@ a.button {
   width: 100%; }
   .cardimg img {
     width: 50%; }
-  .cardimg h1 {
-    color: white;
-    margin-bottom: 20px !important; }
+
+.table-border {
+  border: 3px solid #fff;
+  height: 180px;
+  margin: 10px;
+  background-color: transparent; }
+  .table-border h2 {
+    text-align: center;
+    color: #fff !important;
+    margin-top: 55px; }
+
+.mar-t {
+  margin-top: 20%; }
+
+.btn-start {
+  font-size: 30px;
+  padding: 10px 30px;
+  margin-top: 30px; }
 
 .removedpopup h3 img {
   max-width: 35px;
@@ -9867,78 +9882,22 @@ a.button {
   border-radius: 5px;
   width: 600px; }
 
-.removedpopup .centerDiv {
-  height: 100vh;
-  position: relative; }
-
-.removedpopup .centerRow {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 50%; }
-
-.removedpopup .buttonpos {
-  position: absolute;
-  bottom: 1%;
-  right: 1%; }
-  .removedpopup .buttonpos button {
-    background: transparent !important; }
-  .removedpopup .buttonpos i {
-    font-size: 40px;
-    color: red; }
-
-.removedpopup .cardimg {
-  width: 100%; }
-  .removedpopup .cardimg img {
-    width: 50%; }
-
-.removedpopup .table-border {
-  border: 3px solid #fff;
-  height: 180px;
-  margin: 10px;
-  background-color: transparent; }
-  .removedpopup .table-border h2 {
-    text-align: center;
-    color: #fff !important;
-    margin-top: 55px; }
-
-.removedpopup .mar-t {
-  margin-top: 20%; }
-
-.removedpopup .btn-start {
-  font-size: 30px;
-  padding: 10px 30px;
-  margin-top: 30px; }
-
-.removedpopup .removedpopup h3 img {
-  max-width: 35px;
-  max-height: 35px;
-  font-size: 30px !important; }
-
-.removedpopup .removedpopup .popup-title {
-  font-size: 30px;
-  padding: 20px 20px !important; }
-
-.removedpopup .removedpopup .popup {
-  border-radius: 5px;
-  width: 600px; }
-
-.removedpopup .removedpopup .popup-body {
+.removedpopup .popup-body {
   background: white;
   color: #223c4d;
   text-align: center;
   font-weight: 600;
   padding: 30px 30px;
   font-size: 30px; }
-  .removedpopup .removedpopup .popup-body h4 {
+  .removedpopup .popup-body h4 {
     margin: 0;
     font-size: 250px;
     color: #223c4d;
     font-weight: 600; }
-  .removedpopup .removedpopup .popup-body label {
+  .removedpopup .popup-body label {
     font-size: 25px; }
 
-.removedpopup .removedpopup .popup-head {
+.removedpopup .popup-head {
   padding-top: 20px;
   padding-bottom: 0;
   border-bottom: none !important;
@@ -9947,41 +9906,41 @@ a.button {
   border-radius: 5px;
   font-size: 30px !important; }
 
-.removedpopup .removedpopup .popup-buttons {
+.removedpopup .popup-buttons {
   padding: 0;
   min-height: 40px;
   background: cornflowerblue !important;
   border: none;
   font-size: 30px; }
-  .removedpopup .removedpopup .popup-buttons button {
+  .removedpopup .popup-buttons button {
     border: none;
     min-height: 60px;
     font-size: 25px;
     background: cornflowerblue !important; }
 
-.removedpopup .leaveApp h3 img {
+.leaveApp h3 img {
   max-width: 35px;
   max-height: 35px; }
 
-.removedpopup .leaveApp .popup {
+.leaveApp .popup {
   border-radius: 5px; }
 
-.removedpopup .leaveApp .popup-body {
+.leaveApp .popup-body {
   background: white;
   color: #223c4d;
   text-align: center;
   font-weight: 600;
   padding-bottom: 30px;
   font-size: 14px; }
-  .removedpopup .leaveApp .popup-body h4 {
+  .leaveApp .popup-body h4 {
     margin: 0;
     font-size: 25px;
     color: #223c4d;
     font-weight: 600; }
-  .removedpopup .leaveApp .popup-body label {
+  .leaveApp .popup-body label {
     font-size: 12px; }
 
-.removedpopup .leaveApp .popup-head {
+.leaveApp .popup-head {
   padding-top: 30px;
   padding-bottom: 0;
   border-bottom: none !important;
@@ -9989,25 +9948,12 @@ a.button {
   background: white;
   border-radius: 5px; }
 
-.removedpopup .leaveApp .popup-buttons {
+.leaveApp .popup-buttons {
   padding: 0;
   min-height: 40px;
   background: white;
   border: none; }
-  .removedpopup .leaveApp .popup-buttons button {
+  .leaveApp .popup-buttons button {
     border: none;
     min-height: 35px;
     font-size: 12px; }
-
-.players {
-  margin: 10px; }
-  .players img {
-    border: 3px solid white; }
-
-.playerimg {
-  width: 100%; }
-  .playerimg img {
-    width: 60%; }
-  .playerimg h1 {
-    color: white;
-    margin-bottom: 20px !important; }

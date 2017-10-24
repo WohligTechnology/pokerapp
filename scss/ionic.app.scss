@@ -14,79 +14,22 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-
-
-// The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
-
-.bgImg{
-    background-image: url(../img/bg-added.jpg);
-    width: auto;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center right;
-}
-
-.mar5{
-    margin-top: 5%!important;
-}
-
-.centerDiv{
-    height: 100vh;
-    position: relative;
-}
-
-.centerRow{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    left: 50%;
-}
-
-.buttonpos{
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-    button{
-        background: transparent!important;
+    
+    // The path for our ionicons font files, relative to the built CSS in www/css
+    $ionicons-font-path: "../lib/ionic/fonts" !default;
+    // Include all of Ionic
+    @import "www/lib/ionic/scss/ionic";
+    .bgImg {
+        background-image: url(../img/bg-added.jpg);
+        width: auto;
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
     }
-    i{
-        font-size: 40px;
-        color: red;
-    }
-}
-
-.cardimg{
-    width: 100%;
-    img{
-width: 50%;
-    }
-    h1{
-        color: white;
-        margin-bottom: 20px!important;
-    }
-}
-
-.removedpopup {
-    h3 {
-      img {
-        max-width: 35px;
-        max-height: 35px;
-        font-size: 30px!important;
-      }
-    }
-    .popup-title{
-        font-size: 30px;
-        padding:20px 20px!important;
-    }
-    .popup {
-      border-radius: 5px;
-      width: 600px;
-
+    
+    .mar50 {
+        margin-top: 50%;
     }
     
     .centerDiv {
@@ -199,7 +142,6 @@ width: 50%;
             }
         }
     }
-
     
     .leaveApp {
         h3 {
@@ -248,26 +190,3 @@ width: 50%;
             }
         }
     }
-
-  }
-
-  .players{
- margin: 10px;
- img{
-    border: 3px solid white;
- }
-
-
-  }
-
-  .playerimg{
-    width: 100%;
-    img{
-width: 60%;
-    }
-    h1{
-        color: white;
-        margin-bottom: 20px!important;
-    }
-}
-

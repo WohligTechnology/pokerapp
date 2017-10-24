@@ -9823,8 +9823,8 @@ a.button {
   background-repeat: no-repeat;
   background-position: center right; }
 
-.mar50 {
-  margin-top: 50%; }
+.mar5 {
+  margin-top: 5% !important; }
 
 .centerDiv {
   height: 100vh;
@@ -9850,6 +9850,9 @@ a.button {
   width: 100%; }
   .cardimg img {
     width: 50%; }
+  .cardimg h1 {
+    color: white;
+    margin-bottom: 20px !important; }
 
 .table-border {
   border: 3px solid #fff;
@@ -9957,3 +9960,16 @@ a.button {
     border: none;
     min-height: 35px;
     font-size: 12px; }
+
+.players {
+  margin: 10px; }
+  .players img {
+    border: 3px solid white; }
+
+.playerimg {
+  width: 100%; }
+  .playerimg img {
+    width: 60%; }
+  .playerimg h1 {
+    color: white;
+    margin-bottom: 20px !important; }

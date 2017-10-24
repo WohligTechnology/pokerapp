@@ -30,8 +30,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     background-position: center right;
 }
 
-.mar50{
-    margin-top: 50%;
+.mar5{
+    margin-top: 5%!important;
 }
 
 .centerDiv{
@@ -63,6 +63,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     width: 100%;
     img{
 width: 50%;
+    }
+    h1{
+        color: white;
+        margin-bottom: 20px!important;
     }
 }
 
@@ -170,3 +174,23 @@ width: 50%;
       }
     }
   }
+
+  .players{
+ margin: 10px;
+ img{
+    border: 3px solid white;
+ }
+
+
+  }
+
+  .playerimg{
+    width: 100%;
+    img{
+width: 60%;
+    }
+    h1{
+        color: white;
+        margin-bottom: 20px!important;
+    }
+}

@@ -29,3 +29,39 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     background-repeat: no-repeat;
     background-position: center right;
 }
+
+.mar50{
+    margin-top: 50%;
+}
+
+.centerDiv{
+    height: 100vh;
+    position: relative;
+}
+
+.centerRow{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+.buttonpos{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    button{
+        background: transparent!important;
+    }
+    i{
+        font-size: 40px;
+        color: red;
+    }
+}
+
+.cardimg{
+    width: 100%;
+    img{
+width: 50%;
+    }
+}

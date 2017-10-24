@@ -1,31 +1,23 @@
 <ion-view view-title="Home">
-   
     <ion-content class="bgImg">
         <div class="centerDiv">
-                <div class="row text-center centerRow">
-                        <div class="col-50" ng-click='youlose()'>
-                            <div class="cardimg">
-                                    <img class="img-responsive" src="img/q.png" alt="">
-                            </div>
-                            
-                        </div>
-            
-                        <div class="col-50">
-                                <div class="cardimg" ng-click='yowin()'>
-                                        <img class="img-responsive" src="img/a.png" alt="">
-                                </div>
-            
-                            </div>
+            <div class="row text-center centerRow">
+                <div class="col-50" ng-click='youlose()'>
+                    <div class="cardimg">
+                        <img class="img-responsive" src="img/q.png" alt="">
                     </div>
-                    
-                    <div class=" text-right buttonpos" ng-click='fold()' >
-                            <button class="button">
-                                   <i class="ion ion-chevron-right"></i>
-                                                  </button>
-                          </div>
+                </div>
+                <div class="col-50">
+                    <div class="cardimg" ng-click='yowin()'>
+                        <img class="img-responsive" src="img/a.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class=" text-right buttonpos" ng-click='fold()'>
+                <button class="button">
+                        <i class="ion ion-chevron-right"></i>
+                </button>
+            </div>
         </div>
-      
-          
     </ion-content>
-
-  </ion-view>
+</ion-view>

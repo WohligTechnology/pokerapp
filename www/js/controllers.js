@@ -55,6 +55,9 @@ angular.module('starter.controllers', [])
 .controller('HomeCtrl', function($scope, $stateParams) {
   
 })
+.controller('TableCtrl', function($scope, $stateParams) {
+  
+})
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

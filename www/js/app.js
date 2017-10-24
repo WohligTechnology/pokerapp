@@ -37,6 +37,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: 'templates/home.html' ,
         controller: 'HomeCtrl'
   })
+    .state('table', {
+    url: '/table',
+        templateUrl: 'templates/table.html' ,
+        controller: 'TableCtrl'
+  })
+
 
   .state('app.search', {
     url: '/search',

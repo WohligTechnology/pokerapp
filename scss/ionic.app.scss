@@ -67,12 +67,27 @@ $dark:                            #444 !default;
     .table-border {
         border: 3px solid #fff;
         height: 180px;
+        width: 180px;
         margin: 10px;
         background-color: transparent;
+        display: table;
+    }
+    
+    .dis-cell {
+        display: table-cell;
+        vertical-align: middle;
         h2 {
             text-align: center;
             color: #fff !important;
-            margin-top: 55px;
+        }
+        &:hover{
+            background-color: red;
+        }
+        &:active{
+               background-color: red;
+        }
+        &:focus{
+             background-color: red;
         }
     }
     
@@ -190,8 +205,8 @@ $dark:                            #444 !default;
             }
         }
     }
-
-    .players{
+    
+    .players {
         margin: 10px;
         img{
            border: 3px solid white;
@@ -214,3 +229,15 @@ $dark:                            #444 !default;
        .selected{
            border: 3px solid orangered;
        }
+      
+    
+    .playerimg {
+        width: 100%;
+        img {
+            width: 60%;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 20px!important;
+        }
+    }

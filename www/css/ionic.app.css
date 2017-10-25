@@ -9854,12 +9854,23 @@ a.button {
 .table-border {
   border: 3px solid #fff;
   height: 180px;
+  width: 180px;
   margin: 10px;
-  background-color: transparent; }
-  .table-border h2 {
+  background-color: transparent;
+  display: table; }
+
+.dis-cell {
+  display: table-cell;
+  vertical-align: middle; }
+  .dis-cell h2 {
     text-align: center;
-    color: #fff !important;
-    margin-top: 55px; }
+    color: #fff !important; }
+  .dis-cell:hover {
+    background-color: red; }
+  .dis-cell:active {
+    background-color: red; }
+  .dis-cell:focus {
+    background-color: red; }
 
 .mar-t {
   margin-top: 20%; }

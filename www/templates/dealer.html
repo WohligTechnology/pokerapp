@@ -1,61 +1,19 @@
 <ion-view view-title="Dealer">
   <ion-content class="bgImg">
     <div class="centerDiv">
-      <div class="row text-center mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
+      <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
         <div class="col-25 col-sm-25 " ng-repeat= 'p in player.p track by $index' ng-init="a=a1+'-'+$index">
-          <div class="playerimg players"  ng-class="{'selected' : (a==selected)} ">{{a}}
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>{{p.player}}</h1>
+          <div class="players text-center"  ng-class="{'selected' : (a==selected)} ">{{a}}
+            <div class="playerimg">
+            <img class="img-responsive" src="img/person.png" alt="">
+            </div>
+            <h2>{{p.player}}</h2>
           </div>
         </div>
-        <!-- <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 2</h1>
-          </div>
-        </div> -->
-        <!-- <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 3</h1>
-          </div>
-        </div> -->
-        <!-- <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 4</h1>
-          </div>
-        </div> -->
-      </div>
-      <!-- <div class="row text-center mar5">
-        <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 5</h1>
-          </div>
-        </div>
-        <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 6</h1>
-          </div>
-        </div>
-        <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 7</h1>
-          </div>
-        </div>
-        <div class="col-25">
-          <div class="playerimg players">
-            <img class="img-responsive " src="img/person.png" alt="">
-            <h1>Player 8</h1>
-          </div>
-        </div>
-      </div> -->
-      <div class="row text-center ">
-        <div class="col-20">
-            <div class="cardimg">
+         </div>
+      <div class="row text-center">
+        <div class="col-20 ">
+            <div class="cardimg ">
                 <img class="img-responsive" src="img/q.png" alt="">
 
             </div>

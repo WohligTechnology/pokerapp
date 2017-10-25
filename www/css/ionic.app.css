@@ -9846,10 +9846,13 @@ a.button {
     font-size: 40px;
     color: red; }
 
-.cardimg {
+.cardimg1 {
   width: 100%; }
-  .cardimg img {
-    width: 50%; }
+  .cardimg1 img {
+    width: 60%; }
+
+.cardimg {
+  margin: 30% 0%; }
 
 .table-border {
   border: 3px solid #fff;
@@ -9973,14 +9976,12 @@ a.button {
   margin: 10px; }
   .players img {
     border: 3px solid white; }
-
-.playerimg {
-  width: 100%; }
-  .playerimg img {
-    width: 60%; }
-  .playerimg h1 {
+  .players h2 {
     color: white;
     margin-bottom: 20px !important; }
+
+.playerimg {
+  width: 60%; }
 
 .selected {
   border: 3px solid orangered; }

@@ -58,21 +58,26 @@ $dark:                            #444 !default;
     }
     
     .cardimg1 {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         img {
-            width: 60%;
+            width: 100%;
         }
     }
     
     .cardimg {
-        margin: 30% 0%;
+        margin: 30% auto;
+        width: 60%;
+        img{
+            width: 100%;
+        }
     }
     
     .table-border {
         border: 3px solid #fff;
         height: 180px;
         width: 180px;
-        margin: 10px;
+        margin: 10px auto;
         background-color: transparent;
         display: table;
     }
@@ -238,4 +243,8 @@ $dark:                            #444 !default;
             color: white;
             margin-bottom: 20px!important;
         }
+    }
+
+    .dummydiv{
+        height: 400px;
     }

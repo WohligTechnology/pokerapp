@@ -79,7 +79,6 @@ angular.module('starter.controllers', [])
           text: 'OK',
           // cssClass: 'leaveApp',
           onTap: function (e) {
-            $state.go('table')
           }
         }, ]
       });
@@ -94,7 +93,6 @@ angular.module('starter.controllers', [])
           text: 'OK',
           // cssClass: 'leaveApp',
           onTap: function (e) {
-            $state.go('table')
           }
         }, ]
       });
@@ -109,7 +107,6 @@ angular.module('starter.controllers', [])
           text: 'OK',
           // cssClass: 'leaveApp',
           onTap: function (e) {
-            $state.go('table')
           }
         }, ]
       });

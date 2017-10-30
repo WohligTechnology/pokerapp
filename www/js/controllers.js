@@ -114,8 +114,19 @@ angular.module('starter.controllers', [])
   })
 
 
-  .controller('DealerCtrl', function ($scope, $stateParams) {
+  .controller('DealerCtrl', function ($scope, $stateParams,apiService) {
+    this.updatePlayers= function (){
+      apiService.callApiWithData('Player/getAll',{},function(data){
+      $scope.players = [];
+            var playerData =  data.playerCards;
+         var playersArr  = _.chunk(data.data.data.playerCards, 4);
+         $scope.players =  playersArr;    
+    });
+  }
+    this.updatePlayers();
 
+    //console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
+  //apiService
     $scope.players = [{
 
         'p': [{
@@ -169,10 +180,14 @@ angular.module('starter.controllers', [])
 
     $scope.currentPlayer = 0
 
-    $scope.move = function () {
+    $scope.move = function (playerNo) {
+      apiService.callApiWithData('Player/changeTurn',{},function(data){
+        this.updatePlayers();
+      });
+    
       $scope.selected='0-0';
       count++;
-      console.log(count);
+      console.log(playerNo);
       counter=count%4;
       console.log("hello",counter);
       if (0<count && count<4) {

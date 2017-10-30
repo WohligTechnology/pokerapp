@@ -248,3 +248,30 @@ $dark:                            #444 !default;
     .dummydiv{
         height: 10px;
     }
+
+
+    .rel{
+        position: relative;
+    }
+    .cardbtn{
+        position: absolute;
+        
+        transform: translate(-50%,-50%);
+        button{
+            font-size: 30px;
+            padding: 10px 30px;
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+    .card1-top{
+        top: 44%;
+        left: 30%;
+    }
+    .card2-top{
+        top: 44%;
+        right: 2%;
+    }
+    .back-color{
+        background-color: rgba(248, 248, 248, 0.7) !important;
+    }

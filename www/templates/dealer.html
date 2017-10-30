@@ -11,46 +11,76 @@
           </div>
         </div>
          </div>
-      <div class="row text-center">
-        <div class="col-20 ">
-            <div class="cardimg ">
-                <img class="img-responsive" src="img/q.png" alt="">
-
+         <div class="rel" >
+          <div class="row text-center">
+               <div class="col-20" ng-show="show3cards">
+                  <div class="cardimg " >
+                      <img class="img-responsive" src="img/q.png" alt="">
+                  </div>
+               </div>
+                  <div class="col-20" ng-show="!show3cards">
+                    <div class="cardimg">
+                        <img class="img-responsive" src="img/download.jpeg" alt="">
+                     </div>
+                   </div>
+                 <div class="col-20" ng-show="show3cards">
+                    <div class="cardimg" >
+                       <img class="img-responsive" src="img/a.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-20 " ng-show="!show3cards">
+                    <div class="cardimg ">
+                        <img class="img-responsive" src="img/download.jpeg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-20" ng-show="show3cards">
+                      <div class="cardimg">
+                          <img class="img-responsive" src="img/q.png" alt="">
+                      </div>
+                  </div>
+                   <div class="col-20 " ng-show="!show3cards">
+                        <div class="cardimg ">
+                            <img class="img-responsive" src="img/download.jpeg" alt="">
+                        </div>
+                  </div>
+                  <div class="col-20" ng-show="show2cards">
+                      <div class="cardimg" >
+                          <img class="img-responsive" src="img/a.png" alt="">
+                      </div>
+                  </div>
+                  <div class="col-20 " ng-show="!show2cards">
+                          <div class="cardimg ">
+                              <img class="img-responsive" src="img/download.jpeg" alt="">
+                          </div>
+                    </div>
+                  <div class="col-20" ng-show="show2cards">
+                      <div class="cardimg">
+                          <img class="img-responsive" src="img/q.png" alt="">
+                      </div>
+                  </div>
+                  <div class="col-20 " ng-show="!show2cards">
+                          <div class="cardimg ">
+                              <img class="img-responsive" src="img/download.jpeg" alt="">
+                          </div>
+                    </div>
+                  <div class="cardbtn card1-top" ng-click="show3cards=true" ng-show="!show3cards">
+              <button class="button back-color" >Show</button>
             </div>
-        </div>
-        <div class="col-20">
-            <div class="cardimg" >
-                <img class="img-responsive" src="img/a.png" alt="">
-            </div>
-        </div>
-        <div class="col-20" >
-                <div class="cardimg">
-                    <img class="img-responsive" src="img/q.png" alt="">
-    
+            <div class=" cardbtn card2-top" ng-click="show2cards=true" ng-show="!show2cards">
+                  <button class="button back-color" >Show</button>
                 </div>
-            </div>
-            <div class="col-20">
-                <div class="cardimg" >
-                    <img class="img-responsive" src="img/a.png" alt="">
-                </div>
-            </div>
-            <div class="col-20" >
-                <div class="cardimg">
-                    <img class="img-responsive" src="img/q.png" alt="">
-    
-                </div>
-            </div>
-    </div>
-      <div class="row ">
-        <div class="col-50 text-center" ng-click='move($index)'>
-          <button class="button btn-start">Move</button>
-        </div>
+          </div>
+      </div>
+      <div class="row">
+         <div class="col-50 text-center" ng-click='move($index)'>
+            <button class="button btn-start">Move</button>
+         </div>
         <div class="col-50 text-center">
           <button class="button btn-start">Fold</button>
         </div>
       </div>
       <div class="text-center">
-        <button class="button btn-start" ui-sref="dealer">show</button>
+        <button class="button btn-start">Show</button>
       </div>
     </div>
   </ion-content>

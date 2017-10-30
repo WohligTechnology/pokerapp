@@ -9198,10 +9198,7 @@ a.button {
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
   max-width: 20%; }
-  
-  .blurEffect{
-    opacity: 0.5;
-}
+
 .col-25 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 25%;
@@ -9900,32 +9897,81 @@ a.button {
 .removedpopup h3 img {
   max-width: 35px;
   max-height: 35px;
-  font-size: 30px !important; }
+  font-size: 20px !important; }
 
 .removedpopup .popup-title {
-  font-size: 30px;
-  padding: 20px 20px !important; }
+  font-size: 20px;
+  padding: 0px 0px !important; }
 
 .removedpopup .popup {
   border-radius: 5px;
-  width: 600px; }
+  width: 250px; }
 
 .removedpopup .popup-body {
   background: white;
   color: #223c4d;
   text-align: center;
   font-weight: 600;
+  padding: 10px 10px;
+  font-size: 20px; }
+  .removedpopup .popup-body h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #223c4d;
+    font-weight: 600; }
+  .removedpopup .popup-body label {
+    font-size: 20px; }
+
+.removedpopup .popup-head {
+  padding-top: 10px;
+  padding-bottom: 0;
+  border-bottom: none !important;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  font-size: 20px !important; }
+
+.removedpopup .popup-buttons {
+  padding: 0;
+  min-height: 20px;
+  background: cornflowerblue !important;
+  border: none;
+  font-size: 20px; }
+  .removedpopup .popup-buttons button {
+    border: none;
+    min-height: 40px;
+    font-size: 20px;
+    background: cornflowerblue !important; }
+
+.platform-ipad .removedpopup h3 img {
+  max-width: 35px;
+  max-height: 35px;
+  font-size: 30px !important; }
+
+.platform-ipad .removedpopup .popup-title {
+  font-size: 30px;
+  padding: 20px 20px !important; }
+
+.platform-ipad .removedpopup .popup {
+  border-radius: 5px;
+  width: 600px; }
+
+.platform-ipad .removedpopup .popup-body {
+  background: white;
+  color: #223c4d;
+  text-align: center;
+  font-weight: 600;
   padding: 30px 30px;
   font-size: 30px; }
-  .removedpopup .popup-body h4 {
+  .platform-ipad .removedpopup .popup-body h4 {
     margin: 0;
     font-size: 250px;
     color: #223c4d;
     font-weight: 600; }
-  .removedpopup .popup-body label {
+  .platform-ipad .removedpopup .popup-body label {
     font-size: 25px; }
 
-.removedpopup .popup-head {
+.platform-ipad .removedpopup .popup-head {
   padding-top: 20px;
   padding-bottom: 0;
   border-bottom: none !important;
@@ -9934,13 +9980,13 @@ a.button {
   border-radius: 5px;
   font-size: 30px !important; }
 
-.removedpopup .popup-buttons {
+.platform-ipad .removedpopup .popup-buttons {
   padding: 0;
   min-height: 40px;
   background: cornflowerblue !important;
   border: none;
   font-size: 30px; }
-  .removedpopup .popup-buttons button {
+  .platform-ipad .removedpopup .popup-buttons button {
     border: none;
     min-height: 60px;
     font-size: 25px;
@@ -9986,17 +10032,18 @@ a.button {
     min-height: 35px;
     font-size: 12px; }
 
-.players {
-  margin: 10px; }
-  .players img {
-    border: 3px solid white; }
-  .players h2 {
-    color: white;
-    margin-bottom: 20px !important;
-    font-size: 20px; }
+.players img {
+  border: 3px solid white; }
 
-.platform-ipad .players h2 {
-  font-size: 30px; }
+.players h2 {
+  color: white;
+  margin-bottom: 20px !important;
+  font-size: 20px; }
+
+.platform-ipad .players {
+  margin: 10px; }
+  .platform-ipad .players h2 {
+    font-size: 30px; }
 
 .playerimg {
   width: 60%; }
@@ -10023,13 +10070,14 @@ a.button {
   position: absolute;
   background: rgba(128, 128, 128, 0.71);
   transform: translate(-50%, -50%);
-  top: 28%;
+  top: 35%;
   left: 50%;
   font-size: 20px; }
 
 .platform-ipad .playerfold {
   font-size: 26px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  top: 40%; }
 
 .cardbtn {
   position: absolute;

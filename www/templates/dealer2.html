@@ -4,11 +4,11 @@
       <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
 
         <div class="col-25 col-sm-25 " ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >
-          <label class="playerfold" for="" ng-if="p.isFold">Fold</label>
+          
           <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
             <img class="img-responsive" src="img/person.png" alt="">
-            <!-- <div ng-show="p.isFold"></div> -->
+            <div ng-show="p.isFold"></div>
             </div>
             
             <h2>Player{{p.playerNo}}</h2>

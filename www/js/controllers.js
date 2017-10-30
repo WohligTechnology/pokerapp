@@ -115,16 +115,25 @@ angular.module('starter.controllers', [])
 
 
   .controller('DealerCtrl', function ($scope, $stateParams,apiService) {
-    this.updatePlayers= function (){
+    $scope.updatePlayers= function (){
       apiService.callApiWithData('Player/getAll',{},function(data){
       $scope.players = [];
             var playerData =  data.playerCards;
          var playersArr  = _.chunk(data.data.data.playerCards, 4);
-         $scope.players =  playersArr;    
+         $scope.players =  playersArr;
+         console.log(".....");
+         console.log(data.data.data.communityCards);
+         $scope.communityCards = data.data.data.communityCards;     
     });
   }
-    this.updatePlayers();
+  $scope.updatePlayers();
+  $scope.showCards = function(){
+    apiService.callApiWithData('Player/revealCards',{},function(data){
+      $scope.updatePlayers();
+    });
+    //revealCards
 
+  }
     //console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
   //apiService
     $scope.players = [{
@@ -181,8 +190,8 @@ angular.module('starter.controllers', [])
     $scope.currentPlayer = 0
 
     $scope.move = function (playerNo) {
-      apiService.callApiWithData('Player/changeTurn',{},function(data){
-        this.updatePlayers();
+      apiService.callApiWithData('Player/moveturn',{},function(data){
+        $scope.updatePlayers();
       });
     
       $scope.selected='0-0';
@@ -200,6 +209,12 @@ angular.module('starter.controllers', [])
        count=0;
        
     }
+  }
+
+  $scope.foldUser =function(){
+    apiService.callApiWithData('Player/fold',{},function(data){
+      $scope.updatePlayers();
+    });
   }
   })
   .controller('TableCtrl', function ($scope, $stateParams) {

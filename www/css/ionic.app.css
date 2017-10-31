@@ -9837,11 +9837,6 @@ a.button {
   left: 50%; }
 
 .buttonpos {
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-  width: 50%;
-  display: block;
   margin: 20px 45px; }
   .buttonpos button {
     background: transparent !important; }
@@ -9865,7 +9860,23 @@ a.button {
   border: 3px solid #fff;
   margin: 10px auto;
   background-color: transparent;
-  display: table; }
+  display: table;
+  width: 100%;
+  height: 200px; }
+
+.platform-android .table-border {
+  border: 3px solid #fff;
+  height: 100px;
+  margin: 10px auto !important;
+  background-color: transparent !important;
+  display: table !important; }
+
+.platform-ios .table-border {
+  border: 3px solid #fff;
+  height: 100px;
+  margin: 10px auto !important;
+  background-color: transparent !important;
+  display: table !important; }
 
 .platform-ipad .table-border {
   height: 180px;
@@ -9878,6 +9889,12 @@ a.button {
     text-align: center;
     color: #fff !important;
     font-size: 25px !important; }
+
+.platform-ios .dis-cell h2 {
+  font-size: 20px !important; }
+
+.platform-android .dis-cell h2 {
+  font-size: 20px !important; }
 
 .mar-t {
   margin-top: 20%; }
@@ -10113,16 +10130,41 @@ a.button {
 .backgroundcl {
   background: red; }
 
-.player-select {
+.platform-ipad .player-select {
   width: 50%;
   display: block;
   margin: 20px 45px; }
-  .player-select .input-label {
+  .platform-ipad .player-select .input-label {
     font-size: 24px !important;
+    color: white !important; }
+  .platform-ipad .player-select .item {
+    background-color: transparent !important;
+    color: white !important;
+    font-size: 16px !important; }
+  .platform-ipad .player-select .item-select select {
+    font-size: 24px !important; }
+
+.player-select {
+  width: 60%;
+  display: block;
+  margin: 20px 45px; }
+  .player-select .input-label {
+    font-size: 16px !important;
     color: white !important; }
   .player-select .item {
     background-color: transparent !important;
     color: white !important;
     font-size: 16px !important; }
   .player-select .item-select select {
-    font-size: 24px !important; }
+    font-size: 16px !important;
+    border-radius: 0px !important;
+    direction: ltr !important; }
+
+@media only screen and (max-width: 800px) and (min-width: 1280px) {
+  .table-border {
+    border: 3px solid #fff;
+    margin: 10px auto;
+    background-color: transparent;
+    display: table;
+    width: 100%;
+    height: 200px; } }

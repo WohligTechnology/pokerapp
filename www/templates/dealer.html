@@ -3,8 +3,8 @@
     <div class="centerDiv">
       <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
 
-        <div class="col-25 col-sm-25 " ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >
-          <label class="playerfold" for="" ng-if="p.isFold">Fold</label>
+        <div class="col-25 col-sm-25 rel" ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >{{player.length}}
+          <label class="playerfold" ng-if="p.isFold">Fold</label>
           <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
             <img class="img-responsive" src="img/person.png" alt="">
@@ -29,6 +29,9 @@
 
           </div>
       </div>
+      <div class=" "  id = "deckCard">
+        <!-- <img class="img-responsive" src="img/q.png" alt=""> -->
+    </div>
       <div class="row">
          <div class="col-50 text-center" ng-click='move($index)'>
             <button class="button btn-start">Move</button>

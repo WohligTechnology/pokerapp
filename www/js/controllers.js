@@ -121,11 +121,14 @@ angular.module('starter.controllers', [])
             var playerData =  data.playerCards;
          var playersArr  = _.chunk(data.data.data.playerCards, 4);
          $scope.players =  playersArr;
+         
          console.log(".....");
          console.log(data.data.data.communityCards);
          $scope.communityCards = data.data.data.communityCards;     
     });
   }
+  // var canvas = document.getElementById('deckCard').getContext('2d');
+  // canvas.drawPokerCard(10, 10, 120, 'hearts', '6');
   $scope.updatePlayers();
   $scope.showCards = function(){
     apiService.callApiWithData('Player/revealCards',{},function(data){

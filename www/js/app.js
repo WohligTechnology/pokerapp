@@ -100,7 +100,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       },
       templateUrl: '/templates/directive/card.html',
       link: function ($scope, element, attr) {
+        console.log("the length is: " + $scope.card);
         if ($scope.card.length == 2) {
+          
           $scope.cardColor = $scope.card[1];
           $scope.cardNo = $scope.card[0];
           if ($scope.card[0] == "T") {

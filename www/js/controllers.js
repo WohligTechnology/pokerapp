@@ -218,7 +218,10 @@ angular.module('starter.controllers', [])
     }
   })
   .controller('TableCtrl', function ($scope, $stateParams) {
-
+      $scope.startGame = function(){
+            console.log("start game"); 
+      }
+      $scope.players = [1,2,3,4,5,6,7,8];
   })
 
   .controller('PlaylistCtrl', function ($scope, $stateParams) {});

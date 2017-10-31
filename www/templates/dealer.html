@@ -19,19 +19,11 @@
          <div class="rel" >
           <div class="row text-center"  >
                <div class="col-20" ng-repeat= 'card in communityCards track by $index'>
-                  <div class="cardimg " ng-if ="card == ''">
-                      <img class="img-responsive" src="img/download.jpeg" alt="">
-                  </div>
-                  <div class="cardimg " ng-if ="card != ''">
-                    <img class="img-responsive" src="img/q.png" alt="">
-                </div>
+                  <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
                </div>
-
           </div>
       </div>
-      <div class=" "  id = "deckCard">
-        <!-- <img class="img-responsive" src="img/q.png" alt=""> -->
-    </div>
+     
       <div class="row">
          <div class="col-50 text-center" ng-click='move($index)'>
             <button class="button btn-start">Move</button>

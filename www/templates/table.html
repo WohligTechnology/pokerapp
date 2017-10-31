@@ -61,8 +61,21 @@
                     </div>
                 </div>
             </div>
+            <div class="list player-select">
+                    
+            <label class="item item-input item-select">
+                    <div class="input-label">
+                     Dealer
+                    </div>
+                    <select ng-model="dealerPlayer">
+
+                      <option ng-repeat="p in players"  value="{{p}}">Player{{p}}</option>
+                      
+                    </select>
+            </label>
+            </div>
             <div class="text-center">
-                <button class="button btn-start" ui-sref="dealer">Start</button>
+                <button class="button btn-start" ui-sref="dealer" ng-click="startGame();">Start</button>
             </div>
         </div>
     </ion-content>

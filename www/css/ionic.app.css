@@ -10129,7 +10129,9 @@ a.button {
 
 .backgroundcl {
   background: red; }
-
+  .blurEffect{
+    opacity: 0.5;
+  }
 .platform-ipad .player-select {
   width: 50%;
   display: block;

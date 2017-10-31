@@ -5,6 +5,7 @@
 
         <div class="col-25 col-sm-25 rel" ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >{{player.length}}
           <label class="playerfold" ng-if="p.isFold">Fold</label>
+          <label class="playerfold" ng-if="p.playerNo | declareWinner : winnerData" style="background:green">Winner</label>
           <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
             <img class="img-responsive" src="img/person.png" alt="">
@@ -36,6 +37,15 @@
       <div class="text-center" ng-click="showCards();">
         <button class="button btn-start">Show</button>
       </div>
-    </div>
+      <div class="row">
+          <div class="col-50 text-center" ng-click='newGame()'>
+             <button class="button btn-start">New Game</button>
+          </div>
+          
+         <div class="col-50 text-center" ng-click="showWinner()">
+           <button class="button btn-start">Show Winner</button>
+         </div>
+       </div>
+   </div>
   </ion-content>
 </ion-view>

@@ -1,4 +1,3 @@
-
 myApp = angular.module('starter');
 
 myApp.factory('apiService', function ($http, $q, $timeout) {

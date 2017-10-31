@@ -9864,14 +9864,7 @@ a.button {
   width: 100%;
   height: 200px; }
 
-.platform-android .table-border {
-  border: 3px solid #fff;
-  height: 100px;
-  margin: 10px auto !important;
-  background-color: transparent !important;
-  display: table !important; }
-
-.platform-ios .table-border {
+.table-border {
   border: 3px solid #fff;
   height: 100px;
   margin: 10px auto !important;
@@ -10006,46 +9999,6 @@ a.button {
     font-size: 25px;
     background: cornflowerblue !important; }
 
-.leaveApp h3 img {
-  max-width: 35px;
-  max-height: 35px; }
-
-.leaveApp .popup {
-  border-radius: 5px; }
-
-.leaveApp .popup-body {
-  background: white;
-  color: #223c4d;
-  text-align: center;
-  font-weight: 600;
-  padding-bottom: 30px;
-  font-size: 14px; }
-  .leaveApp .popup-body h4 {
-    margin: 0;
-    font-size: 25px;
-    color: #223c4d;
-    font-weight: 600; }
-  .leaveApp .popup-body label {
-    font-size: 12px; }
-
-.leaveApp .popup-head {
-  padding-top: 30px;
-  padding-bottom: 0;
-  border-bottom: none !important;
-  text-align: center;
-  background: white;
-  border-radius: 5px; }
-
-.leaveApp .popup-buttons {
-  padding: 0;
-  min-height: 40px;
-  background: white;
-  border: none; }
-  .leaveApp .popup-buttons button {
-    border: none;
-    min-height: 35px;
-    font-size: 12px; }
-
 .players img {
   border: 3px solid white; }
 
@@ -10128,10 +10081,8 @@ a.button {
   background-color: rgba(248, 248, 248, 0.7) !important; }
 
 .backgroundcl {
-  background: red; }
-  .blurEffect{
-    opacity: 0.5;
-  }
+  background: #215767 !important; }
+
 .platform-ipad .player-select {
   width: 50%;
   display: block;

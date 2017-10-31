@@ -86,7 +86,7 @@ $dark:                            #444 !default;
         height: 200px;
     }
     
-    .platform-android .table-border {
+    .table-border {
         border: 3px solid #fff;
         height: 100px;
         margin: 10px auto!important;
@@ -94,14 +94,6 @@ $dark:                            #444 !default;
         display: table!important;
     }
 
-  .platform-ios .table-border {
-        border: 3px solid #fff;
-        height: 100px;
-        margin: 10px auto!important;
-        background-color: transparent!important;
-        display: table!important;
-    }
-    
     .platform-ipad  .table-border {
         height: 180px;
         width: 180px; 
@@ -267,53 +259,7 @@ $dark:                            #444 !default;
         }
     }
     
-    .leaveApp {
-        h3 {
-            img {
-                max-width: 35px;
-                max-height: 35px;
-            }
-        }
-        .popup {
-            border-radius: 5px;
-        }
-        .popup-body {
-            background: white;
-            color: #223c4d;
-            text-align: center;
-            font-weight: 600;
-            padding-bottom: 30px;
-            font-size: 14px;
-            h4 {
-                margin: 0;
-                font-size: 25px;
-                color: #223c4d;
-                font-weight: 600;
-            }
-            label {
-                font-size: 12px;
-            }
-        }
-        .popup-head {
-            padding-top: 30px;
-            padding-bottom: 0;
-            border-bottom: none!important;
-            text-align: center;
-            background: white;
-            border-radius: 5px;
-        }
-        .popup-buttons {
-            padding: 0;
-            min-height: 40px;
-            background: white;
-            border: none;
-            button {
-                border: none;
-                min-height: 35px;
-                font-size: 12px;
-            }
-        }
-    }
+   
     
     .players {
         img {
@@ -418,8 +364,8 @@ $dark:                            #444 !default;
         background-color: rgba(248, 248, 248, 0.7) !important;
     }
 
-    .backgroundcl{
-        background: red;
+     .backgroundcl{ 
+        background: #215767 !important;
     }
     .platform-ipad  .player-select{
         width: 50%;

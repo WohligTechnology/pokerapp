@@ -9875,12 +9875,6 @@ a.button {
     text-align: center;
     color: #fff !important;
     font-size: 25px !important; }
-  .dis-cell:hover {
-    background-color: red; }
-  .dis-cell:active {
-    background-color: red; }
-  .dis-cell:focus {
-    background-color: red; }
 
 .mar-t {
   margin-top: 20%; }
@@ -10112,3 +10106,6 @@ a.button {
 
 .back-color {
   background-color: rgba(248, 248, 248, 0.7) !important; }
+
+.backgroundcl {
+  background: red; }

@@ -218,7 +218,11 @@ angular.module('starter.controllers', [])
   }
   })
   .controller('TableCtrl', function ($scope, $stateParams) {
-
+    $scope.table1 = false;
+$scope.clickTable=function(){
+  $scope.table1 =! $scope.table1
+}
+$scope.tableclick= 'Table 1'
   })
 
   .controller('PlaylistCtrl', function ($scope, $stateParams) {});

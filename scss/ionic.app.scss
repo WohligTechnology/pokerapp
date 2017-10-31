@@ -95,15 +95,15 @@ $dark:                            #444 !default;
             color: #fff !important;
             font-size: 25px!important;
         }
-        &:hover {
-            background-color: red;
-        }
-        &:active {
-            background-color: red;
-        }
-        &:focus {
-            background-color: red;
-        }
+        // &:hover {
+        //     background-color: red;
+        // }
+        // &:active {
+        //     background-color: red;
+        // }
+        // &:focus {
+        //     background-color: red;
+        // }
     }
     
     .mar-t {
@@ -386,4 +386,8 @@ $dark:                            #444 !default;
     }
     .back-color{
         background-color: rgba(248, 248, 248, 0.7) !important;
+    }
+
+    .backgroundcl{
+        background: red;
     }

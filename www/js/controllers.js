@@ -78,11 +78,10 @@ angular.module('starter.controllers', [])
         buttons: [{
           text: 'OK',
           // cssClass: 'leaveApp',
-          onTap: function (e) {
-          }
+          onTap: function (e) {}
         }, ]
       });
-    }
+    };
 
     $scope.youwin = function () {
       $ionicPopup.alert({
@@ -92,8 +91,7 @@ angular.module('starter.controllers', [])
         buttons: [{
           text: 'OK',
           // cssClass: 'leaveApp',
-          onTap: function (e) {
-          }
+          onTap: function (e) {}
         }, ]
       });
     }
@@ -106,36 +104,38 @@ angular.module('starter.controllers', [])
         buttons: [{
           text: 'OK',
           // cssClass: 'leaveApp',
-          onTap: function (e) {
-          }
+          onTap: function (e) {}
         }, ]
       });
     }
   })
 
 
-  .controller('DealerCtrl', function ($scope, $stateParams,apiService) {
-    $scope.updatePlayers= function (){
-      apiService.callApiWithData('Player/getAll',{},function(data){
-      $scope.players = [];
-            var playerData =  data.playerCards;
-         var playersArr  = _.chunk(data.data.data.playerCards, 4);
-         $scope.players =  playersArr;
-         console.log(".....");
-         console.log(data.data.data.communityCards);
-         $scope.communityCards = data.data.data.communityCards;     
-    });
-  }
-  $scope.updatePlayers();
-  $scope.showCards = function(){
-    apiService.callApiWithData('Player/revealCards',{},function(data){
-      $scope.updatePlayers();
-    });
-    //revealCards
+  .controller('DealerCtrl', function ($scope, $stateParams, apiService) {
+    $scope.updatePlayers = function () {
+      apiService.callApiWithData('Player/getAll', {}, function (data) {
+        $scope.players = [];
+        var playerData = data.playerCards;
+        var playersArr = _.chunk(data.data.data.playerCards, 4);
+        $scope.players = playersArr;
 
-  }
+        console.log(".....");
+        console.log(data.data.data.communityCards);
+        $scope.communityCards = data.data.data.communityCards;
+      });
+    }
+    // var canvas = document.getElementById('deckCard').getContext('2d');
+    // canvas.drawPokerCard(10, 10, 120, 'hearts', '6');
+    $scope.updatePlayers();
+    $scope.showCards = function () {
+      apiService.callApiWithData('Player/revealCards', {}, function (data) {
+        $scope.updatePlayers();
+      });
+      //revealCards
+
+    }
     //console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
-  //apiService
+    //apiService
     $scope.players = [{
 
         'p': [{
@@ -181,41 +181,41 @@ angular.module('starter.controllers', [])
       },
 
     ]
-    var count=0;
+    var count = 0;
     var counter = 0;
-    $scope.selected='0-0';
+    $scope.selected = '0-0';
     console.log($scope.selected);
     // console.log('helloindex', selected)
 
     $scope.currentPlayer = 0
 
     $scope.move = function (playerNo) {
-      apiService.callApiWithData('Player/moveturn',{},function(data){
+      apiService.callApiWithData('Player/moveturn', {}, function (data) {
         $scope.updatePlayers();
       });
-    
-      $scope.selected='0-0';
+
+      $scope.selected = '0-0';
       count++;
       console.log(playerNo);
-      counter=count%4;
-      console.log("hello",counter);
-      if (0<count && count<4) {
-        $scope.selected = 0+'-'+counter;
+      counter = count % 4;
+      console.log("hello", counter);
+      if (0 < count && count < 4) {
+        $scope.selected = 0 + '-' + counter;
         console.log($scope.selected);
-      } else if(4<=count && count<8){
-        $scope.selected = 1+'-'+counter;
-        console.log("hello",counter);
-    }else{
-       count=0;
-       
-    }
-  }
+      } else if (4 <= count && count < 8) {
+        $scope.selected = 1 + '-' + counter;
+        console.log("hello", counter);
+      } else {
+        count = 0;
 
-  $scope.foldUser =function(){
-    apiService.callApiWithData('Player/fold',{},function(data){
-      $scope.updatePlayers();
-    });
-  }
+      }
+    }
+
+    $scope.foldUser = function () {
+      apiService.callApiWithData('Player/fold', {}, function (data) {
+        $scope.updatePlayers();
+      });
+    }
   })
   .controller('TableCtrl', function ($scope, $stateParams) {
     $scope.table1 = false;
@@ -223,6 +223,10 @@ $scope.clickTable=function(){
   $scope.table1 =! $scope.table1
 }
 $scope.tableclick= 'Table 1'
+      $scope.startGame = function(){
+            console.log("start game"); 
+      }
+      $scope.players = [1,2,3,4,5,6,7,8];
   })
 
   .controller('PlaylistCtrl', function ($scope, $stateParams) {});

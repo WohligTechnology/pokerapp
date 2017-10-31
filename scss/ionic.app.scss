@@ -47,7 +47,9 @@ $dark:                            #444 !default;
     .buttonpos {
         position: absolute;
         bottom: 1%;
-        right: 1%;
+        right: 1%;width: 50%;
+        display: block;
+        margin: 20px 45px;
         button {
             background: transparent!important;
         }
@@ -390,4 +392,21 @@ $dark:                            #444 !default;
 
     .backgroundcl{
         background: red;
+    }
+    .player-select{
+        width: 50%;
+        display: block;
+        margin: 20px 45px;
+        .input-label{
+            font-size: 24px!important;
+            color: white!important;
+        }
+        .item{
+            background-color: transparent!important;
+            color: white!important;
+            font-size: 16px!important;
+        }
+        .item-select select{
+            font-size: 24px!important;
+        }
     }

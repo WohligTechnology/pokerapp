@@ -3,8 +3,8 @@
     <div class="centerDiv">
       <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
 
-        <div class="col-25 col-sm-25 " ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >
-          <label class="playerfold" for="" ng-if="p.isFold">Fold</label>
+        <div class="col-25 col-sm-25 rel" ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >{{player.length}}
+          <label class="playerfold" ng-if="p.isFold">Fold</label>
           <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
             <img class="img-responsive" src="img/person.png" alt="">
@@ -19,16 +19,11 @@
          <div class="rel" >
           <div class="row text-center"  >
                <div class="col-20" ng-repeat= 'card in communityCards track by $index'>
-                  <div class="cardimg " ng-if ="card == ''">
-                      <img class="img-responsive" src="img/download.jpeg" alt="">
-                  </div>
-                  <div class="cardimg " ng-if ="card != ''">
-                    <img class="img-responsive" src="img/q.png" alt="">
-                </div>
+                  <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
                </div>
-
           </div>
       </div>
+     
       <div class="row">
          <div class="col-50 text-center" ng-click='move($index)'>
             <button class="button btn-start">Move</button>

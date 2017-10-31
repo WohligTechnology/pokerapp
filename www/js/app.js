@@ -114,7 +114,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             height: $scope.height + "px"
           };
         } else {
-          console.log("Incorrect Card " + $scope.card);
+          $scope.cardImg = Poker.getBackData(1024, '#58AAAF', '#1F7A80');
+          $scope.style = {
+            width: $scope.width + "px",
+            height: $scope.height + "px"
+          };
         }
 
       }

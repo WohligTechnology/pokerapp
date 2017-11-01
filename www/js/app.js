@@ -84,7 +84,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               width: $scope.width + "px",
               height: $scope.height + "px"
             };
-          } else if ($scope.card == "NONE") {
+          } else if ($scope.card == "NONE" || $scope.card == "") {
             $scope.cardImg = Poker.getBackData(1024, '#535550', '#535550');
             $scope.style = {
               width: $scope.width + "px",
@@ -116,8 +116,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         player: "=ngPlayer"
       },
       templateUrl: '/templates/directive/player.html',
+      link: function ($scope, element, attr) {}
+    };
+  })
+  .directive('community', function () {
+    return {
+      restrict: 'E',
+      replace: false,
+      scope: {
+        communityCard: "=ngCommunityCard"
+      },
+      templateUrl: '/templates/directive/communityCard.html',
       link: function ($scope, element, attr) {
-
+        console.log($scope.communityCard);
       }
     };
   });

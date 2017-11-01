@@ -8,8 +8,8 @@
       </div>
 
       <div class="row text-center">
-        <div class="col-20" ng-repeat='card in communityCards track by $index'>
-          <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
+        <div class="col-20" ng-repeat='communityCard in communityCards track by $index'>
+          <community ng-community-card="communityCard"></community>
         </div>
       </div>
 

@@ -10080,6 +10080,9 @@ a.button {
 .back-color {
   background-color: rgba(248, 248, 248, 0.7) !important; }
 
+.blurEffect {
+  opacity: 0.5; }
+
 .backgroundcl {
   background: #215767 !important; }
 

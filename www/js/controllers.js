@@ -31,8 +31,6 @@ angular.module('starter.controllers', [])
 
     // Perform the login action when the user submits the login form
     $scope.doLogin = function () {
-      console.log('Doing login', $scope.loginData);
-
       // Simulate a login delay. Remove this and replace with your login
       // code if using a login system
       $timeout(function () {
@@ -121,9 +119,6 @@ angular.module('starter.controllers', [])
         var playerData = data.playerCards;
         var playersArr = _.chunk(data.data.data.playerCards, 4);
         $scope.players = playersArr;
-
-        console.log(".....");
-        console.log(data.data.data.communityCards);
         $scope.communityCards = data.data.data.communityCards;
       });
     };
@@ -138,7 +133,6 @@ angular.module('starter.controllers', [])
       });
       //revealCards
     };
-    //console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
     //apiService
     $scope.players = [{
 
@@ -188,10 +182,8 @@ angular.module('starter.controllers', [])
     var count = 0;
     var counter = 0;
     $scope.selected = '0-0';
-    console.log($scope.selected);
-    // console.log('helloindex', selected)
 
-    $scope.currentPlayer = 0
+    $scope.currentPlayer = 0;
 
     $scope.move = function (playerNo) {
       apiService.callApiWithData('Player/moveturn', {}, function (data) {
@@ -200,26 +192,22 @@ angular.module('starter.controllers', [])
 
       $scope.selected = '0-0';
       count++;
-      console.log(playerNo);
       counter = count % 4;
-      console.log("hello", counter);
       if (0 < count && count < 4) {
         $scope.selected = 0 + '-' + counter;
-        console.log($scope.selected);
       } else if (4 <= count && count < 8) {
         $scope.selected = 1 + '-' + counter;
-        console.log("hello", counter);
       } else {
         count = 0;
 
       }
-    }
+    };
 
     $scope.foldUser = function () {
       apiService.callApiWithData('Player/fold', {}, function (data) {
         $scope.updatePlayers();
       });
-    }
+    };
   })
   .controller('TableCtrl', function ($scope, $stateParams, apiService) {
     $scope.table1 = false;
@@ -245,8 +233,6 @@ angular.module('starter.controllers', [])
             $scope.dealerPlayer = playerData[i].playerNo.toString();
           }
         }
-        console.log(".....");
-        console.log(data.data.data.communityCards);
         $scope.communityCards = data.data.data.communityCards;
       });
     };
@@ -254,29 +240,23 @@ angular.module('starter.controllers', [])
     $scope.updatePlayers();
 
     $scope.makeDealer = function (tabId) {
-      console.log("hey");
-      console.log(tabId);
       apiService.callApiWithData('Player/makeDealer', {
         "tabId": tabId
       }, function (data) {
-        console.log(data);
         $scope.updatePlayers();
       });
-    }
+    };
     $scope.makeActive = function (tabId, status) {
-      console.log(tabId);
       if (status) {
         apiService.callApiWithData('Player/addTab', {
           "tabId": tabId
         }, function (data) {
-          console.log(data);
           $scope.updatePlayers();
         });
       } else {
         apiService.callApiWithData('Player/removeTab', {
           "tabId": tabId
         }, function (data) {
-          console.log(data);
           $scope.updatePlayers();
         });
       }
@@ -284,15 +264,11 @@ angular.module('starter.controllers', [])
       //$scope.$digest();
     };
     $scope.tableclick = 'Table 1';
-    $scope.startGame = function () {
-      console.log("start game");
-    };
     $scope.playerIds = [1, 2, 3, 4, 5, 6, 7, 8];
   })
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
     $scope.showWinner = function () {
       apiService.callApiWithData('Player/showWinner', {}, function (data) {
-        console.log(data.data.data);
         $scope.winnerData = data.data.data;
         $scope.getData();
       });

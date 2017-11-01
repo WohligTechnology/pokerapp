@@ -111,8 +111,10 @@ angular.module('starter.controllers', [])
   })
 
 
-  .controller('DealerCtrl', function ($scope, $stateParams, apiService) {
-    
+  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $interval) {
+    $interval(function () {
+      $scope.updatePlayers();
+  }, 5000);
     $scope.updatePlayers = function () {
       apiService.callApiWithData('Player/getAll', {}, function (data) {
         $scope.players = [];

@@ -82,9 +82,18 @@ angular.module('starter.controllers', [])
   })
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $interval) {
-    $interval(function () {
+
+    var getInterval = $interval(function () {
       $scope.updatePlayers();
-    }, 5000);
+    }, 1000);
+
+    $scope.pageChange = function () {
+      console.log("Page Change Called");
+      $interval.cancel(getInterval);
+      getInterval = undefined;
+    };
+
+
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
         // $scope.players = data.data.data.playerCards;
@@ -131,6 +140,10 @@ angular.module('starter.controllers', [])
         $scope.updatePlayers();
       });
     };
+
+
+
+
   })
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService) {
@@ -169,26 +182,12 @@ angular.module('starter.controllers', [])
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
     $scope.showWinner = function () {
       apiService.showWinner(function (data) {
-        $scope.winnerData = data.data.data;
-        $scope.getData();
-      });
-    };
-    $scope.showWinner();
-    $scope.getData = function () {
-      apiService.getAll(function (data) {
-        $scope.players = data.data.data.playerCards;
+        $scope.winners = data.data.data.winners;
         $scope.communityCards = data.data.data.communityCards;
-        _.each($scope.winnerData, function (winner) {
-          winner.playerObj = _.find($scope.players, function (player) {
-            return winner.player == player.playerNo;
-          });
-        });
-        $scope.winnerData = _.uniqBy($scope.winnerData, function (winner) {
-          return winner.player;
-        });
-        $scope.winnerString = _.join(_.map($scope.winnerData, function (n) {
-          return "Player " + n.player;
+        $scope.winnerString = _.join(_.map($scope.winners, function (n) {
+          return "Player " + n.playerNo;
         }), " & ");
       });
     };
+    $scope.showWinner();
   });

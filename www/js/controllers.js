@@ -114,7 +114,7 @@ angular.module('starter.controllers', [])
       $scope.updatePlayers();
     }, 5000);
     $scope.updatePlayers = function () {
-      apiService.callApiWithData('Player/getAll', {}, function (data) {
+      apiService.getAll(function (data) {
         $scope.players = [];
         var playerData = data.playerCards;
         var playersArr = _.chunk(data.data.data.playerCards, 4);
@@ -122,13 +122,10 @@ angular.module('starter.controllers', [])
         $scope.communityCards = data.data.data.communityCards;
       });
     };
-    // var canvas = document.getElementById('deckCard').getContext('2d');
-    // canvas.drawPokerCard(10, 10, 120, 'hearts', '6');
-
 
     $scope.updatePlayers();
     $scope.showCards = function () {
-      apiService.callApiWithData('Player/revealCards', {}, function (data) {
+      apiService.revealCards(function (data) {
         $scope.updatePlayers();
       });
       //revealCards
@@ -178,7 +175,7 @@ angular.module('starter.controllers', [])
         ]
       },
 
-    ]
+    ];
     var count = 0;
     var counter = 0;
     $scope.selected = '0-0';
@@ -186,7 +183,7 @@ angular.module('starter.controllers', [])
     $scope.currentPlayer = 0;
 
     $scope.move = function (playerNo) {
-      apiService.callApiWithData('Player/moveturn', {}, function (data) {
+      apiService.move(function (data) {
         $scope.updatePlayers();
       });
 
@@ -204,7 +201,7 @@ angular.module('starter.controllers', [])
     };
 
     $scope.foldUser = function () {
-      apiService.callApiWithData('Player/fold', {}, function (data) {
+      apiService.fold(function (data) {
         $scope.updatePlayers();
       });
     };
@@ -216,13 +213,13 @@ angular.module('starter.controllers', [])
     };
     $scope.newGame = function () {
       $scope.winnerData = {};
-      apiService.callApiWithData('Player/newGame', {}, function (data) {
+      apiService.newGame(function (data) {
         $scope.updatePlayers();
       });
     };
     $scope.newGame();
     $scope.updatePlayers = function () {
-      apiService.callApiWithData('Player/getAll', {}, function (data) {
+      apiService.getAll(function (data) {
         $scope.players = [];
         var playerData = data.data.data.playerCards;
         $scope.playerData1 = data.data.data.playerCards;
@@ -240,7 +237,7 @@ angular.module('starter.controllers', [])
     $scope.updatePlayers();
 
     $scope.makeDealer = function (tabId) {
-      apiService.callApiWithData('Player/makeDealer', {
+      apiService.makeDealer({
         "tabId": tabId
       }, function (data) {
         $scope.updatePlayers();
@@ -248,13 +245,13 @@ angular.module('starter.controllers', [])
     };
     $scope.makeActive = function (tabId, status) {
       if (status) {
-        apiService.callApiWithData('Player/addTab', {
+        apiService.addTab({
           "tabId": tabId
         }, function (data) {
           $scope.updatePlayers();
         });
       } else {
-        apiService.callApiWithData('Player/removeTab', {
+        apiService.removeTab({
           "tabId": tabId
         }, function (data) {
           $scope.updatePlayers();
@@ -268,14 +265,14 @@ angular.module('starter.controllers', [])
   })
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
     $scope.showWinner = function () {
-      apiService.callApiWithData('Player/showWinner', {}, function (data) {
+      apiService.showWinner(function (data) {
         $scope.winnerData = data.data.data;
         $scope.getData();
       });
     };
     $scope.showWinner();
     $scope.getData = function () {
-      apiService.callApiWithData('Player/getAll', {}, function (data) {
+      apiService.getAll(function (data) {
         $scope.players = [];
         var playerData = data.data.data.playerCards;
         $scope.playerData1 = data.data.data.playerCards;
@@ -285,7 +282,7 @@ angular.module('starter.controllers', [])
           if (playerData[i].isDealer) {
             $scope.dealerPlayer = playerData[i].playerNo.toString();
           }
-        };
+        }
         $scope.communityCards = data.data.data.communityCards;
       });
     };

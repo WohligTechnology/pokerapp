@@ -43,6 +43,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'TableCtrl'
       })
 
+      .state('winner', {
+        url: '/winner',
+        templateUrl: 'templates/winner.html',
+        controller: 'WinnerCtrl'
+      })
 
       .state('dealer', {
         url: '/dealer',
@@ -87,7 +92,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/dealer');
   })
   .directive('card', function () {
     return {

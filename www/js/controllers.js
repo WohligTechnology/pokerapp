@@ -287,5 +287,7 @@ $scope.tableclick= 'Table 1';
       }
       $scope.playerIds = [1,2,3,4,5,6,7,8];
   })
+  .controller('WinnerCtrl', function ($scope, $stateParams) {
 
+  })
   .controller('PlaylistCtrl', function ($scope, $stateParams) {});

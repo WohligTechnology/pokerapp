@@ -9897,6 +9897,9 @@ a.button {
   padding: 0px 20px;
   margin-top: 30px; }
 
+.platform-ios .btn-start {
+  font-size: 20px; }
+
 .platform-ipad .btn-start {
   padding: 10px 30px;
   font-size: 30px; }
@@ -9999,13 +10002,14 @@ a.button {
     font-size: 25px;
     background: cornflowerblue !important; }
 
-.players img {
-  border: 3px solid white; }
-
 .players h2 {
   color: white;
   margin-bottom: 20px !important;
+  margin: 0px;
   font-size: 20px; }
+
+.playersimgbor {
+  border: 3px solid white; }
 
 .platform-ipad .players {
   margin: 10px; }
@@ -10124,3 +10128,45 @@ a.button {
     display: table;
     width: 100%;
     height: 200px; } }
+
+.users1Card {
+  width: 50%;
+  display: block;
+  margin: 0 auto; }
+
+.users2Card {
+  width: 50%;
+  display: block;
+  margin: 0 auto; }
+
+.users2CardImg {
+  width: 100%; }
+
+.winnersHead {
+  text-align: center;
+  color: white;
+  margin-top: 20px !important; }
+
+.platform-ipad .winnersHead {
+  font-size: 60px; }
+
+.winner {
+  width: 40%;
+  display: block;
+  margin: 0 auto; }
+  .winner img {
+    width: 100%; }
+
+.winnerName {
+  font-size: 30px; }
+
+.platform-ipad .winnerName {
+  font-size: 60px !important; }
+
+.platform-ipad .winnerMsg {
+  color: red;
+  font-size: 50px; }
+
+.winnerMsg {
+  font-size: 20px;
+  color: red; }

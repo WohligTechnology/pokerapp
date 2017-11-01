@@ -8,8 +8,21 @@
           <label class="playerfold" ng-if="p.playerNo | declareWinner : winnerData" style="background:green">Winner</label>
           <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
-            <img class="img-responsive" src="img/person.png" alt="">
+            <img class="img-responsive playersimgbor" src="img/person.png" alt="">
             <!-- <div ng-show="p.isFold"></div> -->
+            </div>
+            <div class="row">
+              <div class="col col-50">
+                <div class="users1Card">
+                    <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
+                </div>
+                  
+              </div>
+              <div class="col col-50">
+                  <div class="users2Card">
+                      <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
+                  </div>
+              </div>
             </div>
             
             <h2>Player{{p.playerNo}}</h2>
@@ -26,23 +39,23 @@
       </div>
      
       <div class="row">
-         <div class="col-50 text-center" ng-click='move($index)'>
+         <div class="col col-30 text-center" ng-click='move($index)'>
             <button class="button btn-start">Move</button>
          </div>
-         
-        <div class="col-50 text-center" ng-click="foldUser();">
+         <div class="text-center col col-30" ng-click="showCards();">
+          <button class="button btn-start">Show</button>
+        </div>
+        <div class="col col-30 text-center" ng-click="foldUser();">
           <button class="button btn-start">Fold</button>
         </div>
       </div>
-      <div class="text-center" ng-click="showCards();">
-        <button class="button btn-start">Show</button>
-      </div>
+      
       <div class="row">
-          <div class="col-50 text-center" ng-click='newGame()'>
+          <div class="col-50 text-center" ui-sref='table'>
              <button class="button btn-start">New Game</button>
           </div>
           
-         <div class="col-50 text-center" ng-click="showWinner()">
+         <div class="col-50 text-center" ui-sref='winner'>
            <button class="button btn-start">Show Winner</button>
          </div>
        </div>

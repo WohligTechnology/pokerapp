@@ -311,7 +311,6 @@ $dark:                            #444 !default;
     .playerfold {
         color: white;
         position: absolute;
-        background: rgba(128, 128, 128, 0.71);
         transform: translate(-50%, -50%);
         top: 35%;
         left: 50%;
@@ -411,6 +410,20 @@ $dark:                            #444 !default;
             font-size: 16px!important;
             border-radius: 0px!important;
             direction: ltr!important;
+        }
+    }
+
+    .player-fold {
+        opacity: 0.25;
+    }
+
+    .not-active {
+        opacity: 0.25;
+    }
+
+    .player-turn {
+        .playersimgbor {
+            border-color: blue;
         }
     }
 

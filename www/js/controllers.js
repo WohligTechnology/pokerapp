@@ -82,9 +82,9 @@ angular.module('starter.controllers', [])
   })
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $interval) {
-    $interval(function () {
-      $scope.updatePlayers();
-    }, 5000);
+    // $interval(function () {
+    //   $scope.updatePlayers();
+    // }, 5000);
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
         // $scope.players = data.data.data.playerCards;

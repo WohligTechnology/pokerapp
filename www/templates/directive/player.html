@@ -1,6 +1,6 @@
-<div ng-class="{'player-turn':player.isTurn,'not-active':player.notActive}">
+<div style="position:relative;">
     <label class="playerfold" ng-if="player.isFold">Fold</label>
-    <div class="players text-center">
+    <div class="players text-center" ng-class="{'player-turn':player.isTurn,'not-active':!player.isActive,'player-fold':player.isFold}">
         <div class="playerimg">
             <img class="img-responsive playersimgbor" src="img/person.png" alt="">
             <!-- <div ng-show="p.isFold"></div> -->

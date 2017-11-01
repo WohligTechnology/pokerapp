@@ -117,7 +117,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       },
       templateUrl: '/templates/directive/player.html',
       link: function ($scope, element, attr) {
-        console.log($scope.player);
+
       }
     };
   });

@@ -58,6 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/dealer');
   })
+
   .directive('card', function () {
     return {
       restrict: 'E',
@@ -83,6 +84,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               width: $scope.width + "px",
               height: $scope.height + "px"
             };
+          } else if ($scope.card == "NONE") {
+            $scope.cardImg = Poker.getBackData(1024, '#535550', '#535550');
+            $scope.style = {
+              width: $scope.width + "px",
+              height: $scope.height + "px"
+            };
           } else {
             $scope.cardImg = Poker.getBackData(1024, '#58AAAF', '#1F7A80');
             $scope.style = {
@@ -97,6 +104,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         });
 
 
+      }
+    };
+  })
+
+  .directive('player', function () {
+    return {
+      restrict: 'E',
+      replace: false,
+      scope: {
+        player: "=ngPlayer"
+      },
+      templateUrl: '/templates/directive/player.html',
+      link: function ($scope, element, attr) {
+        console.log($scope.player);
       }
     };
   });

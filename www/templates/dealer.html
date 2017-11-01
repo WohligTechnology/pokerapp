@@ -1,64 +1,39 @@
 <ion-view view-title="Dealer">
   <ion-content class="bgImg">
     <div class="centerDiv">
-      <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
-
-        <div class="col-25 col-sm-25 rel" ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >{{player.length}}
-          <label class="playerfold" ng-if="p.isFold">Fold</label>
-          <label class="playerfold" ng-if="p.playerNo | declareWinner : winnerData" style="background:green">Winner</label>
-          <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
-            <div class="playerimg" ng-class="{blurEffect:!p.isActive}">
-            <img class="img-responsive playersimgbor" src="img/person.png" alt="">
-            <!-- <div ng-show="p.isFold"></div> -->
-            </div>
-            <div class="row">
-              <div class="col col-50">
-                <div class="users1Card">
-                    <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
-                </div>
-                  
-              </div>
-              <div class="col col-50">
-                  <div class="users2Card">
-                      <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
-                  </div>
-              </div>
-            </div>
-            
-            <h2>Player{{p.playerNo}}</h2>
-          </div>
+      <div class="row" ng-repeat="players in playersChunk">
+        <div class="col col-25" ng-repeat="player in players" ng-if="player">
+          <player ng-player="player"></player>
         </div>
-        
-         </div>
-         <div class="rel" >
-          <div class="row text-center"  >
-               <div class="col-20" ng-repeat= 'card in communityCards track by $index'>
-                  <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
-               </div>
-          </div>
       </div>
-     
+
+      <div class="row text-center">
+        <div class="col-20" ng-repeat='card in communityCards track by $index'>
+          <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
+        </div>
+      </div>
+
       <div class="row">
-         <div class="col col-30 text-center" ng-click='move($index)'>
-            <button class="button btn-start">Move</button>
-         </div>
-         <div class="text-center col col-30" ng-click="showCards();">
+        <div class="col col-30 text-center" ng-click='move($index)'>
+          <button class="button btn-start">Move</button>
+        </div>
+        <div class="text-center col col-30" ng-click="showCards();">
           <button class="button btn-start">Show</button>
         </div>
         <div class="col col-30 text-center" ng-click="foldUser();">
           <button class="button btn-start">Fold</button>
         </div>
       </div>
-      
+
       <div class="row">
-          <div class="col-50 text-center" ui-sref='table'>
-             <button class="button btn-start">New Game</button>
-          </div>
-          
-         <div class="col-50 text-center" ui-sref='winner'>
-           <button class="button btn-start">Show Winner</button>
-         </div>
-       </div>
-   </div>
+        <div class="col-50 text-center" ui-sref='table'>
+          <button class="button btn-start">New Game</button>
+        </div>
+
+        <div class="col-50 text-center" ui-sref='winner'>
+          <button class="button btn-start">Show Winner</button>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

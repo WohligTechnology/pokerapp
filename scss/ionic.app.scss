@@ -14,10 +14,9 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-    
+
     // The path for our ionicons font files, relative to the built CSS in www/css
-    $ionicons-font-path: "../lib/ionic/fonts" !default;
-    // Include all of Ionic
+    $ionicons-font-path: "../lib/ionic/fonts" !default; // Include all of Ionic
     @import "www/lib/ionic/scss/ionic";
     .bgImg {
         background-image: url(../img/bg-added.jpg);
@@ -27,23 +26,23 @@ $dark:                            #444 !default;
         background-repeat: no-repeat;
         background-position: center right;
     }
-    
+
     .mar5 {
         margin-top: 5%;
     }
-    
+
     .centerDiv {
         height: 100vh;
         position: relative;
     }
-    
+
     .centerRow {
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
         left: 50%;
     }
-    
+
     .buttonpos {
         // position: absolute;
         // bottom: 1%;
@@ -59,7 +58,7 @@ $dark:                            #444 !default;
             color: red;
         }
     }
-    
+
     .cardimg1 {
         width: 80%;
         margin: 0 auto;
@@ -67,17 +66,17 @@ $dark:                            #444 !default;
             width: 100%;
         }
     }
-    
+
     .cardimg {
         margin: 30% auto;
         width: 60%;
-        img{
+        img {
             width: 100%;
         }
     }
-   .table-border {
-        border: 3px solid #fff;
-        // height: 180px;
+
+    .table-border {
+        border: 3px solid #fff; // height: 180px;
         // width: 180px;
         margin: 10px auto;
         background-color: transparent;
@@ -85,7 +84,7 @@ $dark:                            #444 !default;
         width: 100%;
         height: 200px;
     }
-    
+
     .table-border {
         border: 3px solid #fff;
         height: 100px;
@@ -94,9 +93,9 @@ $dark:                            #444 !default;
         display: table!important;
     }
 
-    .platform-ipad  .table-border {
+    .platform-ipad .table-border {
         height: 180px;
-        width: 180px; 
+        width: 180px;
     }
 
     .dis-cell {
@@ -106,8 +105,7 @@ $dark:                            #444 !default;
             text-align: center;
             color: #fff !important;
             font-size: 25px!important;
-        }
-        // &:hover {
+        } // &:hover {
         //     background-color: red;
         // }
         // &:active {
@@ -117,32 +115,34 @@ $dark:                            #444 !default;
         //     background-color: red;
         // }
     }
-    .platform-ios .dis-cell{
-        h2{
+
+    .platform-ios .dis-cell {
+        h2 {
             font-size: 20px!important;
         }
     }
 
-    .platform-android .dis-cell{
-        h2{
+    .platform-android .dis-cell {
+        h2 {
             font-size: 20px!important;
         }
     }
+
     .mar-t {
         margin-top: 20%;
     }
-    
+
     .btn-start {
         font-size: 25px;
         padding: 0px 20px;
         margin-top: 30px;
     }
 
-    .platform-ios .btn-start{
+    .platform-ios .btn-start {
         font-size: 20px;
     }
 
-  .platform-ipad  .btn-start{
+    .platform-ipad .btn-start {
         padding: 10px 30px;
         font-size: 30px;
     }
@@ -203,8 +203,8 @@ $dark:                            #444 !default;
             }
         }
     }
-    
-  .platform-ipad  .removedpopup {
+
+    .platform-ipad .removedpopup {
         h3 {
             img {
                 max-width: 35px;
@@ -260,11 +260,8 @@ $dark:                            #444 !default;
             }
         }
     }
-    
-   
-    
+
     .players {
-        
         h2 {
             color: white;
             margin-bottom: 20px!important;
@@ -272,24 +269,26 @@ $dark:                            #444 !default;
             font-size: 20px;
         }
     }
+
     .playersimgbor {
         border: 3px solid white;
     }
-    .platform-ipad .players{
+
+    .platform-ipad .players {
         margin: 10px;
-        h2{
+        h2 {
             font-size: 30px;
         }
     }
-    
+
     .playerimg {
         width: 60%;
     }
-    
+
     .selected {
         border: 3px solid orangered;
     }
-    
+
     .playerimg {
         width: 100%;
         img {
@@ -301,109 +300,114 @@ $dark:                            #444 !default;
         }
     }
 
-    .dummydiv{
+    .dummydiv {
         height: 10px;
     }
 
-
-    .rel{
+    .rel {
         position: relative;
     }
 
-    .playerfold{
+    .playerfold {
         color: white;
         position: absolute;
         background: rgba(128, 128, 128, 0.71);
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         top: 35%;
         left: 50%;
         font-size: 20px;
     }
 
-    .platform-ipad .playerfold{
+    .platform-ipad .playerfold {
         font-size: 26px;
         padding: 10px 20px;
         top: 40%;
     }
-    .cardbtn{
+
+    .cardbtn {
         position: absolute;
-        
-        transform: translate(-50%,-50%);
-        button{
+        transform: translate(-50%, -50%);
+        button {
             font-size: 20px;
             padding: 0px 20px;
             margin-top: 30px;
             width: 100%;
-           
         }
     }
 
-    .platform-ipad .cardbtn{
-        button{
+    .platform-ipad .cardbtn {
+        button {
             font-size: 30px;
             padding: 10px 30px;
             margin-top: 30px;
             width: 100%;
         }
     }
-    .card1-top{
+
+    .card1-top {
         top: 36%;
         left: 30%;
-       
     }
-    .platform-ipad .card1-top{
+
+    .platform-ipad .card1-top {
         top: 44%;
         left: 30%;
     }
-    .card2-top{
+
+    .card2-top {
         top: 36%;
         left: 80%;
     }
-    .platform-ipad .card2-top{
+
+    .platform-ipad .card2-top {
         top: 44%;
         right: 2%;
     }
-    .back-color{
+
+    .back-color {
         background-color: rgba(248, 248, 248, 0.7) !important;
     }
-     .blurEffect{
-         opacity: 0.5;
-     }
-     .backgroundcl{ 
+
+    .blurEffect {
+        opacity: 0.5;
+    }
+
+    .backgroundcl {
         background: #215767 !important;
     }
-    .platform-ipad  .player-select{
+
+    .platform-ipad .player-select {
         width: 50%;
         display: block;
         margin: 20px 45px;
-        .input-label{
+        .input-label {
             font-size: 24px!important;
             color: white!important;
         }
-        .item{
+        .item {
             background-color: transparent!important;
             color: white!important;
             font-size: 16px!important;
         }
-        .item-select select{
+        .item-select select {
             font-size: 24px!important;
         }
     }
 
-    .player-select{
+    .player-select {
         width: 60%;
         display: block;
         margin: 20px 45px;
-        .input-label{
+        .input-label {
             font-size: 16px!important;
             color: white!important;
         }
-        .item{
+        .item {
             background-color: transparent!important;
             color: white!important;
             font-size: 16px!important;
         }
-        .item-select select{
+        .item-select select {
             font-size: 16px!important;
             border-radius: 0px!important;
             direction: ltr!important;
@@ -412,8 +416,7 @@ $dark:                            #444 !default;
 
     @media only screen and (max-width:800px) and (min-width:1280px) {
         .table-border {
-            border: 3px solid #fff;
-            // height: 180px;
+            border: 3px solid #fff; // height: 180px;
             // width: 180px;
             margin: 10px auto;
             background-color: transparent;
@@ -421,61 +424,68 @@ $dark:                            #444 !default;
             width: 100%;
             height: 200px;
         }
-        }
+    }
 
-        .users1Card{
-            width: 50%;
-            display: block;
-            margin: 0 auto;
-            max-width: 200px
-        }
+    .users1Card {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        max-width: 200px
+    }
 
-        .users2Card{
-            width: 50%;
-            display: block;
-            margin: 0 auto;
-            max-width: 200px
-        }
-        .users2CardImg{
+    .users2Card {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        max-width: 200px
+    }
+
+    .users2CardImg {
+        width: 100%;
+    }
+
+    .winnersHead {
+        text-align: center;
+        color: white;
+        margin-top: 20px!important;
+        font-size: 24px;
+    }
+
+    .platform-ipad .winnersHead {
+        font-size: 60px;
+    }
+
+    .winner {
+        width: 40%;
+        display: block;
+        margin: 0 auto;
+        img {
             width: 100%;
         }
-
-        .winnersHead{
-            text-align: center;
-            color: white;
-            margin-top: 20px!important;
-            font-size: 24px;
-        }
-    .platform-ipad .winnersHead{
-     font-size: 60px;
     }
-        .winner{
-            width: 40%;
-            display: block;
-            margin: 0 auto;
-            img{
-                width: 100%;
-            }
-        }
 
-        .winnerName{
-            font-size: 30px;
-        }
+    .winnerName {
+        font-size: 30px;
+    }
 
-        .platform-ipad .winnerName{
-            font-size: 60px!important;
-        }
+    .platform-ipad .winnerName {
+        font-size: 60px!important;
+    }
 
-        .platform-ipad .winnerMsg{
-            color: red;
-            font-size: 50px;
-        }
+    .platform-ipad .winnerMsg {
+        color: red;
+        font-size: 50px;
+    }
 
-        .winnerMsg{
-            font-size: 20px;
-            color: red;
-        }
+    .winnerMsg {
+        font-size: 20px;
+        color: red;
+    }
 
-        .marb-30{
-            margin-bottom: 30px;
-        }
+    .marb-30 {
+        margin-bottom: 30px;
+    }
+
+    pre {
+        background: white;
+    }

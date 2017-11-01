@@ -87,11 +87,9 @@ angular.module('starter.controllers', [])
     }, 5000);
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
-        $scope.players = [];
-        var playerData = data.playerCards;
-        var playersArr = _.chunk(data.data.data.playerCards, 4);
-        $scope.players = playersArr;
+        // $scope.players = data.data.data.playerCards;
         $scope.communityCards = data.data.data.communityCards;
+        $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
     };
 
@@ -103,51 +101,7 @@ angular.module('starter.controllers', [])
       //revealCards
     };
     //apiService
-    $scope.players = [{
 
-        'p': [{
-            'player': 'Player1',
-
-          },
-          {
-            'player': 'Player2',
-
-          },
-          {
-            'player': 'Player3',
-
-          },
-          {
-            'player': 'Player4',
-
-          },
-
-        ]
-      },
-      {
-
-        'p': [{
-            'player': 'Player5',
-
-          },
-          {
-            'player': 'Player6',
-
-          },
-          {
-            'player': 'Player7',
-
-          },
-          {
-            'player': 'Player8',
-            'active': true
-
-          },
-
-        ]
-      },
-
-    ];
     var count = 0;
     var counter = 0;
     $scope.selected = '0-0';

@@ -10145,7 +10145,8 @@ a.button {
 .winnersHead {
   text-align: center;
   color: white;
-  margin-top: 20px !important; }
+  margin-top: 20px !important;
+  font-size: 24px; }
 
 .platform-ipad .winnersHead {
   font-size: 60px; }
@@ -10170,3 +10171,6 @@ a.button {
 .winnerMsg {
   font-size: 20px;
   color: red; }
+
+.marb-30 {
+  margin-bottom: 30px; }

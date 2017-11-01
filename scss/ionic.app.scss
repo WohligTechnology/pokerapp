@@ -442,6 +442,7 @@ $dark:                            #444 !default;
             text-align: center;
             color: white;
             margin-top: 20px!important;
+            font-size: 24px;
         }
     .platform-ipad .winnersHead{
      font-size: 60px;
@@ -471,4 +472,8 @@ $dark:                            #444 !default;
         .winnerMsg{
             font-size: 20px;
             color: red;
+        }
+
+        .marb-30{
+            margin-bottom: 30px;
         }

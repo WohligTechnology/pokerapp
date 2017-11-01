@@ -1,44 +1,19 @@
 <ion-view view-title="Dealer">
-    <ion-content class="bgImg">
-      <div class="centerDiv">
-            <h1 class="winnersHead">Winner: Player1</h1>
-        <div class="row mar5 "  ng-init="a1=$index" >
- 
-          <div class="col"  ng-init="a=a1+'-'+$index" >{{player.length}}
-            <!-- <label class="playerfold" ng-if="p.isFold">Fold</label> -->
-            <!-- <label class="playerfold" ng-if="p.playerNo | declareWinner : winnerData" style="background:green">Winner</label> -->
-            <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
-                    <div class="" >
-                            <div class="row text-center"  >
-                                 <div class="col-20" ng-repeat= 'card in communityCards track by $index'>
-                                    <card card='{{card}}' ng-style="style" width="150" height="220"> </card>
-                                 </div>
-                            </div>
-                        </div>
-              <div class="row">
-                <div class="col col-50">
-                  <div class="users1Card">
-                      <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
-                  </div>
-                    
-                </div>
-                <div class="col col-50">
-                    <div class="users2Card">
-                        <img class="users2CardImg img-responsive" src="img/download.jpeg" alt="">
-                    </div>
-                </div>
-              </div>
-              
-              <h2 class="winnerName">Player{{p.playerNo}}</h2>
-              <label class="winnerMsg" for=""> High Cards</label>
-            </div>
-          </div>
-         
-           </div>
-           <div class="marb-30 text-center" ui-sref='table'>
-                <button class="button btn-start">New Game</button>
-              </div>
-     </div>
-    </ion-content>
-  </ion-view>
-  
+  <ion-content class="bgImg">
+    <div class="centerDiv">
+      <div class="row text-center">
+        <div class="col-20" ng-repeat='communityCard in communityCards track by $index'>
+          <community ng-community-card="communityCard"></community>
+        </div>
+      </div>
+      <h1 class="winnersHead">Winner: {{winnerString}}
+      </h1>
+      <div ng-repeat="winner in winnerData" ng-if="winner">
+        <winner-player ng-player="winner.playerObj" method="winner.type"></winner-player>
+      </div>
+      <div class="marb-30 text-center" ui-sref='table'>
+        <button class="button btn-start">New Game</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

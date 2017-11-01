@@ -134,10 +134,7 @@ angular.module('starter.controllers', [])
   })
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService) {
-    $scope.table1 = false;
-    $scope.clickTable = function () {
-      $scope.table1 = !$scope.table1;
-    };
+
     $scope.newGame = function () {
       $scope.winnerData = {};
       apiService.newGame(function (data) {
@@ -147,17 +144,7 @@ angular.module('starter.controllers', [])
     $scope.newGame();
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
-        $scope.players = [];
-        var playerData = data.data.data.playerCards;
-        $scope.playerData1 = data.data.data.playerCards;
-        var playersArr = _.chunk(data.data.data.playerCards, 4);
-        $scope.players = playersArr;
-        for (var i = 0; i < playerData.length; i++) {
-          if (playerData[i].isDealer) {
-            $scope.dealerPlayer = playerData[i].playerNo.toString();
-          }
-        }
-        $scope.communityCards = data.data.data.communityCards;
+        $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
     };
 
@@ -167,28 +154,16 @@ angular.module('starter.controllers', [])
       apiService.makeDealer({
         "tabId": tabId
       }, function (data) {
-        $scope.updatePlayers();
+
       });
     };
-    $scope.makeActive = function (tabId, status) {
-      if (status) {
-        apiService.addTab({
-          "tabId": tabId
-        }, function (data) {
-          $scope.updatePlayers();
-        });
-      } else {
-        apiService.removeTab({
-          "tabId": tabId
-        }, function (data) {
-          $scope.updatePlayers();
-        });
-      }
 
-      //$scope.$digest();
+    $scope.activePlayers = function () {
+      var players = _.flatten($scope.playersChunk);
+      return _.filter(players, function (player) {
+        return player.isActive;
+      });
     };
-    $scope.tableclick = 'Table 1';
-    $scope.playerIds = [1, 2, 3, 4, 5, 6, 7, 8];
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
@@ -201,18 +176,19 @@ angular.module('starter.controllers', [])
     $scope.showWinner();
     $scope.getData = function () {
       apiService.getAll(function (data) {
-        $scope.players = [];
-        var playerData = data.data.data.playerCards;
-        $scope.playerData1 = data.data.data.playerCards;
-        var playersArr = _.chunk(data.data.data.playerCards, 4);
-        $scope.players = playersArr;
-        for (var i = 0; i < playerData.length; i++) {
-          if (playerData[i].isDealer) {
-            $scope.dealerPlayer = playerData[i].playerNo.toString();
-          }
-        }
+        $scope.players = data.data.data.playerCards;
         $scope.communityCards = data.data.data.communityCards;
+        _.each($scope.winnerData, function (winner) {
+          winner.playerObj = _.find($scope.players, function (player) {
+            return winner.player == player.playerNo;
+          });
+        });
+        $scope.winnerData = _.uniqBy($scope.winnerData, function (winner) {
+          return winner.player;
+        });
+        $scope.winnerString = _.join(_.map($scope.winnerData, function (n) {
+          return "Player " + n.player;
+        }), " & ");
       });
     };
-
-  })
+  });

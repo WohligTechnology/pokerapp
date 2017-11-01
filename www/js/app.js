@@ -128,7 +128,45 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       },
       templateUrl: '/templates/directive/communityCard.html',
       link: function ($scope, element, attr) {
-        console.log($scope.communityCard);
+
+      }
+    };
+  })
+
+  .directive('winnerPlayer', function () {
+    return {
+      restrict: 'E',
+      replace: false,
+      scope: {
+        player: "=ngPlayer",
+        method: "="
+      },
+      templateUrl: '/templates/directive/winnerPlayer.html',
+      link: function ($scope, element, attr) {}
+    };
+  })
+
+  .directive('tab', function (apiService) {
+    return {
+      restrict: 'E',
+      replace: false,
+      scope: {
+        player: "=ngPlayer",
+      },
+      templateUrl: '/templates/directive/tab.html',
+      link: function ($scope, element, attr) {
+        $scope.makeActive = function (tabId, status) {
+          $scope.player.isActive = status;
+          if (status) {
+            apiService.addTab({
+              "tabId": tabId
+            }, function (data) {});
+          } else {
+            apiService.removeTab({
+              "tabId": tabId
+            }, function (data) {});
+          }
+        };
       }
     };
   });

@@ -10,27 +10,27 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             });
         },
         revealCards: function (callback) {
-            $http.post(adminurl + 'Player/revealCards', data).then(function (data) {
+            $http.post(adminurl + 'Player/revealCards').then(function (data) {
                 callback(data);
             });
         },
         getAll: function (callback) {
-            $http.post(adminurl + 'Player/getAll', data).then(function (data) {
+            $http.post(adminurl + 'Player/getAll').then(function (data) {
                 callback(data);
             });
         },
         newGame: function (callback) {
-            $http.post(adminurl + 'Player/newGame', data).then(function (data) {
+            $http.post(adminurl + 'Player/newGame').then(function (data) {
                 callback(data);
             });
         },
         move: function (callback) {
-            $http.post(adminurl + 'Player/moveturn', data).then(function (data) {
+            $http.post(adminurl + 'Player/moveturn').then(function (data) {
                 callback(data);
             });
         },
         fold: function (callback) {
-            $http.post(adminurl + 'Player/fold', data).then(function (data) {
+            $http.post(adminurl + 'Player/fold').then(function (data) {
                 callback(data);
             });
         },
@@ -50,10 +50,10 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             });
         },
         showWinner: function (callback) {
-            $http.post(adminurl + 'Player/showWinner', data).then(function (data) {
+            $http.post(adminurl + 'Player/showWinner').then(function (data) {
                 callback(data);
             });
-        },
+        }
         // This is a demo Service for POST Method.
     };
 });

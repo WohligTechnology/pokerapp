@@ -9862,7 +9862,8 @@ a.button {
   background-color: transparent;
   display: table;
   width: 100%;
-  height: 200px; }
+  height: 200px;
+  opacity: 0.4; }
 
 .table-border {
   border: 3px solid #fff;
@@ -10088,7 +10089,8 @@ a.button {
   opacity: 0.5; }
 
 .backgroundcl {
-  background: #215767 !important; }
+  background: #215767 !important;
+  opacity: 1.0; }
 
 .platform-ipad .player-select {
   width: 50%;
@@ -10142,7 +10144,8 @@ img.player-dealer {
     background-color: transparent;
     display: table;
     width: 100%;
-    height: 200px; } }
+    height: 200px;
+    opacity: 0.4; } }
 
 .users1Card {
   width: 50%;

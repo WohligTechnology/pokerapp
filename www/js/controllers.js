@@ -86,21 +86,20 @@ angular.module('starter.controllers', [])
 
 
     io.socket.on("Update", function (data) {
+      console.log(data);
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
       $scope.$apply();
     });
 
 
-    // var getInterval = $interval(function () {
-    //   $scope.updatePlayers();
-    // }, 1000);
 
     $scope.pageChange = function () {};
 
 
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
+
         $scope.communityCards = data.data.data.communityCards;
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
@@ -118,9 +117,7 @@ angular.module('starter.controllers', [])
     $scope.currentPlayer = 0;
 
     $scope.move = function (playerNo) {
-      apiService.move(function (data) {
-        $scope.updatePlayers();
-      });
+      apiService.move(function (data) {});
 
       $scope.selected = '0-0';
       count++;

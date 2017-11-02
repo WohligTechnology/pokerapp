@@ -1,9 +1,9 @@
 <div ng-if="communityCard.cardValue==''">
     <card card='NONE' ng-style="style" width="150" height="220"> </card>
 </div>
-<div ng-if="communityCard.cardValue!='' && !communityCard.isOpen">
+<!-- <div ng-if="communityCard.cardValue!='' && !communityCard.isOpen">
     <card card='DONE' ng-style="style" width="150" height="220"> </card>
-</div>
-<div ng-if="communityCard.cardValue!='' && communityCard.isOpen">
+</div> -->
+<div ng-if="communityCard.cardValue!=''">
     <card card='{{communityCard.cardValue}}' ng-style="style" width="150" height="220"> </card>
 </div>

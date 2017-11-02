@@ -1,24 +1,26 @@
-<ion-view view-title="Table">
-    <ion-content class="bgImg">
-        <div class="mar-t">
-            <div class="row " ng-repeat="players in playersChunk">
-                <div class="col col-25  color" ng-repeat="player in players">
+<ion-view view-title="Table" class="poker-bg">
+    <ion-content>
+
+        <div class="poker-table">
+            <div class="row" ng-repeat="players in playersChunk">
+                <div class="col col-25" ng-repeat="player in players">
                     <tab ng-player="player" ng-if="player"></tab>
                 </div>
             </div>
-            <div class="list player-select">
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Dealer
-                    </div>
-                    <select ng-model="dealerPlayer" ng-change="makeDealer(dealerPlayer);">
-                        <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
-                    </select>
-                </label>
-            </div>
-            <div class="text-center">
-                <button class="button btn-start" ng-disabled="!dealerPlayer" ui-sref="dealer">Start</button>
-            </div>
         </div>
+        <div class="list poker-list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    <i class="ion-ios-people"></i> Dealer
+                </div>
+                <select ng-model="dealerPlayer" ng-change="makeDealer(dealerPlayer);">
+                    <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
+                </select>
+            </label>
+        </div>
+        <div class="text-center">
+            <button class="button button-balanced button-poker btn-start" ng-disabled="!dealerPlayer" ui-sref="dealer">Start</button>
+        </div>
+
     </ion-content>
 </ion-view>

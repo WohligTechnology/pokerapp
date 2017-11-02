@@ -14,19 +14,25 @@
       </div>
 
       <div class="row">
-        <div class="col col-33 text-center" ng-click='move($index)'>
+        <div class="col col-50 text-center" ng-click='move($index)'>
           <button class="button btn-start">Move</button>
         </div>
 
-        <div class="col col-33 text-center" ng-click="foldUser();">
+        <div class="col col-50 text-center" ng-click="foldUser();">
           <button class="button btn-start">Fold</button>
         </div>
 
-        <div class="col-33 text-center" ui-sref='winner' ng-click="pageChange();">
+      </div>
+
+      <div class="row">
+        <div class="col-50 text-center" ui-sref='table' ng-click="pageChange();">
+          <button class="button btn-start">New Game</button>
+        </div>
+
+        <div class="col-50 text-center" ui-sref='winner' ng-click="pageChange();">
           <button class="button btn-start">Show Winner</button>
         </div>
       </div>
-
     </div>
   </ion-content>
 </ion-view>

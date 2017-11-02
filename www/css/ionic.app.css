@@ -9895,7 +9895,8 @@ a.button {
 .btn-start {
   font-size: 25px;
   padding: 0px 20px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  width: 300px; }
 
 .platform-ios .btn-start {
   font-size: 20px; }

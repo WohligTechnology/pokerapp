@@ -104,9 +104,7 @@ angular.module('starter.controllers', [])
 
     $scope.updatePlayers();
     $scope.showCards = function () {
-      apiService.revealCards(function (data) {
-        $scope.updatePlayers();
-      });
+      apiService.revealCards(function (data) {});
       //revealCards
     };
     //apiService
@@ -136,14 +134,8 @@ angular.module('starter.controllers', [])
     };
 
     $scope.foldUser = function () {
-      apiService.fold(function (data) {
-        $scope.updatePlayers();
-      });
+      apiService.fold(function (data) {});
     };
-
-
-
-
   })
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService) {
@@ -160,8 +152,6 @@ angular.module('starter.controllers', [])
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
     };
-
-    $scope.updatePlayers();
 
     $scope.makeDealer = function (tabId) {
       apiService.makeDealer({

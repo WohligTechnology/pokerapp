@@ -86,11 +86,9 @@ angular.module('starter.controllers', [])
 
 
     io.socket.on("Update", function (data) {
-      console.log(data);
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
       $scope.$apply();
-      console.log("Demo");
     });
 
 

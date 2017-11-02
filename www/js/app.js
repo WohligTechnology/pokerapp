@@ -97,15 +97,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             height: $scope.height + "px"
           };
         }
-
-
-        // $scope.$watch("card", function (newVal, oldVal) {
-        //   console.log(newVal, oldVal);
-        //   calc();
-        //   console.log("Card updated");
-        // });
-
-
       }
     };
   })

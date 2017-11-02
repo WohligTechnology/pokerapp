@@ -10129,7 +10129,7 @@ a.button {
   opacity: 0.25; }
 
 .player-turn .playersimgbor {
-  border-color: #6161ff; }
+  border-color: #b54747; }
 
 img.player-dealer {
   width: 50px;
@@ -10256,7 +10256,9 @@ pre {
   border-width: 4px;
   border-radius: 20px;
   text-transform: uppercase;
-  letter-spacing: 10px; }
+  letter-spacing: 10px;
+  width: auto;
+  padding: 10px 50px; }
 
 .few-pad {
   padding: 15px; }

@@ -83,9 +83,18 @@ angular.module('starter.controllers', [])
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $interval) {
 
-    var getInterval = $interval(function () {
-      $scope.updatePlayers();
-    }, 1000);
+
+
+    io.socket.on("Update", function (data) {
+      $scope.communityCards = data.communityCards;
+      $scope.playersChunk = _.chunk(data.playerCards, 4);
+      $scope.$apply();
+    });
+
+
+    // var getInterval = $interval(function () {
+    //   $scope.updatePlayers();
+    // }, 1000);
 
     $scope.pageChange = function () {
       $interval.cancel(getInterval);

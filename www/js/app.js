@@ -85,7 +85,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             height: $scope.height + "px"
           };
         } else if ($scope.card == "NONE" || $scope.card == "") {
-          $scope.cardImg = Poker.getBackData(1024, '#535550', '#535550');
+          $scope.cardImg = Poker.getBackData(1024, '#a7a7a7', '#a7a7a7');
           $scope.style = {
             width: $scope.width + "px",
             height: $scope.height + "px"

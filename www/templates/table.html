@@ -1,5 +1,5 @@
 <ion-view view-title="Table" class="poker-bg">
-    <ion-content>
+    <ion-content class="few-pad">
 
         <div class="poker-table">
             <div class="row" ng-repeat="players in playersChunk">
@@ -8,20 +8,21 @@
                 </div>
             </div>
         </div>
-        <div class="list poker-list">
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    <i class="ion-ios-people"></i> Dealer
-                </div>
-                <select ng-model="dealerPlayer">
-                    <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
-                </select>
-            </label>
-        </div>
-        <div class="text-center">
-            <button class="button button-balanced button-poker btn-start" ng-disabled="!dealerPlayer || !isDealerPlayerInActive(dealerPlayer) || (activePlayers().length<2)"
-                ng-click="makeDealer(dealerPlayer);">Start</button>
-        </div>
-
+        <form>
+            <div class="list poker-list">
+                <label class="item item-input item-select" for="dealer">
+                    <div class="input-label">
+                        <i class="ion-ios-people"></i> Dealer
+                    </div>
+                    <select id="dealer" ng-model="dealerPlayer">
+                        <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
+                    </select>
+                </label>
+            </div>
+            <div class="text-center">
+                <button class="button button-balanced button-poker btn-start" ng-disabled="!dealerPlayer || !isDealerPlayerInActive(dealerPlayer) || (activePlayers().length<2)"
+                    ng-click="makeDealer(dealerPlayer);">Start</button>
+            </div>
+        </form>
     </ion-content>
 </ion-view>

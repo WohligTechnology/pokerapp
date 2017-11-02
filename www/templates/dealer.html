@@ -1,5 +1,5 @@
-<ion-view view-title="Dealer">
-  <ion-content class="bgImg">
+<ion-view view-title="Dealer" class="green-velvet-bg">
+  <ion-content>
     <div class="centerDiv">
       <div class="row" ng-repeat="players in playersChunk">
         <div class="col col-25" ng-repeat="player in players" ng-if="player">
@@ -15,11 +15,11 @@
 
       <div class="row">
         <div class="col col-50 text-center" ng-click='move($index)'>
-          <button class="button btn-start">Move</button>
+          <button class="button button-default btn-start">Move</button>
         </div>
 
         <div class="col col-50 text-center" ng-click="foldUser();">
-          <button class="button btn-start">Fold</button>
+          <button class="button button-default btn-start">Fold</button>
         </div>
 
       </div>

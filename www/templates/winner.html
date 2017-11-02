@@ -1,5 +1,5 @@
-<ion-view view-title="Dealer">
-  <ion-content class="bgImg">
+<ion-view view-title="Dealer" class="green-velvet-bg">
+  <ion-content>
     <div class="centerDiv">
       <div class="row text-center">
         <div class="col-20" ng-repeat='communityCard in communityCards track by $index'>
@@ -11,8 +11,8 @@
       <div ng-repeat="winner in winners" ng-if="winner">
         <winner-player ng-player="winner"></winner-player>
       </div>
-      <div class="marb-30 text-center" ui-sref='table'>
-        <button class="button btn-start">New Game</button>
+      <div class="marb-30 text-center">
+        <a class="button button-block" ui-sref='table'>New Game</a>
       </div>
     </div>
   </ion-content>

@@ -137,7 +137,7 @@ $dark:                            #444 !default;
         font-size: 25px;
         padding: 0px 20px;
         margin-top: 30px;
-        width: 300px;
+        width: 90%;
     }
 
     .platform-ios .btn-start {
@@ -515,7 +515,7 @@ $dark:                            #444 !default;
     }
 
     .poker-table {
-        background-color: green;
+        background-image: url('../img/green-velvet.jpg');
         border: 16px solid black;
         margin: 20px auto;
         text-align: center;
@@ -530,9 +530,14 @@ $dark:                            #444 !default;
         background-size: cover;
     }
 
+    .green-velvet-bg {
+        background-image: url('../img/green-velvet.jpg');
+        background-size: cover;
+    }
+
     .player-ui {
         h2 {
-            display: inline-block;
+            display: block;
             padding: 25px 20px;
             font-size: 20px;
             background-color: white;
@@ -540,14 +545,12 @@ $dark:                            #444 !default;
             opacity: 0.3;
             transition: all 300ms ease;
             i {
-                font-size: 26px;
+                font-size: 120px;
                 vertical-align: middle;
             }
             span {
-                background-color: #f3eba8;
-                padding: 30px 10px;
-                border: 1px solid black;
                 display: block;
+                font-size: 45px;
             }
         }
         &.player-selected h2 {
@@ -562,11 +565,17 @@ $dark:                            #444 !default;
         .item {
             border: 4px solid black;
             border-radius: 20px;
+            background-color: #d8d8d8;
         }
         .input-label,
         .item select {
             font-size: 25px;
             color: black;
+        }
+        .item-select select {
+            background-color: #fff;
+            width: 100%;
+            border-radius: 0;
         }
     }
 
@@ -576,4 +585,8 @@ $dark:                            #444 !default;
         border-radius: 20px;
         text-transform: uppercase;
         letter-spacing: 10px;
+    }
+
+    .few-pad {
+        padding: 15px;
     }

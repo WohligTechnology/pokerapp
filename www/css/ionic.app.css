@@ -9897,7 +9897,7 @@ a.button {
   font-size: 25px;
   padding: 0px 20px;
   margin-top: 30px;
-  width: 300px; }
+  width: 90%; }
 
 .platform-ios .btn-start {
   font-size: 20px; }
@@ -10199,7 +10199,7 @@ pre {
   background: white; }
 
 .poker-table {
-  background-color: green;
+  background-image: url("../img/green-velvet.jpg");
   border: 16px solid black;
   margin: 20px auto;
   text-align: center;
@@ -10212,8 +10212,12 @@ pre {
   background-image: url("../img/bg-poker.jpg");
   background-size: cover; }
 
+.green-velvet-bg {
+  background-image: url("../img/green-velvet.jpg");
+  background-size: cover; }
+
 .player-ui h2 {
-  display: inline-block;
+  display: block;
   padding: 25px 20px;
   font-size: 20px;
   background-color: white;
@@ -10221,13 +10225,11 @@ pre {
   opacity: 0.3;
   transition: all 300ms ease; }
   .player-ui h2 i {
-    font-size: 26px;
+    font-size: 120px;
     vertical-align: middle; }
   .player-ui h2 span {
-    background-color: #f3eba8;
-    padding: 30px 10px;
-    border: 1px solid black;
-    display: block; }
+    display: block;
+    font-size: 45px; }
 
 .player-ui.player-selected h2 {
   opacity: 1;
@@ -10238,11 +10240,16 @@ pre {
   max-width: 800px; }
   .poker-list .item {
     border: 4px solid black;
-    border-radius: 20px; }
+    border-radius: 20px;
+    background-color: #d8d8d8; }
   .poker-list .input-label,
   .poker-list .item select {
     font-size: 25px;
     color: black; }
+  .poker-list .item-select select {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0; }
 
 .button.button-poker {
   border-color: black;
@@ -10250,3 +10257,6 @@ pre {
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 10px; }
+
+.few-pad {
+  padding: 15px; }

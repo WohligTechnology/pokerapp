@@ -10011,7 +10011,7 @@ a.button {
   font-size: 20px; }
 
 .playersimgbor {
-  border: 10px solid white; }
+  border: 10px solid rgba(255, 255, 255, 0.12); }
 
 .platform-ipad .players {
   margin: 10px; }

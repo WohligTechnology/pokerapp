@@ -29,8 +29,8 @@
           <button class="button btn-start">New Game</button>
         </div>
 
-        <div class="col-50 text-center" ui-sref='winner' ng-click="pageChange();">
-          <button class="button btn-start" ng-disabled="communityCards[4].cardValue==''">Show Winner</button>
+        <div class="col-50 text-center">
+          <button class="button btn-start" ng-disabled="communityCards[4].cardValue==''" ui-sref="winner">Show Winner</button>
         </div>
       </div>
     </div>

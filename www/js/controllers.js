@@ -83,7 +83,7 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state) {
+  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout) {
 
 
     updateSocketFunction = function (data) {
@@ -102,10 +102,13 @@ angular.module('starter.controllers', [])
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
         // check whether dealer is selected or not
+
         var dealerIndex = _.findIndex(data.data.data.playerCards, function (player) {
           return player.isDealer;
         });
-        if (dealerIndex) {
+
+        if (dealerIndex <= 0) {
+          // $scope.noDealer = true;
           $state.go("table");
         }
 

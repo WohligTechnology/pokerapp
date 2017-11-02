@@ -83,6 +83,7 @@ $dark:                            #444 !default;
         display: table;
         width: 100%;
         height: 200px;
+        opacity: 0.4;
     }
 
     .table-border {
@@ -272,7 +273,7 @@ $dark:                            #444 !default;
     }
 
     .playersimgbor {
-        border: 3px solid white;
+        border: 10px solid rgba(255, 255, 255, 0.12);
     }
 
     .platform-ipad .players {
@@ -374,6 +375,7 @@ $dark:                            #444 !default;
 
     .backgroundcl {
         background: #215767 !important;
+        opacity: 1.0;
     }
 
     .platform-ipad .player-select {
@@ -424,8 +426,15 @@ $dark:                            #444 !default;
 
     .player-turn {
         .playersimgbor {
-            border-color: blue;
+            border-color: #6161ff;
         }
+    }
+
+    img.player-dealer {
+        width: 50px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
     }
 
     @media only screen and (max-width:800px) and (min-width:1280px) {
@@ -437,6 +446,7 @@ $dark:                            #444 !default;
             display: table;
             width: 100%;
             height: 200px;
+            opacity: 0.4;
         }
     }
 

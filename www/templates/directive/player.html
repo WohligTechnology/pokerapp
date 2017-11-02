@@ -2,35 +2,36 @@
     <label class="playerfold" ng-if="player.isFold">Fold</label>
     <div class="players text-center" ng-class="{'player-turn':player.isTurn,'not-active':!player.isActive,'player-fold':player.isFold}">
         <div class="playerimg">
-            <img class="img-responsive playersimgbor" src="img/person.png" alt="">
+            <img class="img-responsive playersimgbor" src="img/person.jpg" alt="">
+            <img class="player-dealer" ng-if="player.isDealer" src="img/dealer.png" alt="">
             <!-- <div ng-show="p.isFold"></div> -->
         </div>
 
         <div class="row" ng-if="player.cards.length==0">
             <div class="col col-50">
-                <card card='"NONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"NONE"' ng-style="style" width="50" height="60"> </card>
 
             </div>
             <div class="col col-50">
-                <card card='"NONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"NONE"' ng-style="style" width="50" height="60"> </card>
             </div>
         </div>
         <div class="row" ng-if="player.cards.length==1">
             <div class="col col-50">
-                <card card='"DONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"DONE"' ng-style="style" width="50" height="60"> </card>
 
             </div>
             <div class="col col-50">
-                <card card='"NONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"NONE"' ng-style="style" width="50" height="60"> </card>
             </div>
         </div>
         <div class="row" ng-if="player.cards.length==2">
             <div class="col col-50">
-                <card card='"DONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"DONE"' ng-style="style" width="50" height="60"> </card>
 
             </div>
             <div class="col col-50">
-                <card card='"DONE"' ng-style="style" width="20" height="30"> </card>
+                <card card='"DONE"' ng-style="style" width="50" height="60"> </card>
             </div>
         </div>
 

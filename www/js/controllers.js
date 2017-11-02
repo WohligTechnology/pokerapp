@@ -1,3 +1,5 @@
+var updateSocketFunction;
+
 angular.module('starter.controllers', [])
 
   .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
@@ -81,26 +83,34 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $interval) {
+  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout) {
 
 
-
-    io.socket.on("Update", function (data) {
+    updateSocketFunction = function (data) {
+      console.log(data);
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
       $scope.$apply();
-    });
+    };
 
+    io.socket.on("Update", updateSocketFunction);
 
-    // var getInterval = $interval(function () {
-    //   $scope.updatePlayers();
-    // }, 1000);
 
     $scope.pageChange = function () {};
 
 
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
+        // check whether dealer is selected or not
+
+        var dealerIndex = _.findIndex(data.data.data.playerCards, function (player) {
+          return player.isDealer;
+        });
+        if (dealerIndex < 0) {
+          // $scope.noDealer = true;
+          $state.go("table");
+        }
+
         $scope.communityCards = data.data.data.communityCards;
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
@@ -118,9 +128,7 @@ angular.module('starter.controllers', [])
     $scope.currentPlayer = 0;
 
     $scope.move = function (playerNo) {
-      apiService.move(function (data) {
-        $scope.updatePlayers();
-      });
+      apiService.move(function (data) {});
 
       $scope.selected = '0-0';
       count++;
@@ -140,8 +148,8 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('TableCtrl', function ($scope, $stateParams, apiService) {
-
+  .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {
+    io.socket.off("Update", updateSocketFunction);
     $scope.newGame = function () {
       $scope.winnerData = {};
       apiService.newGame(function (data) {
@@ -159,7 +167,7 @@ angular.module('starter.controllers', [])
       apiService.makeDealer({
         "tabId": tabId
       }, function (data) {
-
+        $state.go("dealer");
       });
     };
 
@@ -169,9 +177,24 @@ angular.module('starter.controllers', [])
         return player.isActive;
       });
     };
+
+    $scope.isDealerPlayerInActive = function (dealerPlayer) {
+      var players = _.flatten($scope.playersChunk);
+      var dealerPlayerIndex = _.findIndex(players, function (player) {
+        return (player.isActive && player.playerNo == dealerPlayer);
+      });
+      if (dealerPlayerIndex >= 0) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
+    io.socket.off("Update", updateSocketFunction);
     $scope.showWinner = function () {
       apiService.showWinner(function (data) {
         $scope.winners = data.data.data.winners;

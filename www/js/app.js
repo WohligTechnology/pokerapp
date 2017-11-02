@@ -56,7 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'DealerCtrl'
       });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/dealer');
+    $urlRouterProvider.otherwise('/table');
   })
 
   .directive('card', function () {

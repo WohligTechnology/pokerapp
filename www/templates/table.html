@@ -11,13 +11,14 @@
                     <div class="input-label">
                         Dealer
                     </div>
-                    <select ng-model="dealerPlayer" ng-change="makeDealer(dealerPlayer);">
+                    <select ng-model="dealerPlayer">
                         <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
                     </select>
                 </label>
             </div>
             <div class="text-center">
-                <button class="button btn-start" ng-disabled="!dealerPlayer || (activePlayers().length<2) " ui-sref="dealer">Start</button>
+                <button class="button btn-start" ng-disabled="!dealerPlayer || !isDealerPlayerInActive(dealerPlayer) || (activePlayers().length<2)"
+                    ng-click="makeDealer(dealerPlayer);">Start</button>
             </div>
         </div>
     </ion-content>

@@ -140,7 +140,7 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('TableCtrl', function ($scope, $stateParams, apiService) {
+  .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {
 
     $scope.newGame = function () {
       $scope.winnerData = {};
@@ -159,7 +159,7 @@ angular.module('starter.controllers', [])
       apiService.makeDealer({
         "tabId": tabId
       }, function (data) {
-
+        $state.go("dealer");
       });
     };
 
@@ -169,6 +169,20 @@ angular.module('starter.controllers', [])
         return player.isActive;
       });
     };
+
+    $scope.isDealerPlayerInActive = function (dealerPlayer) {
+      var players = _.flatten($scope.playersChunk);
+      var dealerPlayerIndex = _.findIndex(players, function (player) {
+        return (player.isActive && player.playerNo == dealerPlayer);
+      });
+      if (dealerPlayerIndex >= 0) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {

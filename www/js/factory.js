@@ -26,7 +26,7 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             });
         },
         move: function (callback) {
-            $http.post(adminurl + 'Player/moveturn').then(function (data) {
+            $http.post(adminurl + 'Player/moveTurn').then(function (data) {
                 callback(data);
             });
         },

@@ -17,7 +17,7 @@
                 </label>
             </div>
             <div class="text-center">
-                <button class="button btn-start" ng-disabled="!dealerPlayer" ui-sref="dealer">Start</button>
+                <button class="button btn-start" ng-disabled="!dealerPlayer || (activePlayers().length<2) " ui-sref="dealer">Start</button>
             </div>
         </div>
     </ion-content>

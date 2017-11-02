@@ -1,52 +1,52 @@
 <ion-view view-title="Dealer">
   <ion-content class="bgImg">
     <div class="centerDiv">
-      <div class="row mar5 " ng-repeat= 'player in players track by $index' ng-init="a1=$index" >
+      <div class="row mar5 " ng-repeat='player in players track by $index' ng-init="a1=$index">
 
-        <div class="col-25 col-sm-25 " ng-repeat= 'p in player track by $index' ng-init="a=a1+'-'+$index" >
-          
-          <div class="players text-center"  ng-class="{'selected' : p.isTurn} ">
+        <div class="col-25 col-sm-25 " ng-repeat='p in player track by $index' ng-init="a=a1+'-'+$index">
+
+          <div class="players text-center" ng-class="{'selected' : p.isTurn} ">
             <div class="playerimg" ng-if='p.isActive'>
-            <img class="img-responsive" src="img/person.png" alt="">
+              <img class="img-responsive" src="img/person.jpg" alt="">
             </div>
             <div class="playerimg" ng-if='!p.isActive'>
-                <img class="img-responsive" src="img/person.png" alt="">
-                </div>
+              <img class="img-responsive" src="img/person.jpg" alt="">
+            </div>
             <h2>Player{{p.playerNo}}</h2>
           </div>
         </div>
-        
-         </div>
+
+      </div>
       <div class="row text-center">
         <div class="col-20 ">
-            <div class="cardimg ">
-                <img class="img-responsive" src="img/q.png" alt="">
+          <div class="cardimg ">
+            <img class="img-responsive" src="img/q.png" alt="">
 
-            </div>
+          </div>
         </div>
         <div class="col-20">
-            <div class="cardimg" >
-                <img class="img-responsive" src="img/a.png" alt="">
-            </div>
+          <div class="cardimg">
+            <img class="img-responsive" src="img/a.png" alt="">
+          </div>
         </div>
-        <div class="col-20" >
-                <div class="cardimg">
-                    <img class="img-responsive" src="img/q.png" alt="">
-    
-                </div>
-            </div>
-            <div class="col-20">
-                <div class="cardimg" >
-                    <img class="img-responsive" src="img/a.png" alt="">
-                </div>
-            </div>
-            <div class="col-20" >
-                <div class="cardimg">
-                    <img class="img-responsive" src="img/q.png" alt="">
-    
-                </div>
-            </div>
-    </div>
+        <div class="col-20">
+          <div class="cardimg">
+            <img class="img-responsive" src="img/q.png" alt="">
+
+          </div>
+        </div>
+        <div class="col-20">
+          <div class="cardimg">
+            <img class="img-responsive" src="img/a.png" alt="">
+          </div>
+        </div>
+        <div class="col-20">
+          <div class="cardimg">
+            <img class="img-responsive" src="img/q.png" alt="">
+
+          </div>
+        </div>
+      </div>
       <div class="row ">
         <div class="col-50 text-center" ng-click='move($index)'>
           <button class="button btn-start">Move</button>

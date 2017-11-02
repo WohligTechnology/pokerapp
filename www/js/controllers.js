@@ -86,9 +86,11 @@ angular.module('starter.controllers', [])
 
 
     io.socket.on("Update", function (data) {
+      console.log(data);
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
       $scope.$apply();
+      console.log("Demo");
     });
 
 
@@ -96,10 +98,7 @@ angular.module('starter.controllers', [])
     //   $scope.updatePlayers();
     // }, 1000);
 
-    $scope.pageChange = function () {
-      $interval.cancel(getInterval);
-      getInterval = undefined;
-    };
+    $scope.pageChange = function () {};
 
 
     $scope.updatePlayers = function () {

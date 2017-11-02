@@ -272,7 +272,7 @@ $dark:                            #444 !default;
     }
 
     .playersimgbor {
-        border: 3px solid white;
+        border: 10px solid white;
     }
 
     .platform-ipad .players {
@@ -424,8 +424,15 @@ $dark:                            #444 !default;
 
     .player-turn {
         .playersimgbor {
-            border-color: blue;
+            border-color: #6161ff;
         }
+    }
+
+    img.player-dealer {
+        width: 50px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
     }
 
     @media only screen and (max-width:800px) and (min-width:1280px) {

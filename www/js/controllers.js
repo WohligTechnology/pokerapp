@@ -106,8 +106,7 @@ angular.module('starter.controllers', [])
         var dealerIndex = _.findIndex(data.data.data.playerCards, function (player) {
           return player.isDealer;
         });
-
-        if (dealerIndex <= 0) {
+        if (dealerIndex < 0) {
           // $scope.noDealer = true;
           $state.go("table");
         }

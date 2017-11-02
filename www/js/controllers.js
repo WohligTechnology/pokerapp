@@ -88,7 +88,6 @@ angular.module('starter.controllers', [])
     }, 1000);
 
     $scope.pageChange = function () {
-      console.log("Page Change Called");
       $interval.cancel(getInterval);
       getInterval = undefined;
     };
@@ -96,7 +95,6 @@ angular.module('starter.controllers', [])
 
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
-        // $scope.players = data.data.data.playerCards;
         $scope.communityCards = data.data.data.communityCards;
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
       });
@@ -105,9 +103,7 @@ angular.module('starter.controllers', [])
     $scope.updatePlayers();
     $scope.showCards = function () {
       apiService.revealCards(function (data) {});
-      //revealCards
     };
-    //apiService
 
     var count = 0;
     var counter = 0;

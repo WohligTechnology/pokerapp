@@ -2,9 +2,6 @@ myApp = angular.module('starter');
 
 myApp.factory('apiService', function ($http, $q, $timeout) {
 
-    var adminUUU = 'http://10.0.0.2:8081';
-    io.sails.url = adminUUU;
-    var adminurl = adminUUU + '/api/';
 
     return {
         // This is a demo Service for POST Method.

@@ -198,7 +198,7 @@ angular.module('starter.controllers', [])
     $scope.showWinner = function () {
       apiService.showWinner(function (data) {
         $scope.players = data.data.data.winners;
-
+        $scope.playersChunks = _.chunk($scope.players, 2);
         $scope.winners = _.filter($scope.players, function (player) {
           return player.winner;
         });
@@ -208,5 +208,6 @@ angular.module('starter.controllers', [])
         }), " & ");
       });
     };
+
     $scope.showWinner();
   });

@@ -1,5 +1,6 @@
 <ion-view view-title="Dealer" class="green-velvet-bg">
   <ion-content>
+
     <div class="centerDiv">
       <div class="row" ng-repeat="players in playersChunk">
         <div class="col col-25" ng-repeat="player in players" ng-if="player">
@@ -14,25 +15,36 @@
       </div>
 
       <div class="row">
-        <div class="col col-50 text-center" ng-click='move($index)'>
-          <button class="button button-default btn-start">Move</button>
+        <div class="col col-25 text-center">
+          <button class="button button-default btn-start">All In</button>
         </div>
-
-        <div class="col col-50 text-center" ng-click="foldUser();">
+        <div class="col col-25 text-center">
+          <button class="button button-default btn-start">Raise</button>
+        </div>
+        <div class="col col-25 text-center">
+          <button class="button button-default btn-start">Check</button>
+        </div>
+        <div class="col col-25 text-center" ng-if="false">
+          <button class="button button-default btn-start">Call</button>
+        </div>
+        <div class="col col-25 text-center" ng-click="foldUser();">
           <button class="button button-default btn-start">Fold</button>
         </div>
-
       </div>
 
       <div class="row">
-        <div class="col-50 text-center" ui-sref='table' ng-click="pageChange();">
-          <button class="button btn-start">New Game</button>
-        </div>
+        <div class="col col-25 text-center">
 
-        <div class="col-50 text-center">
-          <button class="button btn-start" ng-disabled="communityCards[communityCards.length-1].cardValue==''" ui-sref="winner">Show Winner</button>
+        </div>
+        <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
+          <button class="button btn-start">New</button>
+        </div>
+        <div class="col col-25 text-center">
+          <button class="button btn-start" ng-disabled="communityCards[communityCards.length-1].cardValue==''" ui-sref="winner">Winner</button>
         </div>
       </div>
+
+
     </div>
   </ion-content>
 </ion-view>

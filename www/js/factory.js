@@ -59,6 +59,11 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             $http.post(adminurl + 'Player/allIn').then(function (data) {
                 callback(data);
             });
+        },
+        raise: function (callback) {
+            $http.post(adminurl + 'Player/raise').then(function (data) {
+                callback(data);
+            });
         }
         // This is a demo Service for POST Method.
     };

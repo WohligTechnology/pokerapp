@@ -150,6 +150,9 @@ angular.module('starter.controllers', [])
     $scope.allInUser = function () {
       apiService.allIn(function (data) {});
     };
+    $scope.raise = function () {
+      apiService.raise(function (data) {});
+    };
   })
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {

@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
           onTap: function (e) {}
         }, ]
       });
-    }
+    };
 
     $scope.fold = function () {
       $ionicPopup.alert({
@@ -81,6 +81,7 @@ angular.module('starter.controllers', [])
         }, ]
       });
     };
+
   })
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout) {
@@ -145,6 +146,9 @@ angular.module('starter.controllers', [])
 
     $scope.foldUser = function () {
       apiService.fold(function (data) {});
+    };
+    $scope.allInUser = function () {
+      apiService.allIn(function (data) {});
     };
   })
 

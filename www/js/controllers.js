@@ -163,10 +163,20 @@ angular.module('starter.controllers', [])
         $scope.updatePlayers();
       });
     };
+
+
     $scope.newGame();
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
+        $scope.allPlayers = data.data.data.playerCards;
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
+        _.each($scope.allPlayers, function (n) {
+          if (n.isDealer) {
+            $scope.dealer = {
+              dealerPlayer: n.playerNo
+            };
+          }
+        });
       });
     };
 

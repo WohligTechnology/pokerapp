@@ -91,6 +91,7 @@ angular.module('starter.controllers', [])
       console.log(data);
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
+      $scope.extra = data.extra;
       $scope.$apply();
     };
 

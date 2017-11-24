@@ -10018,9 +10018,6 @@ a.button {
   .platform-ipad .players h2 {
     font-size: 30px; }
 
-.playerimg {
-  width: 60%; }
-
 .selected {
   border: 3px solid orangered; }
 
@@ -10031,6 +10028,15 @@ a.button {
   .playerimg h1 {
     color: white;
     margin-bottom: 20px !important; }
+
+.playerimg {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #ddd;
+  padding: 0;
+  margin: 0 auto; }
+  .playerimg h1 {
+    line-height: 1.2; }
 
 .dummydiv {
   height: 10px; }
@@ -10274,16 +10280,6 @@ pre {
 .modal-sure {
   text-align: center;
   padding: 75px 20px; }
-
-.playerimg {
-  height: 100px;
-  border: 2px solid #ddd;
-  padding: 0;
-  width: 100px;
-  margin: 0 auto; }
-  .playerimg h1 {
-    font-size: 70px;
-    line-height: 1.3; }
 
 .col-60 {
   -webkit-box-flex: 0;

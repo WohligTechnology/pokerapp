@@ -95,6 +95,9 @@ angular.module('starter.controllers', [])
       $scope.communityCards = data.communityCards;
       $scope.playersChunk = _.chunk(data.playerCards, 4);
       $scope.extra = data.extra;
+      $scope.hasTurn = data.hasTurn;
+      $scope.isCheck = data.isCheck;
+      $scope.showWinner = data.showWinner;
       $scope.$apply();
     };
 
@@ -118,6 +121,9 @@ angular.module('starter.controllers', [])
 
         $scope.communityCards = data.data.data.communityCards;
         $scope.playersChunk = _.chunk(data.data.data.playerCards, 4);
+        $scope.hasTurn = data.data.data.hasTurn;
+        $scope.isCheck = data.data.data.isCheck;
+        $scope.showWinner = data.data.data.showWinner;
       });
     };
 
@@ -131,22 +137,6 @@ angular.module('starter.controllers', [])
     $scope.selected = '0-0';
 
     $scope.currentPlayer = 0;
-
-    // $scope.move = function (playerNo) {
-    //   apiService.move(function (data) {});
-
-    //   $scope.selected = '0-0';
-    //   count++;
-    //   counter = count % 4;
-    //   if (0 < count && count < 4) {
-    //     $scope.selected = 0 + '-' + counter;
-    //   } else if (4 <= count && count < 8) {
-    //     $scope.selected = 1 + '-' + counter;
-    //   } else {
-    //     count = 0;
-
-    //   }
-    // };
 
     $ionicModal.fromTemplateUrl('templates/modal/sure.html', {
       scope: $scope,

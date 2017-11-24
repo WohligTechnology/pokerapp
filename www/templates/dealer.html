@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" ng-if="hasTurn">
         <!-- <div class="col col-25 text-center">
           <button class="button button-default btn-start" ng-click="allInUserModal();">All In</button>
         </div> -->
@@ -50,13 +50,13 @@
         <!-- <div class="col col-25 text-center" ng-click="move();">
           <button class="button button-default btn-start">Check</button>
         </div> -->
-        <div class="col col-25 text-center" ng-click="move();" ng-if="extra.showCheck">
+        <div class="col col-25 text-center" ng-click="move();" ng-if="isCheck">
           <button class="button button-default btn-start">Check</button>
         </div>
         <!-- <div class="col col-25 text-center" ng-click="move();" >
           <button class="button button-default btn-start">Call</button>
         </div> -->
-        <div class="col col-25 text-center" ng-click="move();" ng-if="!extra.showCheck">
+        <div class="col col-25 text-center" ng-click="move();" ng-if="!isCheck">
           <button class="button button-default btn-start">Call</button>
         </div>
         <!-- <div class="col col-25 text-center" ng-click="foldUser();">
@@ -66,7 +66,7 @@
           <button class="button button-default btn-start">Fold</button>
         </div>
       </div>
-      <div class="row" ng-if="false">
+      <div class="row" ng-if="!hasTurn">
         <div class="col col-100 text-center">
           <button class="button button-default btn-start">Serve Card</button>
         </div>
@@ -83,13 +83,12 @@
           <button class="button btn-start">New</button>
         </div> -->
         <div class="col col-25 text-center">
-          <button class="button btn-start" ng-disabled="communityCards[communityCards.length-1].cardValue==''" ui-sref="winner">Winner</button>
+          <button class="button btn-start" ng-disabled="!showWinner" ui-sref="winner">Winner</button>
         </div>
         <div class="col col-25 text-center" ng-click="undoModal();">
           <button class="button button-assertive btn-start">Undo</button>
         </div>
       </div>
-
 
     </div>
   </ion-content>

@@ -217,8 +217,9 @@ angular.module('starter.controllers', [])
     $scope.newGameModal = function () {
       $scope.modal.show();
       $scope.alluser = 'Start New Game';
-      $scope.pageChange = function () {
-        $state.go()
+      $scope.allFunctions = function () {
+        $state.go("table");
+        $scope.sureModalClose();
       };
     };
     $scope.undoModal = function () {

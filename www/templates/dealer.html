@@ -66,10 +66,15 @@
           <button class="button button-default btn-start">Fold</button>
         </div>
       </div>
+      <div class="row" ng-if="!extra.turn">
+        <div class="col col-100 text-center">
+          <button class="button button-default btn-start">Serve Card</button>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col col-25 text-center">
-
+          <button class="button button-positive btn-start" ng-click="randomCard();">Card</button>
         </div>
         <div class="col col-25 text-center" ng-click="newGameModal();">
           <button class="button btn-start">New</button>

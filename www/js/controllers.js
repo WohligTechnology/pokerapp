@@ -86,6 +86,9 @@ angular.module('starter.controllers', [])
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout, $ionicModal) {
 
+    $scope.randomCard = function () {
+      apiService.randomCard();
+    };
 
     updateSocketFunction = function (data) {
       console.log(data);

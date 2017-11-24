@@ -64,6 +64,15 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             $http.post(adminurl + 'Player/raise').then(function (data) {
                 callback(data);
             });
+        },
+        randomCard: function () {
+            var cardValue = cards[_.random(0, cards.length - 3)].name;
+            $http.post(adminurl + 'Player/serve', {
+                card: cardValue
+            }).then(function (data) {
+                console.log(data.data);
+            });
+
         }
         // This is a demo Service for POST Method.
     };

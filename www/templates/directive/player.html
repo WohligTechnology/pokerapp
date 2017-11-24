@@ -4,7 +4,7 @@
     <div class="players text-center" ng-class="{'player-turn':player.isTurn,'not-active':!player.isActive,'player-fold':player.isFold || player.isAllIn}">
         <div class="playerimg">
             <!-- <img class="img-responsive playersimgbor" src="img/person.jpg" alt=""> -->
-            <h1>1</h1>
+            <h1>{{player.playerNo}}</h1>
             <img class="player-dealer" ng-if="player.isDealer" src="img/dealer.png" alt="">
             <!-- <div ng-show="p.isFold"></div> -->
         </div>
@@ -36,6 +36,5 @@
                 <card card='DONE' ng-style="style" width="50" height="60"> </card>
             </div>
         </div>
-        <h2>L: {{player.hasRaised}}</h2>
     </div>
 </div>

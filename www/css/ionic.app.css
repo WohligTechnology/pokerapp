@@ -10134,8 +10134,8 @@ a.button {
 .not-active {
   opacity: 0.25; }
 
-.player-turn .playersimgbor {
-  border-color: #b54747; }
+.player-turn .playerimg {
+  background: blue; }
 
 img.player-dealer {
   width: 50px;

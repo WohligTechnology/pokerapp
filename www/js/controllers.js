@@ -98,7 +98,7 @@ angular.module('starter.controllers', [])
     io.socket.on("Update", updateSocketFunction);
 
 
-    $scope.pageChange = function () {};
+    // $scope.pageChange = function () {};
 
 
     $scope.updatePlayers = function () {
@@ -129,23 +129,23 @@ angular.module('starter.controllers', [])
 
     $scope.currentPlayer = 0;
 
-    $scope.move = function (playerNo) {
-      apiService.move(function (data) {});
+    // $scope.move = function (playerNo) {
+    //   apiService.move(function (data) {});
 
-      $scope.selected = '0-0';
-      count++;
-      counter = count % 4;
-      if (0 < count && count < 4) {
-        $scope.selected = 0 + '-' + counter;
-      } else if (4 <= count && count < 8) {
-        $scope.selected = 1 + '-' + counter;
-      } else {
-        count = 0;
+    //   $scope.selected = '0-0';
+    //   count++;
+    //   counter = count % 4;
+    //   if (0 < count && count < 4) {
+    //     $scope.selected = 0 + '-' + counter;
+    //   } else if (4 <= count && count < 8) {
+    //     $scope.selected = 1 + '-' + counter;
+    //   } else {
+    //     count = 0;
 
-      }
-    };
+    //   }
+    // };
 
-    $ionicModal.fromTemplateUrl('templates/modal/delete.html', {
+    $ionicModal.fromTemplateUrl('templates/modal/sure.html', {
       scope: $scope,
       animation: 'slide-in-up'
     }).then(function (modal) {
@@ -154,22 +154,92 @@ angular.module('starter.controllers', [])
 
     $scope.allInUserModal = function () {
       $scope.modal.show();
+      $scope.alluser = 'All In';
+      $scope.allFunctions = function () {
+        console.log("demo1");
+        apiService.allIn(function (data) {});
+      };
     };
+    $scope.foldModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Fold';
+      $scope.allFunctions = function () {
+        console.log("demo");
+        apiService.fold(function (data) {});
+      };
+    };
+    $scope.raiseModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Raise';
+      $scope.allFunctions = function () {
+        console.log("demo");
+        apiService.raise(function (data) {});
+      };
+    };
+    $scope.checkModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Check';
+      $scope.allFunctions = function (playerNo) {
+        apiService.move(function (data) {});
 
-    $scope.allInUserModalClose = function () {
+        $scope.selected = '0-0';
+        count++;
+        counter = count % 4;
+        if (0 < count && count < 4) {
+          $scope.selected = 0 + '-' + counter;
+        } else if (4 <= count && count < 8) {
+          $scope.selected = 1 + '-' + counter;
+        } else {
+          count = 0;
+
+        }
+      };
+    };
+    $scope.callModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Call';
+      $scope.allFunctions = function (playerNo) {
+        apiService.move(function (data) {});
+
+        $scope.selected = '0-0';
+        count++;
+        counter = count % 4;
+        if (0 < count && count < 4) {
+          $scope.selected = 0 + '-' + counter;
+        } else if (4 <= count && count < 8) {
+          $scope.selected = 1 + '-' + counter;
+        } else {
+          count = 0;
+
+        }
+      };
+    };
+    $scope.newGameModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Start New Game';
+      $scope.pageChange = function () {
+        $state.go()
+      };
+    };
+    $scope.undoModal = function () {
+      $scope.modal.show();
+      $scope.alluser = 'Undo';
+    };
+    $scope.sureModalClose = function () {
       $scope.modal.hide();
     };
 
 
-    $scope.foldUser = function () {
-      apiService.fold(function (data) {});
-    };
-    $scope.allInUser = function () {
-      apiService.allIn(function (data) {});
-    };
-    $scope.raise = function () {
-      apiService.raise(function (data) {});
-    };
+    // $scope.foldUser = function () {
+    //   console.log("demo");
+    //   apiService.fold(function (data) {});
+    // };
+    // $scope.allInUser = function () {
+    //   apiService.allIn(function (data) {});
+    // };
+    // $scope.raise = function () {
+    //   apiService.raise(function (data) {});
+    // };
   })
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {

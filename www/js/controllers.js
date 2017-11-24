@@ -84,7 +84,7 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout) {
+  .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout,$ionicModal) {
 
 
     updateSocketFunction = function (data) {
@@ -143,6 +143,22 @@ angular.module('starter.controllers', [])
 
       }
     };
+
+    $ionicModal.fromTemplateUrl('templates/modal/delete.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+   }).then(function(modal) {
+      $scope.modal = modal;
+   });
+	
+   $scope.allInUserModal = function() {
+      $scope.modal.show();
+   };
+	
+   $scope.allInUserModalClose = function() {
+      $scope.modal.hide();
+   };
+
 
     $scope.foldUser = function () {
       apiService.fold(function (data) {});

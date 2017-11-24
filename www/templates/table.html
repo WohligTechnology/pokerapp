@@ -20,10 +20,21 @@
                     </select>
                 </label>
             </div>
+            <div class="item item-toggle">
+                Straddle
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" ng-model="form.isStraddle">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
             <div class="text-center">
                 <button class="button button-balanced button-poker btn-start" ng-disabled="!dealer.dealerPlayer || !isDealerPlayerInActive(dealer.dealerPlayer) || (activePlayers().length<2)"
                     ng-click="makeDealer(dealer.dealerPlayer);">Start</button>
             </div>
+
+
         </form>
     </ion-content>
 </ion-view>

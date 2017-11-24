@@ -266,7 +266,8 @@ angular.module('starter.controllers', [])
 
     $scope.makeDealer = function (tabId) {
       apiService.makeDealer({
-        "tabId": tabId
+        "tabId": tabId,
+        isStraddle: $scope.form.isStraddle
       }, function (data) {
         $state.go("dealer");
       });
@@ -289,6 +290,9 @@ angular.module('starter.controllers', [])
       } else {
         return false;
       }
+    };
+    $scope.form = {
+      isStraddle: false
     };
 
 

@@ -13,24 +13,44 @@
           <community ng-community-card="communityCard"></community>
         </div>
       </div>
+      <div class="row">
+        <div class="col col-60">
+          <div class="text-center">
+              <button class="button button-default" ng-click="allInUserModal();" ng-if="communityCard.cardValue==''">Remove</button>
+          </div>
+
+        </div>
+      </div>
 
       <div class="row">
-        <!-- <div class="col col-25 text-center">
+        <div class="col col-25 text-center">
           <button class="button button-default btn-start" ng-click="allInUserModal();">All In</button>
+        </div>
+        <!-- <div class="col col-25 text-center">
+          <button class="button button-default btn-start" ng-click="allInUser();">All In</button>
+        </div> -->
+        <!-- <div class="col col-25 text-center">
+          <button class="button button-default btn-start" ng-click="raise();">Raise</button>
         </div> -->
         <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="allInUser();">All In</button>
+          <button class="button button-default btn-start" ng-click="raiseModal();">Raise</button>
         </div>
-        <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="raise();">Raise</button>
-        </div>
-        <div class="col col-25 text-center" ng-click="move();">
+        <!-- <div class="col col-25 text-center" ng-click="move();">
+          <button class="button button-default btn-start">Check</button>
+        </div> -->
+        <div class="col col-25 text-center" ng-click="checkModal();">
           <button class="button button-default btn-start">Check</button>
         </div>
-        <div class="col col-25 text-center" ng-click="move();" ng-if="false">
+        <!-- <div class="col col-25 text-center" ng-click="move();" ng-if="false">
+          <button class="button button-default btn-start">Call</button>
+        </div> -->
+        <div class="col col-25 text-center" ng-click="callModal();" ng-if="false">
           <button class="button button-default btn-start">Call</button>
         </div>
-        <div class="col col-25 text-center" ng-click="foldUser();">
+        <!-- <div class="col col-25 text-center" ng-click="foldUser();">
+          <button class="button button-default btn-start">Fold</button>
+        </div> -->
+        <div class="col col-25 text-center" ng-click="foldModal();">
           <button class="button button-default btn-start">Fold</button>
         </div>
       </div>
@@ -39,11 +59,17 @@
         <div class="col col-25 text-center">
 
         </div>
-        <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
+        <div class="col col-25 text-center" ng-click="newGameModal();">
           <button class="button btn-start">New</button>
         </div>
+        <!-- <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
+          <button class="button btn-start">New</button>
+        </div> -->
         <div class="col col-25 text-center">
           <button class="button btn-start" ng-disabled="communityCards[communityCards.length-1].cardValue==''" ui-sref="winner">Winner</button>
+        </div>
+        <div class="col col-25 text-center" ng-click="undoModal();">
+          <button class="button button-assertive btn-start">Undo</button>
         </div>
       </div>
 

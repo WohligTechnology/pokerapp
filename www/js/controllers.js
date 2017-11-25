@@ -86,6 +86,9 @@ angular.module('starter.controllers', [])
 
   .controller('DealerCtrl', function ($scope, $stateParams, apiService, $state, $timeout, $ionicModal) {
 
+    io.socket.on("ShowWinner", function (data) {
+      console.log("Winner", data);
+    });
     $scope.randomCard = function () {
       apiService.randomCard();
     };
@@ -216,8 +219,9 @@ angular.module('starter.controllers', [])
       };
     };
     $scope.undoModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Undo';
+      // $scope.modal.show();
+      // $scope.alluser = 'Undo';
+      apiService.undo(function () {});
     };
     $scope.sureModalClose = function () {
       $scope.modal.hide();
@@ -229,8 +233,6 @@ angular.module('starter.controllers', [])
     $scope.move = function () {
       apiService.move(function (data) {});
     };
-
-
     $scope.removeCard = function (cardNo) {
       apiService.removeCard(cardNo);
     };

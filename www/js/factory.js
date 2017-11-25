@@ -80,6 +80,11 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             }).then(function (data) {
                 console.log(data.data);
             });
+        },
+        undo: function (callback) {
+            $http.post(adminurl + 'GameLogs/undo').then(function (data) {
+                console.log(data.data);
+            });
         }
     };
 });

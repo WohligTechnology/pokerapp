@@ -232,7 +232,7 @@ angular.module('starter.controllers', [])
 
 
     $scope.removeCard = function (cardNo) {
-      console.log("Remove Card No. " + cardNo);
+      apiService.removeCard(cardNo);
     };
     $scope.showRemove = function (cardNo) {
       if ($scope.communityCards && $scope.communityCards.length == 8) {

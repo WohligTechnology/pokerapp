@@ -81,7 +81,6 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
                 console.log(data.data);
             });
         }
-        // This is a demo Service for POST Method.
     };
 });
 myApp.filter('declareWinner', function () {

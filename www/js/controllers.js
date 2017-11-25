@@ -223,19 +223,33 @@ angular.module('starter.controllers', [])
       $scope.modal.hide();
     };
 
-
-    // $scope.foldUser = function () {
-    //   console.log("demo");
-    //   apiService.fold(function (data) {});
-    // };
-    // $scope.allInUser = function () {
-    //   apiService.allIn(function (data) {});
-    // };
     $scope.raise = function () {
       apiService.raise(function (data) {});
     };
     $scope.move = function () {
       apiService.move(function (data) {});
+    };
+
+
+    $scope.removeCard = function (cardNo) {
+      console.log("Remove Card No. " + cardNo);
+    };
+    $scope.showRemove = function (cardNo) {
+      if ($scope.communityCards && $scope.communityCards.length == 8) {
+        if (cardNo === 0) {
+          if ($scope.communityCards[0].cardValue !== "" && $scope.communityCards[4].cardValue === "") {
+            return true;
+          }
+        } else if (cardNo === 4) {
+          if ($scope.communityCards[4].cardValue !== "" && $scope.communityCards[6].cardValue === "") {
+            return true;
+          }
+        } else if (cardNo === 6) {
+          if ($scope.communityCards[6].cardValue !== "") {
+            return true;
+          }
+        }
+      }
     };
   })
 

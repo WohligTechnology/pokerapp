@@ -73,6 +73,13 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
                 console.log(data.data);
             });
 
+        },
+        removeCard: function (cardNo) {
+            $http.post(adminurl + 'CommunityCards/removeCards', {
+                cardIndex: cardNo
+            }).then(function (data) {
+                console.log(data.data);
+            });
         }
         // This is a demo Service for POST Method.
     };

@@ -208,6 +208,7 @@ angular.module('starter.controllers', [])
           count = 0;
 
         }
+        $scope.sureModalClose();
       };
     };
     $scope.newGameModal = function () {

@@ -10318,3 +10318,6 @@ card.community-card {
   max-width: 150px;
   display: block;
   margin: 0 auto; }
+
+.hidden {
+  display: none; }

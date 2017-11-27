@@ -10004,12 +10004,6 @@ a.button {
     font-size: 25px;
     background: cornflowerblue !important; }
 
-.players h2 {
-  color: white;
-  margin-bottom: 20px !important;
-  margin: 0px;
-  font-size: 20px; }
-
 .playersimgbor {
   border: 10px solid rgba(255, 255, 255, 0.12); }
 
@@ -10020,23 +10014,6 @@ a.button {
 
 .selected {
   border: 3px solid orangered; }
-
-.playerimg {
-  width: 100%; }
-  .playerimg img {
-    width: 60%; }
-  .playerimg h1 {
-    color: white;
-    margin-bottom: 20px !important; }
-
-.playerimg {
-  height: 50px;
-  width: 50px;
-  border: 2px solid #ddd;
-  padding: 0;
-  margin: 0 auto; }
-  .playerimg h1 {
-    line-height: 1.2; }
 
 .dummydiv {
   height: 10px; }
@@ -10134,9 +10111,6 @@ a.button {
 .not-active {
   opacity: 0.25; }
 
-.player-turn .playerimg {
-  background: blue; }
-
 img.player-dealer {
   width: 50px;
   position: absolute;
@@ -10204,20 +10178,6 @@ img.player-dealer {
 
 pre {
   background: white; }
-
-.poker-table {
-  background-image: url("../img/green-velvet.jpg");
-  border: 16px solid black;
-  margin: 20px auto;
-  text-align: center;
-  border-radius: 50px;
-  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  max-width: 900px; }
-
-.poker-bg {
-  background-image: url("../img/bg-poker.jpg");
-  background-size: cover; }
 
 .green-velvet-bg {
   background-image: url("../img/green-velvet.jpg");
@@ -10302,3 +10262,38 @@ pre {
   .custom-modal-page.modal {
     top: 30%;
     bottom: 25%; } }
+
+.button-positive.btn-start {
+  padding: 20px;
+  font-size: 30px; }
+
+.playerimg {
+  height: 45px;
+  width: 45px;
+  border: 2px solid #ddd;
+  padding: 0;
+  margin-top: 6px;
+  float: left; }
+  .playerimg h2 {
+    line-height: 1.2;
+    color: #387ef5;
+    margin-bottom: 20px !important; }
+
+.player-dealer {
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  border: 1px solid #387ef5;
+  border-radius: 50%;
+  padding: 0px 5px;
+  background: #387ef5;
+  color: #fff; }
+
+.custom-row {
+  width: calc(100% - 50px);
+  float: left; }
+
+card.community-card {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto; }

@@ -4,37 +4,25 @@
     <div class="players text-center" ng-class="{'player-turn':player.isTurn,'not-active':!player.isActive,'player-fold':player.isFold || player.isAllIn}">
         <div class="playerimg">
             <!-- <img class="img-responsive playersimgbor" src="img/person.jpg" alt=""> -->
-            <h1>{{player.playerNo}}</h1>
-            <img class="player-dealer" ng-if="player.isDealer" src="img/dealer.png" alt="">
+            <h2>{{player.playerNo}}</h2>
+            <!-- <img class="player-dealer"  src="img/dealer.png" alt=""> -->
+            <div class="player-dealer" ng-if="player.isDealer"> D </div>
             <!-- <div ng-show="p.isFold"></div> -->
         </div>
-
-        <div class="row" ng-if="player.cards.length==0">
-            <div class="col col-50">
-                <card card='NONE' ng-style="style" width="50" height="60"> </card>
-
-            </div>
-            <div class="col col-50">
-                <card card='NONE' ng-style="style" width="50" height="60"> </card>
-            </div>
+        <div class="row custom-row" ng-if="player.cards.length==0">
+            <card card='NONE' ng-style="style" width="40" height="45"> </card>
+            <card card='NONE' ng-style="style" width="40" height="45"> </card>
         </div>
-        <div class="row" ng-if="player.cards.length==1">
-            <div class="col col-50">
-                <card card='DONE' ng-style="style" width="50" height="60"> </card>
-
-            </div>
-            <div class="col col-50">
-                <card card='NONE' ng-style="style" width="50" height="60"> </card>
-            </div>
+        <div class="row custom-row" ng-if="player.cards.length==1">
+            <card card='DONE' ng-style="style" width="40" height="45"> </card>
+            <card card='NONE' ng-style="style" width="40" height="45"> </card>
         </div>
-        <div class="row" ng-if="player.cards.length==2">
-            <div class="col col-50">
-                <card card='DONE' ng-style="style" width="50" height="60"> </card>
-
-            </div>
-            <div class="col col-50">
-                <card card='DONE' ng-style="style" width="50" height="60"> </card>
-            </div>
+        <div class="row custom-row" ng-if="player.cards.length==2">
+            <card card='DONE' ng-style="style" width="40" height="45"> </card>
+            <card card='DONE' ng-style="style" width="40" height="45"> </card>
         </div>
     </div>
+
+
+</div>
 </div>

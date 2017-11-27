@@ -1,4 +1,4 @@
-<ion-view view-title="Dealer" class="green-velvet-bg">
+<ion-view view-title="Dealer">
   <ion-content>
 
     <div class="centerDiv">
@@ -16,77 +16,77 @@
       <div class="row">
         <div class="col col-60">
           <div class="text-center">
-            <button class="button button-default" ng-disabled="!showRemove(0);" ng-click="removeCard(0);">Remove</button>
+            <button class="button button-default button-block" ng-disabled="!showRemove(0);" ng-click="removeCard(0);">Remove</button>
           </div>
         </div>
         <div class="col col-20">
           <div class="text-center">
-            <button class="button button-default" ng-disabled="!showRemove(4);" ng-click="removeCard(4);">Remove</button>
+            <button class="button button-default button-block" ng-disabled="!showRemove(4);" ng-click="removeCard(4);">Remove</button>
           </div>
         </div>
         <div class="col col-20">
           <div class="text-center">
-            <button class="button button-default" ng-disabled="!showRemove(6);" ng-click="removeCard(6);">Remove</button>
+            <button class="button button-default button-block" ng-disabled="!showRemove(6);" ng-click="removeCard(6);">Remove</button>
           </div>
         </div>
       </div>
 
       <div class="row" ng-if="hasTurn">
         <!-- <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="allInUserModal();">All In</button>
+          <button class="button button-default button-block" ng-click="allInUserModal();">All In</button>
         </div> -->
         <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="allInUserModal();">All In</button>
+          <button class="button button-default button-block" ng-click="allInUserModal();">All In</button>
         </div>
         <!-- <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="allInUser();">All In</button>
+          <button class="button button-default button-block" ng-click="allInUser();">All In</button>
         </div> -->
         <!-- <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="raise();">Raise</button>
+          <button class="button button-default button-block" ng-click="raise();">Raise</button>
         </div> -->
         <div class="col col-25 text-center">
-          <button class="button button-default btn-start" ng-click="raise();">Raise</button>
+          <button class="button button-default button-block" ng-click="raise();">Raise</button>
         </div>
         <!-- <div class="col col-25 text-center" ng-click="move();">
-          <button class="button button-default btn-start">Check</button>
+          <button class="button button-default button-block">Check</button>
         </div> -->
         <div class="col col-25 text-center" ng-click="move();" ng-if="isCheck">
-          <button class="button button-default btn-start">Check</button>
+          <button class="button button-default button-block">Check</button>
         </div>
         <!-- <div class="col col-25 text-center" ng-click="move();" >
-          <button class="button button-default btn-start">Call</button>
+          <button class="button button-default button-block">Call</button>
         </div> -->
         <div class="col col-25 text-center" ng-click="move();" ng-if="!isCheck">
-          <button class="button button-default btn-start">Call</button>
+          <button class="button button-default button-block">Call</button>
         </div>
         <!-- <div class="col col-25 text-center" ng-click="foldUser();">
-          <button class="button button-default btn-start">Fold</button>
+          <button class="button button-default button-block">Fold</button>
         </div> -->
         <div class="col col-25 text-center" ng-click="foldModal();">
-          <button class="button button-default btn-start">Fold</button>
+          <button class="button button-default button-block">Fold</button>
         </div>
       </div>
       <div class="row" ng-if="!hasTurn">
         <div class="col col-100 text-center">
-          <button class="button button-default btn-start">Serve Card</button>
+          <button class="button button-default button-block">Serve Card</button>
         </div>
       </div>
 
       <div class="row">
         <div class="col col-25 text-center">
-          <button class="button button-positive btn-start" ng-click="randomCard();">Card</button>
+          <button class="button button-positive button-block" ng-click="randomCard();">Card</button>
         </div>
         <div class="col col-25 text-center" ng-click="newGameModal();">
-          <button class="button btn-start">New</button>
+          <button class="button button-block">New</button>
         </div>
         <!-- <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
-          <button class="button btn-start">New</button>
+          <button class="button button-block">New</button>
         </div> -->
         <div class="col col-25 text-center">
-          <button class="button btn-start" ng-disabled="!showWinner" ui-sref="winner">Winner</button>
+          <button class="button button-block" ng-disabled="!showWinner" ui-sref="winner">Winner</button>
         </div>
         <div class="col col-25 text-center" ng-click="undoModal();">
-          <button class="button button-assertive btn-start">Undo</button>
+          <button class="button button-assertive button-block">Undo</button>
         </div>
       </div>
 

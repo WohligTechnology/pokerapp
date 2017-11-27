@@ -1,4 +1,4 @@
-<ion-view view-title="Table" class="poker-bg">
+<ion-view view-title="Table">
     <ion-content class="few-pad">
 
         <div class="poker-table">
@@ -9,12 +9,12 @@
             </div>
         </div>
         <form>
-            <div class="list poker-list">
+            <div class="list">
                 <label class="item item-input item-select" for="dealer">
                     <div class="input-label">
                         <i class="ion-ios-people"></i> Dealer
                     </div>
-                    {{dealer.dealerPlayer}}
+                    <strong>{{dealer.dealerPlayer}}</strong>
                     <select id="dealer" ng-model="dealer.dealerPlayer">
                         <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
                     </select>
@@ -22,7 +22,7 @@
             </div>
             <div class="item item-toggle">
                 Straddle
-                <label class="toggle toggle-assertive">
+                <label class="toggle toggle-positive">
                     <input type="checkbox" ng-model="form.isStraddle">
                     <div class="track">
                         <div class="handle"></div>
@@ -30,7 +30,7 @@
                 </label>
             </div>
             <div class="text-center">
-                <button class="button button-balanced button-poker btn-start" ng-disabled="!dealer.dealerPlayer || !isDealerPlayerInActive(dealer.dealerPlayer) || (activePlayers().length<2)"
+                <button class="button button-positive button-block" ng-disabled="!dealer.dealerPlayer || !isDealerPlayerInActive(dealer.dealerPlayer) || (activePlayers().length<2)"
                     ng-click="makeDealer(dealer.dealerPlayer);">Start</button>
             </div>
 

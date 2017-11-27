@@ -34,37 +34,19 @@
 
 
       <div class="row" ng-if="hasTurn">
-        <!-- <div class="col col-25 text-center">
-          <button class="button button-default button-block" ng-click="allInUserModal();">All In</button>
-        </div> -->
         <div class="col col-25 text-center">
-          <button class="button button-dark button-block button-outline" ng-click="allInUserModal();">All In</button>
+          <button class="button button-dark button-block button-outline" ng-click="showConfirmationModal('allIn');">All In</button>
         </div>
-        <!-- <div class="col col-25 text-center">
-          <button class="button button-positive button-block" ng-click="allInUser();">All In</button>
-        </div> -->
-        <!-- <div class="col col-25 text-center">
-          <button class="button button-positive button-block" ng-click="raise();">Raise</button>
-        </div> -->
         <div class="col col-25 text-center">
           <button class="button button-dark button-block button-outline" ng-click="raise();">Raise</button>
         </div>
-        <!-- <div class="col col-25 text-center" ng-click="move();">
-          <button class="button button-positive button-block">Check</button>
-        </div> -->
         <div class="col col-25 text-center" ng-click="move();" ng-if="isCheck">
           <button class="button button-dark button-block button-outline">Check</button>
         </div>
-        <!-- <div class="col col-25 text-center" ng-click="move();" >
-          <button class="button button-positive button-block">Call</button>
-        </div> -->
         <div class="col col-25 text-center" ng-click="move();" ng-if="!isCheck">
           <button class="button button-dark button-block button-outline">Call</button>
         </div>
-        <!-- <div class="col col-25 text-center" ng-click="foldUser();">
-          <button class="button button-positive button-block">Fold</button>
-        </div> -->
-        <div class="col col-25 text-center" ng-click="foldModal();">
+        <div class="col col-25 text-center" ng-click="showConfirmationModal('fold');">
           <button class="button button-dark button-block button-outline">Fold</button>
         </div>
       </div>
@@ -77,19 +59,13 @@
       <div class="padding-vertical">
         <div class="row">
           <div class="col col-25 text-center">
-            <!-- <button class="button button-stable button-block">Card</button> -->
           </div>
           <div class="col col-25 text-center">
-            <!-- <button class="button button-royal button-block" ng-disabled="!showWinner">Winner</button> -->
           </div>
-          <div class="col col-25 text-center" ng-click="newGameModal();">
+          <div class="col col-25 text-center" ng-click="showConfirmationModal('newGame');">
             <button class="button button-assertive button-block button-outline">New</button>
           </div>
-          <!-- <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
-                <button class="button button-block">New</button>
-              </div> -->
-
-          <div class="col col-25 text-center" ng-click="undoModal();">
+          <div class="col col-25 text-center" ng-click="showConfirmationModal('undo');">
             <button class="button button-assertive button-block  button-outline">Undo</button>
           </div>
         </div>

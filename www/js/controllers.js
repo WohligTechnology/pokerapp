@@ -141,6 +141,10 @@ angular.module('starter.controllers', [])
 
     $scope.currentPlayer = 0;
 
+
+
+
+    // Modal Actions
     $ionicModal.fromTemplateUrl('templates/modal/sure.html', {
       scope: $scope,
       animation: 'slide-in-up'
@@ -148,92 +152,58 @@ angular.module('starter.controllers', [])
       $scope.modal = modal;
     });
 
-    $scope.allInUserModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'All In';
-      $scope.allFunctions = function () {
-        console.log("demo1");
-        apiService.allIn(function (data) {});
-        $scope.modal.hide();
-      };
-    };
-    $scope.foldModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Fold';
-      $scope.allFunctions = function () {
-        console.log("demo");
-        apiService.fold(function (data) {});
-      };
-    };
-    $scope.raiseModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Raise';
-      $scope.allFunctions = function () {
-        console.log("demo");
-        apiService.raise(function (data) {});
-      };
-    };
-    $scope.checkModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Check';
-      $scope.allFunctions = function (playerNo) {
-        apiService.move(function (data) {});
-
-        $scope.selected = '0-0';
-        count++;
-        counter = count % 4;
-        if (0 < count && count < 4) {
-          $scope.selected = 0 + '-' + counter;
-        } else if (4 <= count && count < 8) {
-          $scope.selected = 1 + '-' + counter;
-        } else {
-          count = 0;
-
-        }
-      };
-    };
-    $scope.callModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Call';
-      $scope.allFunctions = function (playerNo) {
-        apiService.move(function (data) {});
-
-        $scope.selected = '0-0';
-        count++;
-        counter = count % 4;
-        if (0 < count && count < 4) {
-          $scope.selected = 0 + '-' + counter;
-        } else if (4 <= count && count < 8) {
-          $scope.selected = 1 + '-' + counter;
-        } else {
-          count = 0;
-        }
-        $scope.modal.hide();
-      };
-    };
-    $scope.newGameModal = function () {
-      $scope.modal.show();
-      $scope.alluser = 'Start New Game';
-      $scope.allFunctions = function () {
-        $state.go("table");
-        $scope.modal.hide();
-      };
-    };
-    $scope.undoModal = function () {
-      // $scope.modal.show();
-      // $scope.alluser = 'Undo';
-      apiService.undo(function () {});
-    };
-    $scope.sureModalClose = function () {
+    $scope.confirmModalClose = function () {
       $scope.modal.hide();
     };
+    $scope.showConfirmationModal = function (value) {
 
+      switch (value) {
+        case "allIn":
+          $scope.confirmModalOk = $scope.allIn;
+          $scope.modelActionFor = "All In";
+          break;
+        case "fold":
+          $scope.confirmModalOk = $scope.fold;
+          $scope.modelActionFor = "Fold";
+          break;
+        case "newGame":
+          $scope.confirmModalOk = $scope.newGame;
+          $scope.modelActionFor = "Start New Game";
+          break;
+        case "undo":
+          $scope.confirmModalOk = $scope.undo;
+          $scope.modelActionFor = "Undo";
+          break;
+      }
+      $scope.modal.show();
+    };
+
+    // Turn Actions
+    $scope.allIn = function () {
+      apiService.allIn(function (data) {});
+    };
+    $scope.fold = function () {
+      apiService.fold(function (data) {});
+    };
     $scope.raise = function () {
       apiService.raise(function (data) {});
     };
     $scope.move = function () {
       apiService.move(function (data) {});
     };
+
+
+    // New Game
+    $scope.newGame = function () {
+      $state.go("table");
+    };
+
+    // Undo
+    $scope.undo = function () {
+      apiService.undo(function (data) {});
+    };
+
+    // Remove Cards
     $scope.removeCard = function (cardNo) {
       apiService.removeCard(cardNo);
     };

@@ -258,15 +258,15 @@ angular.module('starter.controllers', [])
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {
     io.socket.off("Update", updateSocketFunction);
-    // $scope.newGame = function () {
-    //   $scope.winnerData = {};
-    //   apiService.newGame(function (data) {
-    //     $scope.updatePlayers();
-    //   });
-    // };
+    $scope.newGame = function () {
+      $scope.winnerData = {};
+      apiService.newGame(function (data) {
+        $scope.updatePlayers();
+      });
+    };
 
 
-    // $scope.newGame();
+    $scope.newGame();
 
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
@@ -281,12 +281,6 @@ angular.module('starter.controllers', [])
         });
       });
     };
-
-    $scope.updatePlayers();
-
-
-
-
 
     $scope.makeDealer = function (tabId) {
       apiService.makeDealer({

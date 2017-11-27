@@ -13,7 +13,7 @@
                     <div class="input-label">
                         <i class="ion-ios-people"></i> Dealer
                     </div>
-                    <span>(Default: {{dealer.dealerPlayer}})</span>
+                    <span class="low-opacity">(Default: {{dealer.dealerPlayer}})</span>
                     <select id="dealer" ng-model="dealer.dealerPlayer">
                         <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
                     </select>
@@ -33,5 +33,20 @@
                     ng-click="makeDealer(dealer.dealerPlayer);">Start</button>
             </div>
         </form>
+
+
+        <div class="row" ng-if="settings">
+            <div class="col col-50"></div>
+            <div class="col col-50">
+                <div class="list">
+                    <label class="item item-input" ng-repeat="setting in settings">
+                        <span class="input-label">{{setting.name}}</span>
+                        <input type="text" ng-model="setting.value">
+                    </label>
+                    <button class="button button-positive button-block button-outline" ng-click="storeSetting();">Save</button>
+                </div>
+            </div>
+        </div>
+
     </ion-content>
 </ion-view>

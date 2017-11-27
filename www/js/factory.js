@@ -72,7 +72,6 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
             }).then(function (data) {
                 console.log(data.data);
             });
-
         },
         removeCard: function (cardNo) {
             $http.post(adminurl + 'CommunityCards/removeCards', {
@@ -84,6 +83,16 @@ myApp.factory('apiService', function ($http, $q, $timeout) {
         undo: function (callback) {
             $http.post(adminurl + 'GameLogs/undo').then(function (data) {
                 console.log(data.data);
+            });
+        },
+        getSettings: function (callback) {
+            $http.post(adminurl + 'Setting/search', {}).then(function (data) {
+                callback(data.data);
+            });
+        },
+        storeSettings: function (data, callback) {
+            $http.post(adminurl + 'Setting/store', data).then(function (data) {
+                callback(data.data);
             });
         }
     };

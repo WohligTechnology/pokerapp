@@ -26,18 +26,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     $ionicConfigProvider.views.maxCache(0);
     $stateProvider
 
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
-      })
-
-      .state('home', {
-        url: '/home',
-        templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl'
-      })
       .state('table', {
         url: '/table',
         templateUrl: 'templates/table.html',

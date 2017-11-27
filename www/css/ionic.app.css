@@ -10335,3 +10335,6 @@ card.community-card {
 
 tab button {
   font-size: 30px !important; }
+
+.low-opacity {
+  opacity: 0.75; }

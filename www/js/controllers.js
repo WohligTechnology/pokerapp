@@ -258,15 +258,16 @@ angular.module('starter.controllers', [])
 
   .controller('TableCtrl', function ($scope, $stateParams, apiService, $state) {
     io.socket.off("Update", updateSocketFunction);
-    $scope.newGame = function () {
-      $scope.winnerData = {};
-      apiService.newGame(function (data) {
-        $scope.updatePlayers();
-      });
-    };
+    // $scope.newGame = function () {
+    //   $scope.winnerData = {};
+    //   apiService.newGame(function (data) {
+    //     $scope.updatePlayers();
+    //   });
+    // };
 
 
-    $scope.newGame();
+    // $scope.newGame();
+
     $scope.updatePlayers = function () {
       apiService.getAll(function (data) {
         $scope.allPlayers = data.data.data.playerCards;
@@ -280,6 +281,12 @@ angular.module('starter.controllers', [])
         });
       });
     };
+
+    $scope.updatePlayers();
+
+
+
+
 
     $scope.makeDealer = function (tabId) {
       apiService.makeDealer({
@@ -313,6 +320,15 @@ angular.module('starter.controllers', [])
     };
 
 
+
+
+    //Settings
+    apiService.getSettings(function (data) {
+      $scope.settings = data.data.results;
+    });
+    $scope.storeSetting = function () {
+      apiService.storeSettings($scope.settings, function () {});
+    };
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {

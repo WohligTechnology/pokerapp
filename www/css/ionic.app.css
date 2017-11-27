@@ -10299,13 +10299,16 @@ pre {
 .player-dealer,
 .player-raised {
   position: absolute;
-  top: -5px;
   left: -10px;
-  border: 1px solid #387ef5;
+  border: 1px solid;
   border-radius: 50%;
   padding: 0px 5px;
-  background: #387ef5;
   color: #fff; }
+
+.player-dealer {
+  top: -5px;
+  background: #387ef5;
+  border-color: #387ef5; }
 
 .player-raised {
   bottom: -5px;

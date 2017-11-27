@@ -70,28 +70,31 @@
       </div>
       <div class="row" ng-if="!hasTurn">
         <div class="col col-100 text-center">
-          <button class="button button-light button-block">Serve Card</button>
+          <button class="button button-light button-block" ng-show="!showWinner" ng-click="randomCard();">Serve Card</button>
+          <button class="button button-royal button-block button-outline" ng-show="showWinner" ui-sref="winner">Show Winner</button>
+        </div>
+      </div>
+      <div class="padding-vertical">
+        <div class="row">
+          <div class="col col-25 text-center">
+            <!-- <button class="button button-stable button-block">Card</button> -->
+          </div>
+          <div class="col col-25 text-center">
+            <!-- <button class="button button-royal button-block" ng-disabled="!showWinner">Winner</button> -->
+          </div>
+          <div class="col col-25 text-center" ng-click="newGameModal();">
+            <button class="button button-assertive button-block button-outline">New</button>
+          </div>
+          <!-- <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
+                <button class="button button-block">New</button>
+              </div> -->
+
+          <div class="col col-25 text-center" ng-click="undoModal();">
+            <button class="button button-assertive button-block  button-outline">Undo</button>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col col-25 text-center">
-          <button class="button button-stable button-block" ng-click="randomCard();">Card</button>
-        </div>
-        <div class="col col-25 text-center">
-          <button class="button button-royal button-block" ng-disabled="!showWinner" ui-sref="winner">Winner</button>
-        </div>
-        <div class="col col-25 text-center" ng-click="newGameModal();">
-          <button class="button button-stable button-block">New</button>
-        </div>
-        <!-- <div class="col col-25 text-center" ui-sref='table' ng-click="pageChange();">
-          <button class="button button-block">New</button>
-        </div> -->
-
-        <div class="col col-25 text-center" ng-click="undoModal();">
-          <button class="button button-stable button-block">Undo</button>
-        </div>
-      </div>
 
     </div>
   </ion-content>

@@ -1,6 +1,5 @@
 <ion-view view-title="Table">
     <ion-content class="few-pad">
-
         <div class="poker-table">
             <div class="row" ng-repeat="players in playersChunk">
                 <div class="col col-25" ng-repeat="player in players">
@@ -14,7 +13,7 @@
                     <div class="input-label">
                         <i class="ion-ios-people"></i> Dealer
                     </div>
-                    <strong>{{dealer.dealerPlayer}}</strong>
+                    <span>(Default: {{dealer.dealerPlayer}})</span>
                     <select id="dealer" ng-model="dealer.dealerPlayer">
                         <option ng-repeat="p in activePlayers() track by $index" value="{{p.playerNo}}">Player {{p.playerNo}}</option>
                     </select>
@@ -33,8 +32,6 @@
                 <button class="button button-positive button-block button-outline" ng-disabled="!dealer.dealerPlayer || !isDealerPlayerInActive(dealer.dealerPlayer) || (activePlayers().length<2)"
                     ng-click="makeDealer(dealer.dealerPlayer);">Start</button>
             </div>
-
-
         </form>
     </ion-content>
 </ion-view>

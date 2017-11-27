@@ -292,13 +292,29 @@ $dark:                            #444 !default;
         position: relative;
     }
 
-    .playerfold {
-        color: white;
+    .player-fold-label,
+    .player-allin-label {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 35%;
+        top: 50%;
         left: 50%;
-        font-size: 20px;
+        text-transform: uppercase;
+        display: block;
+        z-index: 10;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 4px 15px;
+    }
+
+    .player-allin-label {
+        background: #387df6;
+        color: white;
+    }
+
+    .player-fold-label {
+        background: white;
+        color: #387df6;
     }
 
     .platform-ipad .playerfold {
@@ -608,16 +624,25 @@ $dark:                            #444 !default;
         padding: 0;
         margin-top: 6px;
         float: left;
+        position: relative;
         h2 {
-            line-height: 1.2;
+            line-height: 1.3;
             color: $positive;
             margin-bottom: 20px!important;
         }
     }
 
+    .player-turn .playerimg {
+        background: $positive;
+        border-color: $positive;
+        h2 {
+            color: #fff;
+        }
+    }
+
     .player-dealer {
         position: absolute;
-        top: 0px;
+        top: -5px;
         left: -10px;
         border: 1px solid #387ef5;
         border-radius: 50%;

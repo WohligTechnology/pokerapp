@@ -313,9 +313,6 @@ angular.module('starter.controllers', [])
       isStraddle: false
     };
 
-
-
-
     //Settings
     apiService.getSettings(function (data) {
       $scope.settings = data.data.results;

@@ -154,6 +154,7 @@ angular.module('starter.controllers', [])
       $scope.allFunctions = function () {
         console.log("demo1");
         apiService.allIn(function (data) {});
+        $scope.modal.hide();
       };
     };
     $scope.foldModal = function () {
@@ -206,9 +207,8 @@ angular.module('starter.controllers', [])
           $scope.selected = 1 + '-' + counter;
         } else {
           count = 0;
-
         }
-        $scope.sureModalClose();
+        $scope.modal.hide();
       };
     };
     $scope.newGameModal = function () {
@@ -216,7 +216,7 @@ angular.module('starter.controllers', [])
       $scope.alluser = 'Start New Game';
       $scope.allFunctions = function () {
         $state.go("table");
-        $scope.sureModalClose();
+        $scope.modal.hide();
       };
     };
     $scope.undoModal = function () {
@@ -283,9 +283,12 @@ angular.module('starter.controllers', [])
     };
 
     $scope.makeDealer = function (tabId) {
+      console.log($scope.form.isStraddle);
+      console.log($scope.activePlayers().length > 2);
+      console.log(($scope.form.isStraddle && $scope.activePlayers().length > 2));
       apiService.makeDealer({
         "tabId": tabId,
-        isStraddle: $scope.form.isStraddle
+        isStraddle: ($scope.form.isStraddle && $scope.activePlayers() > 2)
       }, function (data) {
         $state.go("dealer");
       });

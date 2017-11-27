@@ -636,7 +636,8 @@ $dark:                            #444 !default;
         }
     }
 
-    .player-dealer {
+    .player-dealer,
+    .player-raised {
         position: absolute;
         top: -5px;
         left: -10px;
@@ -645,6 +646,12 @@ $dark:                            #444 !default;
         padding: 0px 5px;
         background: #387ef5;
         color: #fff;
+    }
+
+    .player-raised {
+        bottom: -5px;
+        background: $assertive;
+        border-color: $assertive;
     }
 
     .custom-row {

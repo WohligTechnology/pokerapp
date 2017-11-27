@@ -7,6 +7,7 @@
             <h2>{{player.playerNo}}</h2>
             <!-- <img class="player-dealer"  src="img/dealer.png" alt=""> -->
             <div class="player-dealer" ng-if="player.isDealer"> D </div>
+            <div class="player-raised" ng-if="player.hasRaised"> R </div>
             <!-- <div ng-show="p.isFold"></div> -->
         </div>
         <div class="row custom-row" ng-if="player.cards.length==0">
@@ -22,7 +23,4 @@
             <card card='DONE' ng-style="style" width="40" height="45"> </card>
         </div>
     </div>
-
-
-</div>
 </div>

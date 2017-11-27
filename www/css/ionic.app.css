@@ -10296,7 +10296,8 @@ pre {
   .player-turn .playerimg h2 {
     color: #fff; }
 
-.player-dealer {
+.player-dealer,
+.player-raised {
   position: absolute;
   top: -5px;
   left: -10px;
@@ -10305,6 +10306,11 @@ pre {
   padding: 0px 5px;
   background: #387ef5;
   color: #fff; }
+
+.player-raised {
+  bottom: -5px;
+  background: #ef473a;
+  border-color: #ef473a; }
 
 .custom-row {
   width: calc(100% - 50px);

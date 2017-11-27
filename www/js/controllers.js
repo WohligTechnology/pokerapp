@@ -283,9 +283,6 @@ angular.module('starter.controllers', [])
     };
 
     $scope.makeDealer = function (tabId) {
-      console.log($scope.form.isStraddle);
-      console.log($scope.activePlayers().length > 2);
-      console.log(($scope.form.isStraddle && $scope.activePlayers().length > 2));
       apiService.makeDealer({
         "tabId": tabId,
         isStraddle: ($scope.form.isStraddle && $scope.activePlayers() > 2)

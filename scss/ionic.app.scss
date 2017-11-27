@@ -465,14 +465,9 @@ $dark:                            #444 !default;
 
     .winnersHead {
         text-align: center;
-        color: white;
         margin-top: 20px!important;
-        font-size: 30px;
+        font-size: 20px;
         padding-bottom: 15px;
-    }
-
-    .platform-ipad .winnersHead {
-        font-size: 60px;
     }
 
     .winner {
@@ -578,13 +573,15 @@ $dark:                            #444 !default;
     }
 
     .winner-section {
-        background: rgba(220, 117, 0, 0.44);
-        border-radius: 20px;
+        background: $royal;
+        h4 {
+            color: #fff;
+        }
     }
 
     .modal-sure {
         text-align: center;
-        padding: 75px 20px;
+        padding: 55px 20px;
     }
 
     .col-60 {
@@ -608,8 +605,7 @@ $dark:                            #444 !default;
 
     @media (min-width: 680px) {
         .custom-modal-page.modal {
-            top: 30%;
-            bottom: 25%;
+            height: 0px;
         }
     } //new scss
     .button-positive.btn-start {
@@ -664,4 +660,19 @@ $dark:                            #444 !default;
 
     .hidden {
         display: none;
+    }
+
+    .modal-action-for {
+        color: $assertive;
+        font-size: 1.2em;
+    }
+
+    .button-custom {
+        width: 200px;
+    }
+
+    .button.button-block,
+    .button.button-full {
+        letter-spacing: 2px;
+        font-size: 16px;
     }

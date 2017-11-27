@@ -10158,13 +10158,9 @@ img.player-dealer {
 
 .winnersHead {
   text-align: center;
-  color: white;
   margin-top: 20px !important;
-  font-size: 30px;
+  font-size: 20px;
   padding-bottom: 15px; }
-
-.platform-ipad .winnersHead {
-  font-size: 60px; }
 
 .winner {
   width: 40%;
@@ -10248,12 +10244,13 @@ pre {
   padding: 10px; }
 
 .winner-section {
-  background: rgba(220, 117, 0, 0.44);
-  border-radius: 20px; }
+  background: #886aea; }
+  .winner-section h4 {
+    color: #fff; }
 
 .modal-sure {
   text-align: center;
-  padding: 75px 20px; }
+  padding: 55px 20px; }
 
 .col-60 {
   -webkit-box-flex: 0;
@@ -10274,8 +10271,7 @@ pre {
 
 @media (min-width: 680px) {
   .custom-modal-page.modal {
-    top: 30%;
-    bottom: 25%; } }
+    height: 0px; } }
 
 .button-positive.btn-start {
   padding: 20px;
@@ -10321,3 +10317,15 @@ card.community-card {
 
 .hidden {
   display: none; }
+
+.modal-action-for {
+  color: #ef473a;
+  font-size: 1.2em; }
+
+.button-custom {
+  width: 200px; }
+
+.button.button-block,
+.button.button-full {
+  letter-spacing: 2px;
+  font-size: 16px; }

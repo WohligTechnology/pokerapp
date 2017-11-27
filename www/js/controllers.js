@@ -155,8 +155,8 @@ angular.module('starter.controllers', [])
     $scope.confirmModalClose = function () {
       $scope.modal.hide();
     };
-    $scope.showConfirmationModal = function (value) {
 
+    $scope.showConfirmationModal = function (value) {
       switch (value) {
         case "allIn":
           $scope.confirmModalOk = $scope.allIn;

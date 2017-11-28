@@ -10253,6 +10253,9 @@ pre {
     background: #fff !important;
     color: #886aea !important; }
 
+.item.result-item {
+  padding: 0px 20px; }
+
 .modal-sure {
   text-align: center;
   padding: 55px 20px; }

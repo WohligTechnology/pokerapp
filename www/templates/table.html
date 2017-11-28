@@ -36,14 +36,14 @@
 
 
         <div class="row" ng-if="settings">
-            <div class="col col-50"></div>
-            <div class="col col-50">
+
+            <div class="col col-33">
                 <div class="list">
                     <label class="item item-input" ng-repeat="setting in settings">
                         <span class="input-label">{{setting.name}}</span>
-                        <input type="text" ng-model="setting.value">
+                        <input type="text" ng-model="setting.value" class="setting-input">
                     </label>
-                    <button class="button button-positive button-block button-outline" ng-click="storeSetting();">Save</button>
+                    <button class="button button-energized button-block button-outline button-small" ng-click="storeSetting();">Save</button>
                 </div>
             </div>
         </div>

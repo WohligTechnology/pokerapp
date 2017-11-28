@@ -587,6 +587,10 @@ $dark:                            #444 !default;
 
     .item.result-item {
         padding: 0px 20px;
+        .big-font {
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
     .modal-sure {
@@ -708,4 +712,8 @@ $dark:                            #444 !default;
 
     .low-opacity {
         opacity: 0.75;
+    }
+
+    .setting-input {
+        text-align: right;
     }

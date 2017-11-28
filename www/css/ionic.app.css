@@ -10255,6 +10255,9 @@ pre {
 
 .item.result-item {
   padding: 0px 20px; }
+  .item.result-item .big-font {
+    font-size: 20px;
+    font-weight: bold; }
 
 .modal-sure {
   text-align: center;
@@ -10355,3 +10358,6 @@ tab button {
 
 .low-opacity {
   opacity: 0.75; }
+
+.setting-input {
+  text-align: right; }

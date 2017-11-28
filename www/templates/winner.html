@@ -1,27 +1,43 @@
 <ion-view view-title="Dealer">
   <ion-content>
     <div class="centerDiv">
-      <div class="row text-center">
-        <div class="col-20" ng-repeat='communityCard in communityCards track by $index' ng-if=" !communityCard.isBurn">
-          <community ng-community-card="communityCard"></community>
+      <div class="row">
+        <div class="col-60">
+          <div class="row text-center">
+            <div class="col-20" ng-repeat='communityCard in communityCards track by $index' ng-if=" !communityCard.isBurn">
+              <community ng-community-card="communityCard"></community>
+            </div>
+          </div>
+          <div class="padding">
+            <button class="button button-royal button-block" ui-sref="dealer">Winner: {{winnerString}} - Back
+              <span ng-if="winners.length>1">(SPLIT POT)</span>
+            </button>
+          </div>
+          <div class="marb-30 text-center padding">
+            <a class="button button-block button-royal button-outline" ui-sref='table'>New Game</a>
+          </div>
+        </div>
+        <div class="col-40">
+          <div class="list">
+            <a class="item" ng-repeat="player in players|orderBy:'winRank'" ng-class="{'winner-section':player.winner}">
+              <div class="row">
+                <div class="col col-20">
+                  <card card='{{player.cards[0]}}' ng-style="style" width="60" height="80"> </card>
+                </div>
+                <div class="col col-20">
+                  <card card='{{player.cards[1]}}' ng-style="style" width="60" height="80"> </card>
+                </div>
+                <div class="col col-60">
+                  <h2>Player {{player.playerNo}}</h2>
+                  <p> {{player.descr}}</p>
+                  <span class="badge badge-royal">Rank {{player.winRank}}</span>
+                </div>
+              </div>
+
+            </a>
+          </div>
         </div>
       </div>
-      <div class="padding">
-        <button class="button button-royal button-block" ui-sref="dealer">Winner: {{winnerString}} - Back
-          <span ng-if="winners.length>1">(SPLIT POT)</span>
-        </button>
-      </div>
-
-      <div class="marb-30 text-center padding">
-        <a class="button button-block button-royal button-outline" ui-sref='table'>New Game</a>
-      </div>
-      <div class="row" ng-repeat="playersChunk in playersChunks">
-        <div class="col-33 p10 card m0" ng-repeat="player in playersChunk" ng-if="player" ng-class="{'winner-section':player.winner}">
-          <winner-player ng-player="player"></winner-player>
-        </div>
-      </div>
-
-
     </div>
   </ion-content>
 </ion-view>

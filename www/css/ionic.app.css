@@ -10245,8 +10245,13 @@ pre {
 
 .winner-section {
   background: #886aea; }
-  .winner-section h4 {
+  .winner-section h2,
+  .winner-section h4,
+  .winner-section p {
     color: #fff; }
+  .winner-section .badge {
+    background: #fff !important;
+    color: #886aea !important; }
 
 .modal-sure {
   text-align: center;

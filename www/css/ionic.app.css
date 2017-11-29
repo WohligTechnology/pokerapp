@@ -10361,3 +10361,8 @@ tab button {
 
 .setting-input {
   text-align: right; }
+
+.setting-button {
+  font-size: 30px;
+  margin-bottom: 15px;
+  float: right; }

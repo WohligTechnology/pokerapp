@@ -290,6 +290,12 @@ angular.module('starter.controllers', [])
     $scope.storeSetting = function () {
       apiService.storeSettings($scope.settings, function () {});
     };
+
+    $scope.settingShow = false;
+    $scope.toggleSettingShow = function () {
+      $scope.settingShow = !$scope.settingShow;
+    };
+
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {

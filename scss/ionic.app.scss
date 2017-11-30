@@ -723,3 +723,21 @@ $dark:                            #444 !default;
         margin-bottom: 15px;
         float: right;
     }
+
+    .result-item.winner-section,
+    .result-item.activated {
+        .winner-show-only {
+            display: block;
+        }
+        .non-winner-show-only {
+            display: none;
+        }
+    }
+
+    .winner-show-only {
+        display: none;
+    }
+
+    .non-winner-show-only {
+        display: block;
+    }

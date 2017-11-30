@@ -312,6 +312,5 @@ angular.module('starter.controllers', [])
         }), " & ");
       });
     };
-
     $scope.showWinner();
   });

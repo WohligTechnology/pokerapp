@@ -191,7 +191,12 @@ angular.module('starter.controllers', [])
     $scope.move = function () {
       apiService.move(function (data) {});
     };
-
+    $scope.call = function () {
+      apiService.call(function (data) {});
+    };
+    $scope.check = function () {
+      apiService.check(function (data) {});
+    };
 
     // New Game
     $scope.newGame = function () {

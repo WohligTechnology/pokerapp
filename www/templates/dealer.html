@@ -40,10 +40,10 @@
         <div class="col col-25 text-center">
           <button class="button button-dark button-block button-outline" ng-click="raise();">Raise</button>
         </div>
-        <div class="col col-25 text-center" ng-click="move();" ng-if="isCheck">
+        <div class="col col-25 text-center" ng-click="check();" ng-if="isCheck">
           <button class="button button-dark button-block button-outline">Check</button>
         </div>
-        <div class="col col-25 text-center" ng-click="move();" ng-if="!isCheck">
+        <div class="col col-25 text-center" ng-click="call();" ng-if="!isCheck">
           <button class="button button-dark button-block button-outline">Call</button>
         </div>
         <div class="col col-25 text-center" ng-click="showConfirmationModal('fold');">

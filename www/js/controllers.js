@@ -240,6 +240,10 @@ angular.module('starter.controllers', [])
       });
     };
 
+    $scope.form = {
+      adminurl: apiService.getAdminUrl()
+    };
+
 
     $scope.newGame();
 

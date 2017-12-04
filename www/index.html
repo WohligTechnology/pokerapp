@@ -29,6 +29,7 @@
   <script src="lib/sails/sails.io.js"></script>
   <script>
     var adminUUU = $.jStorage.get("adminurl");
+    console.log(adminUUU);
     if (adminUUU) {
       var adminurl = adminUUU + '/api/';
       io.sails.url = adminUUU;

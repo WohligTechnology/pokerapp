@@ -303,7 +303,7 @@ angular.module('starter.controllers', [])
 
     $scope.saveAdminUrl = function () {
       apiService.saveAdminUrl($scope.form.adminurl);
-      window.location.href = window.location.origin;
+      window.location.href = window.location.href.split("#")[0];
     };
 
   })

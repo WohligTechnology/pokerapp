@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.wohlig.dealer-poker" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Dealer's app</name>
-    <description>A demo app.</description>
+<widget id="com.wohlig.dealerpoker" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Dealer</name>
+    <description>Stike Poker Dealer</description>
     <author email="info@wohlig.com" href="http://wohlig.com/">Wohlig</author>
     <content src="index.html" />
     <access origin="*" />

@@ -16,17 +16,17 @@
         <div class="row">
           <div class="col col-60">
             <div class="text-center">
-              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(0);" ng-tap="removeCard(0);">Remove</button>
+              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(0);" on-tap="removeCard(0);">Remove</button>
             </div>
           </div>
           <div class="col col-20">
             <div class="text-center">
-              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(4);" ng-tap="removeCard(4);">Remove</button>
+              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(4);" on-tap="removeCard(4);">Remove</button>
             </div>
           </div>
           <div class="col col-20">
             <div class="text-center">
-              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(6);" ng-tap="removeCard(6);">Remove</button>
+              <button class="button button-assertive button-outline button-block button-small" ng-disabled="!showRemove(6);" on-tap="removeCard(6);">Remove</button>
             </div>
           </div>
         </div>
@@ -35,24 +35,24 @@
 
       <div class="row" ng-if="hasTurn" ng-show="remainingPlayers>1">
         <div class="col col-25 text-center">
-          <button class="button button-dark button-block button-outline" ng-tap="showConfirmationModal('allIn');">All In</button>
+          <button class="button button-dark button-block button-outline" on-tap="showConfirmationModal('allIn');">All In</button>
         </div>
         <div class="col col-25 text-center">
-          <button class="button button-dark button-block button-outline" ng-tap="raise();">Raise</button>
+          <button class="button button-dark button-block button-outline" on-tap="raise();">Raise</button>
         </div>
-        <div class="col col-25 text-center" ng-tap="check();" ng-if="isCheck">
+        <div class="col col-25 text-center" on-tap="check();" ng-if="isCheck">
           <button class="button button-dark button-block button-outline">Check</button>
         </div>
-        <div class="col col-25 text-center" ng-tap="call();" ng-if="!isCheck">
+        <div class="col col-25 text-center" on-tap="call();" ng-if="!isCheck">
           <button class="button button-dark button-block button-outline">Call</button>
         </div>
-        <div class="col col-25 text-center" ng-tap="showConfirmationModal('fold');">
+        <div class="col col-25 text-center" on-tap="showConfirmationModal('fold');">
           <button class="button button-dark button-block button-outline">Fold</button>
         </div>
       </div>
       <div class="row" ng-if="!hasTurn" ng-show="remainingPlayers>1">
         <div class="col col-100 text-center">
-          <button class="button button-royal button-block" ng-show="!showWinner" ng-tap="randomCard();">Serve Card</button>
+          <button class="button button-royal button-block" ng-show="!showWinner" on-tap="randomCard();">Serve Card</button>
           <button class="button button-royal button-block button-outline" ng-show="showWinner" ui-sref="winner">Show Winner</button>
         </div>
       </div>
@@ -62,10 +62,10 @@
           </div>
           <div class="col col-25 text-center">
           </div>
-          <div class="col col-25 text-center" ng-tap="showConfirmationModal('newGame');">
+          <div class="col col-25 text-center" on-tap="showConfirmationModal('newGame');">
             <button class="button button-assertive button-block button-outline">New</button>
           </div>
-          <div class="col col-25 text-center" ng-tap="showConfirmationModal('undo');">
+          <div class="col col-25 text-center" on-tap="showConfirmationModal('undo');">
             <button class="button button-assertive button-block  button-outline">Undo</button>
           </div>
         </div>

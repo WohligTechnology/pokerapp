@@ -20,7 +20,8 @@
                 </label>
             </div>
             <div class="item item-toggle" ng-if="activePlayers().length>2">
-                <span class="fnt-24">Straddle</span> <span class="fnt-16">{{form.isStraddle}}</span>
+                <span class="fnt-24">Straddle</span>
+                <span class="fnt-16">{{form.isStraddle}}</span>
                 <label class="toggle toggle-positive">
                     <input type="checkbox" ng-model="form.isStraddle">
                     <div class="track">
@@ -29,18 +30,16 @@
                 </label>
             </div>
             <div class="text-center">
-
                 <button class="button button-positive button-block fnt4-5em btn-pad" ng-disabled="!dealer.dealerPlayer || !isDealerPlayerInActive(dealer.dealerPlayer) || (activePlayers().length<2)"
                     ng-click="makeDealer(dealer.dealerPlayer);">Start</button>
-
             </div>
         </form>
 
 
         <div class="row">
-            <div class="col col-33"></div>
-            <div class="col col-33"></div>
-            <div class="col col-33">
+            <div class="col col-25"></div>
+            <div class="col col-25"></div>
+            <div class="col col-50">
                 <div class="clearfix">
                     <button class="button button-royal button-outline setting-button " on-tap="toggleSettingShow();">
                         <i class="ion ion-ios-cog"></i>

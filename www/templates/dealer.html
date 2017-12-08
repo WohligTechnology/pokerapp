@@ -37,7 +37,7 @@
 
       <div class="row" ng-if="hasTurn" ng-show="remainingPlayers>1">
         <div class="col col-25 text-center">
-<<<<<<< HEAD
+
           <button class="button button-dark button-block button-outline fnt-3em" ng-click="showConfirmationModal('allIn');">All In</button>
         </div>
         <div class="col col-25 text-center">
@@ -51,32 +51,15 @@
         </div>
         <div class="col col-25 text-center" ng-click="showConfirmationModal('fold');">
           <button class="button button-dark button-block button-outline fnt-3em">Fold</button>
-=======
-          <button class="button button-dark button-block button-outline" on-tap="showConfirmationModal('allIn');">All In</button>
-        </div>
-        <div class="col col-25 text-center">
-          <button class="button button-dark button-block button-outline" on-tap="raise();">Raise</button>
-        </div>
-        <div class="col col-25 text-center" on-tap="check();" ng-if="isCheck">
-          <button class="button button-dark button-block button-outline">Check</button>
-        </div>
-        <div class="col col-25 text-center" on-tap="call();" ng-if="!isCheck">
-          <button class="button button-dark button-block button-outline">Call</button>
-        </div>
-        <div class="col col-25 text-center" on-tap="showConfirmationModal('fold');">
-          <button class="button button-dark button-block button-outline">Fold</button>
->>>>>>> de71062b8c2d30b466983ebd511a7101caebcd67
+
         </div>
       </div>
       <div class="row" ng-if="!hasTurn" ng-show="remainingPlayers>1">
         <div class="col col-100 text-center">
-<<<<<<< HEAD
+
           <button class="button button-royal button-block fnt4-5em btn-pad" ng-show="!showWinner" ng-click="randomCard();">Serve Card</button>
           <button class="button button-royal button-block button-outline fnt4-5em" ng-show="showWinner" ui-sref="winner">Show Winner</button>
-=======
-          <button class="button button-royal button-block" ng-show="!showWinner" on-tap="randomCard();">Serve Card</button>
-          <button class="button button-royal button-block button-outline" ng-show="showWinner" ui-sref="winner">Show Winner</button>
->>>>>>> de71062b8c2d30b466983ebd511a7101caebcd67
+
         </div>
       </div>
       <div class="padding-vertical">
@@ -85,19 +68,12 @@
           </div>
           <div class="col col-25 text-center">
           </div>
-<<<<<<< HEAD
           <div class="col col-25 text-center" ng-click="showConfirmationModal('newGame');">
             <button class="button button-assertive button-block button-outline fnt-3em">New</button>
           </div>
           <div class="col col-25 text-center" ng-click="showConfirmationModal('undo');">
             <button class="button button-assertive button-block  button-outline fnt-3em">Undo</button>
-=======
-          <div class="col col-25 text-center" on-tap="showConfirmationModal('newGame');">
-            <button class="button button-assertive button-block button-outline">New</button>
-          </div>
-          <div class="col col-25 text-center" on-tap="showConfirmationModal('undo');">
-            <button class="button button-assertive button-block  button-outline">Undo</button>
->>>>>>> de71062b8c2d30b466983ebd511a7101caebcd67
+
           </div>
         </div>
       </div>

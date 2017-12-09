@@ -90,7 +90,7 @@ angular.module('starter.controllers', [])
       console.log("Winner", data);
     });
     $scope.randomCard = function () {
-      // apiService.randomCard();
+      apiService.randomCard();
     };
 
     updateSocketFunction = function (data) {

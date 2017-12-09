@@ -325,8 +325,8 @@ angular.module('starter.controllers', [])
         });
         $scope.communityCards = data.data.data.communityCards;
         $scope.winnerString = _.join(_.map($scope.winners, function (n) {
-          return "Player " + n.playerNo;
-        }), " & ");
+          return "Player-" + n.playerNo;
+        }), " , ");
       });
     };
     $scope.showWinner();

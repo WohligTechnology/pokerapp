@@ -575,6 +575,12 @@ $dark:                            #444 !default;
         }
     }
 
+    .show-card {
+        p {
+            color: #000 !important;
+        }
+    }
+
     .item.result-item {
         padding: 0px 20px;
         .big-font {
@@ -733,7 +739,8 @@ $dark:                            #444 !default;
     }
 
     .result-item.winner-section,
-    .result-item.activated {
+    .result-item.activated,
+    .result-item.show-card {
         .winner-show-only {
             display: block;
         }
@@ -792,13 +799,14 @@ $dark:                            #444 !default;
     .fnt4-5em {
         font-size: 4.5em;
     }
-    span.light-grey {
-    color: #e2cf00;
-}
 
-.btn-show{
-    padding: 4px 30px;
-    line-height: 1;
-    min-height: auto;
-    letter-spacing: 2px;
-}
+    span.light-grey {
+        color: #e2cf00;
+    }
+
+    .btn-show {
+        padding: 4px 30px;
+        line-height: 1;
+        min-height: auto;
+        letter-spacing: 2px;
+    }

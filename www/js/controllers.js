@@ -334,6 +334,7 @@ angular.module('starter.controllers', [])
     };
 
 
+
   })
 
   .controller('WinnerCtrl', function ($scope, $stateParams, apiService) {
@@ -351,4 +352,11 @@ angular.module('starter.controllers', [])
       });
     };
     $scope.showWinner();
+    $scope.showPlayerCard = function (player) {
+      player.showCard = true;
+      apiService.showPlayerCard(player, function (data) {
+
+      });
+    };
+
   });

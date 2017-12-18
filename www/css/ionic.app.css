@@ -10245,6 +10245,9 @@ pre {
     background: #fff !important;
     color: #886aea !important; }
 
+.show-card p {
+  color: #000 !important; }
+
 .item.result-item {
   padding: 0px 20px; }
   .item.result-item .big-font {
@@ -10375,11 +10378,13 @@ card.community-card {
   float: right; }
 
 .result-item.winner-section .winner-show-only,
-.result-item.activated .winner-show-only {
+.result-item.activated .winner-show-only,
+.result-item.show-card .winner-show-only {
   display: block; }
 
 .result-item.winner-section .non-winner-show-only,
-.result-item.activated .non-winner-show-only {
+.result-item.activated .non-winner-show-only,
+.result-item.show-card .non-winner-show-only {
   display: none; }
 
 .winner-show-only {

@@ -10423,4 +10423,5 @@ span.light-grey {
 .btn-show {
   padding: 4px 30px;
   line-height: 1;
-  min-height: auto; }
+  min-height: auto;
+  letter-spacing: 2px; }

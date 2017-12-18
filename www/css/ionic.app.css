@@ -10318,6 +10318,15 @@ pre {
   background: #000187;
   border-color: #000187; }
 
+.player-blind {
+  padding: 10px 6px;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  font-size: 1.8em;
+  background: #b72c00;
+  border-color: #b72c00; }
+
 .player-raised {
   bottom: 52px;
   background: #ef473a;

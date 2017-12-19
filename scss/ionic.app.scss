@@ -666,12 +666,13 @@ $dark:                            #444 !default;
     }
 
     .player-blind {
-        padding: 10px 6px;
+        padding: 12px 6px;
         left: 5px;
         height: 45px;
         width: 45px;
         color: #fff;
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin: 0;
         background: #009686;
         border-color: #009686;
     }

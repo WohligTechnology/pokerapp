@@ -10320,12 +10320,17 @@ pre {
 
 .player-blind {
   padding: 10px 6px;
+  left: 5px;
   height: 45px;
   width: 45px;
   color: #fff;
   font-size: 1.8em;
-  background: #b72c00;
-  border-color: #b72c00; }
+  background: #009686;
+  border-color: #009686; }
+
+.small-blind {
+  background: #673AB7;
+  border-color: #673AB7; }
 
 .player-raised {
   bottom: 52px;
